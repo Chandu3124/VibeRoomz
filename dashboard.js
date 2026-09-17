@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        LUCIDE ICONS
-       ===================================================== */
+       ====================================================== */
 
     function refreshIcons() {
         if (window.lucide) {
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        SIDEBAR / PANELS
-       ===================================================== */
+       ====================================================== */
 
     const navLinks = document.querySelectorAll(".vr-nav-link");
     const panels = document.querySelectorAll(".vr-panel");
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        QUICK ACTIONS
-       ===================================================== */
+       ====================================================== */
 
     document.querySelectorAll("[data-open-panel]").forEach(button => {
         button.addEventListener("click", () => {
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        PROFILE DROPDOWN
-       ===================================================== */
+       ====================================================== */
 
     const profileBtn = document.getElementById("profileBtn");
     const profileDropdown = document.getElementById("profileDropdown");
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-profile-action]").forEach(button => {
         button.addEventListener("click", () => {
             const action = button.dataset.profileAction;
-            
+
             if (profileDropdown) {
                 profileDropdown.classList.remove("show");
             }
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        NOTIFICATION
-       ===================================================== */
+       ====================================================== */
 
     const notificationBtn = document.getElementById("notificationBtn");
 
@@ -111,141 +111,120 @@ document.addEventListener("DOMContentLoaded", () => {
             showDashboardMessage("You have 3 notifications waiting.");
         });
     }
-
-    /* =====================================================
-       DARK MODE
-       ===================================================== */
-const themeToggle = document.getElementById("themeToggle");
-
 /* =====================================================
-REFRESH LUCIDE ICONS
-===================================================== */
-
-function refreshIcons() {
-if (window.lucide) {
-lucide.createIcons();
-}
-}
-
-/* =====================================================
-THEME ICON
-===================================================== */
-
-function updateThemeIcon() {
-
-```
-if (!themeToggle) return;
-
-const isDark = document.body.classList.contains("dark");
-
-themeToggle.innerHTML = isDark
-    ? '<i data-lucide="sun"></i>'
-    : '<i data-lucide="moon-star"></i>';
-
-refreshIcons();
-```
-
-}
-
-/* =====================================================
-LOGO SWITCH
-===================================================== */
-
-function updateDashboardLogos() {
-
-```
-const isDark = document.body.classList.contains("dark");
-
-document
-    .querySelectorAll(".vr-dashboard img[data-light-logo]")
-    .forEach(img => {
-
-        const lightLogo = img.dataset.lightLogo;
-        const darkLogo = img.dataset.darkLogo;
-
-        if (isDark && darkLogo) {
-            img.src = darkLogo;
-        } else if (lightLogo) {
-            img.src = lightLogo;
-        }
-
-    });
-```
-
-}
-
-/* =====================================================
-APPLY THEME
-===================================================== */
-
-function applyTheme(theme) {
-
-```
-if (theme === "dark") {
-    document.body.classList.add("dark");
-} else {
-    document.body.classList.remove("dark");
-}
-
-try {
-    localStorage.setItem("viberoomz-theme", theme);
-} catch (error) {
-    console.log("LocalStorage error");
-}
-
-updateThemeIcon();
-updateDashboardLogos();
-```
-
-}
-
-/* =====================================================
-THEME TOGGLE
-===================================================== */
-
-if (themeToggle) {
-
-```
-themeToggle.addEventListener("click", function () {
-
-    const isDark = document.body.classList.contains("dark");
-
-    // Dark mode lo unte Light mode ki
-    // Light mode lo unte Dark mode ki
-    if (isDark) {
-        applyTheme("light");
-    } else {
-        applyTheme("dark");
-    }
-
-});
-```
-
-}
-
-/* =====================================================
-LOAD SAVED THEME
+   DARK MODE
 ===================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-```
-let savedTheme = "light";
+    const themeToggle = document.getElementById("themeToggle");
 
-try {
-    savedTheme = localStorage.getItem("viberoomz-theme") || "light";
-} catch (error) {
-    console.log("LocalStorage error");
-}
+    /* ---------------------------------------------
+       Refresh Lucide Icons Safely
+    --------------------------------------------- */
+    function refreshIcons() {
+        if (typeof lucide !== "undefined") {
+            lucide.createIcons();
+        }
+    }
 
-applyTheme(savedTheme);
-```
+
+    /* ---------------------------------------------
+       Update Theme Icon
+    --------------------------------------------- */
+    function updateThemeIcon() {
+
+        if (!themeToggle) return;
+
+        const isDark = document.body.classList.contains("dark");
+
+        themeToggle.innerHTML = isDark
+            ? '<i data-lucide="sun"></i>'
+            : '<i data-lucide="moon-star"></i>';
+
+        refreshIcons();
+    }
+
+
+    /* ---------------------------------------------
+       Update Dashboard Logos
+    --------------------------------------------- */
+    function updateDashboardLogos() {
+
+        const isDark = document.body.classList.contains("dark");
+
+        document
+            .querySelectorAll("img[data-light-logo]")
+            .forEach(function (img) {
+
+                const lightLogo = img.getAttribute("data-light-logo");
+                const darkLogo = img.getAttribute("data-dark-logo");
+
+                if (isDark && darkLogo) {
+                    img.src = darkLogo;
+                } else if (lightLogo) {
+                    img.src = lightLogo;
+                }
+
+            });
+    }
+
+
+    /* ---------------------------------------------
+       Apply Theme
+    --------------------------------------------- */
+    function applyTheme(theme) {
+
+        if (theme === "dark") {
+            document.body.classList.add("dark");
+        } else {
+            document.body.classList.remove("dark");
+        }
+
+        try {
+            localStorage.setItem("viberoomz-theme", theme);
+        } catch (error) {
+            console.log("LocalStorage error:", error);
+        }
+
+        updateThemeIcon();
+        updateDashboardLogos();
+    }
+
+
+    /* ---------------------------------------------
+       Load Saved Theme
+    --------------------------------------------- */
+    let savedTheme = "light";
+
+    try {
+        savedTheme = localStorage.getItem("viberoomz-theme") || "light";
+    } catch (error) {
+        console.log("LocalStorage error:", error);
+    }
+
+    applyTheme(savedTheme);
+
+
+    /* ---------------------------------------------
+       Theme Toggle Click Event
+    --------------------------------------------- */
+    if (themeToggle) {
+
+        themeToggle.addEventListener("click", function () {
+
+            const isDark = document.body.classList.contains("dark");
+
+            applyTheme(isDark ? "light" : "dark");
+
+        });
+
+    }
 
 });
-
     /* =====================================================
        RTL
-       ===================================================== */
+       ====================================================== */
 
     const rtlToggle = document.getElementById("rtlToggle");
     let rtlEnabled = false;
@@ -360,7 +339,7 @@ applyTheme(savedTheme);
 
     /* =====================================================
        MOBILE SIDEBAR
-       ===================================================== */
+       ====================================================== */
 
     const mobileMenu = document.getElementById("vrMobileMenu");
     const sidebar = document.getElementById("vrSidebar");
@@ -383,17 +362,13 @@ applyTheme(savedTheme);
         mobileMenu.addEventListener("click", openMobileSidebar);
     }
 
-    /* =====================================================
-       RESIZE
-       ===================================================== */
-
     window.addEventListener("resize", () => {
         updateRTL();
     });
 
     /* =====================================================
        SIMPLE MESSAGE (TOAST)
-       ===================================================== */
+       ====================================================== */
 
     function showDashboardMessage(message) {
         const old = document.querySelector(".vr-dashboard-toast");
@@ -428,7 +403,7 @@ applyTheme(savedTheme);
 
     /* =====================================================
        DEFAULT PANEL
-       ===================================================== */
+       ====================================================== */
 
     openPanel("dashboard");
     updateRTL();

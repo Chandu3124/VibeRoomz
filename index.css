@@ -1310,3 +1310,835 @@ body.dark
   filter: invert(1);
   opacity: 0.7;
 }
+
+
+/* =========================================================
+   Samsung Galaxy S8+
+   Width: 360px–740px
+   ========================================================= */
+@media screen and (min-width: 360px) and (max-width: 740px) {
+  .home1-hero-split {
+    min-height: auto;
+    padding: 40px 0 32px;
+  }
+
+  .home1-hero-split .container {
+    width: calc(100% - 32px);
+    height: auto;
+  }
+
+  .home1-hero-split-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    min-height: auto;
+  }
+
+  .home1-hero-copy {
+    min-height: auto;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .home1-hero-badge {
+    gap: 8px;
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+
+  .home1-badge-line {
+    width: 26px;
+  }
+
+  .home1-badge-line:last-child {
+    width: 14px;
+  }
+
+  .home1-hero-copy h2 {
+    font-size: clamp(34px, 10vw, 48px);
+    line-height: 1.08;
+    margin-bottom: 14px;
+  }
+
+  .home1-hero-text {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  .home1-hero-actions {
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 22px;
+  }
+
+  .home1-btn {
+    min-height: 46px;
+    padding: 0 15px;
+    font-size: 14px;
+  }
+
+  .home1-hero-visual {
+    min-height: auto;
+    width: 100%;
+  }
+
+  .home1-music-stage {
+    width: 100%;
+    max-width: 360px;
+    height: 390px;
+    transform: scale(0.82);
+    transform-origin: center top;
+    margin-bottom: -65px;
+  }
+
+  .ring-one {
+    width: 250px;
+    height: 250px;
+  }
+
+  .ring-two {
+    width: 315px;
+    height: 315px;
+  }
+
+  .ring-three {
+    width: 375px;
+    height: 375px;
+  }
+
+  .wave-one {
+    width: 225px;
+    height: 225px;
+  }
+
+  .wave-two {
+    width: 285px;
+    height: 285px;
+  }
+
+  .wave-three {
+    width: 340px;
+    height: 340px;
+  }
+
+  .home1-mic-area {
+    width: 160px;
+    height: 160px;
+  }
+
+  .home1-mic-glow {
+    width: 145px;
+    height: 145px;
+  }
+
+  .home1-mic-circle {
+    width: 112px;
+    height: 112px;
+  }
+
+  .home1-mic-circle i {
+    width: 48px;
+    height: 48px;
+  }
+
+  .home1-mic-ripple {
+    width: 130px;
+    height: 130px;
+  }
+
+  .home1-equalizer {
+    bottom: 78px;
+    gap: 5px;
+    height: 72px;
+  }
+
+  .home1-equalizer span {
+    width: 5px;
+  }
+
+  .home1-music-card {
+    min-width: auto;
+    padding: 8px 10px;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .home1-music-card i {
+    width: 15px;
+    height: 15px;
+  }
+
+  .music-card-one {
+    top: 48px;
+    left: 2px;
+  }
+
+  .music-card-two {
+    top: 112px;
+    right: 0;
+  }
+
+  .music-card-three {
+    bottom: 98px;
+    left: 0;
+  }
+
+  .music-card-four {
+    bottom: 42px;
+    right: 8px;
+  }
+
+  .home1-stage-content {
+    bottom: -2px;
+  }
+
+  .home1-stage-title {
+    font-size: 17px;
+  }
+
+  .home1-stage-content p {
+    font-size: 13px;
+  }
+
+  .dot-one {
+    top: 62px;
+    right: 74px;
+  }
+
+  .dot-two {
+    top: 205px;
+    left: 8px;
+  }
+
+  .dot-three {
+    bottom: 82px;
+    right: 70px;
+  }
+
+  .dot-four {
+    top: 145px;
+    left: 70px;
+  }
+
+  .home1-section-head-center,
+  .home1-section-head-left {
+    margin-bottom: 26px;
+  }
+
+  .home1-section-head-center h3,
+  .home1-section-head-left h3 {
+    font-size: clamp(26px, 8vw, 34px);
+  }
+
+  .home1-section-head-center > p:last-child,
+  .home1-section-head-left > p:last-child {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .home1-featured-rooms,
+  .home1-reviews,
+  .home1-benefits,
+  .home1-packages-horizontal,
+  .home1-how-flow,
+  .home1-slot-widget,
+  .home1-features-grid,
+  .home1-cta-banner {
+    padding: 38px 0;
+  }
+
+  .home1-rooms-grid,
+  .home1-benefits-grid,
+  .home1-testimonials,
+  .home1-features-grid-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .home1-room-image {
+    height: 190px;
+  }
+
+  .home1-room-content,
+  .home1-benefit-card,
+  .home1-testimonial,
+  .home1-feature-item {
+    padding: 18px;
+  }
+
+  .home1-room-content h4,
+  .home1-benefit-card h4 {
+    font-size: 20px;
+  }
+
+  .home1-package-horizontal-card,
+  .home1-package-horizontal-card-reverse {
+    flex-direction: column;
+  }
+
+  .home1-package-horizontal-image {
+    flex: none;
+    width: 100%;
+    min-height: 190px;
+    height: 190px;
+  }
+
+  .home1-package-horizontal-content {
+    padding: 18px;
+  }
+
+  .home1-package-horizontal-content h4 {
+    font-size: 20px;
+  }
+
+  .home1-package-horizontal-desc {
+    font-size: 15px;
+  }
+
+  .home1-package-horizontal-meta {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .home1-package-horizontal-btn {
+    width: 100%;
+  }
+
+  .home1-flowchart {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .home1-flowchart::before {
+    top: 35px;
+    bottom: 35px;
+    left: 50%;
+    right: auto;
+    width: 3px;
+    height: auto;
+    transform: translateX(-50%);
+    background: linear-gradient(
+      180deg,
+      var(--primary),
+      var(--secondary)
+    );
+  }
+
+  .home1-flow-marker {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 14px;
+  }
+
+  .home1-flow-marker i {
+    width: 27px;
+    height: 27px;
+  }
+
+  .home1-flow-box {
+    padding: 20px 16px;
+  }
+
+  .home1-slot-widget-wrap {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .home1-slot-media {
+    min-height: 260px;
+    max-height: 320px;
+    border-radius: 20px;
+  }
+
+  .home1-slot-form-box {
+    border-radius: 20px;
+    padding: 20px 16px;
+  }
+
+  .home1-slot-form {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .home1-slot-field:nth-child(3),
+  .home1-slot-field:nth-child(4),
+  .home1-slot-btn {
+    grid-column: auto;
+  }
+
+  .home1-slot-btn {
+    width: 100%;
+  }
+
+  .home1-cta-box {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 18px;
+    border-left-width: 4px;
+  }
+
+  .home1-cta-content h3 {
+    font-size: clamp(28px, 8vw, 38px);
+  }
+
+  .home1-cta-content > p:last-child {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .home1-cta-action,
+  .home1-cta-btn {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   iPad Mini
+   Width: 768px–820px
+   ========================================================= */
+@media screen and (min-width: 768px) and (max-width: 820px) {
+  .home1-hero-split {
+    min-height: auto;
+    padding: 54px 0 44px;
+  }
+
+  .home1-hero-split .container {
+    width: calc(100% - 48px);
+  }
+
+  .home1-hero-split-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    min-height: auto;
+  }
+
+  .home1-hero-copy {
+    min-height: auto;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .home1-hero-copy h2 {
+    font-size: clamp(46px, 7vw, 60px);
+    max-width: 700px;
+  }
+
+  .home1-hero-text {
+    max-width: 650px;
+    font-size: 18px;
+  }
+
+  .home1-hero-actions {
+    justify-content: center;
+  }
+
+  .home1-hero-visual {
+    min-height: auto;
+  }
+
+  .home1-music-stage {
+    max-width: 510px;
+    height: 480px;
+    transform: scale(0.9);
+    transform-origin: center top;
+    margin-bottom: -45px;
+  }
+
+  .home1-rooms-grid,
+  .home1-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .home1-room-image {
+    height: 210px;
+  }
+
+  .home1-package-horizontal-image {
+    flex-basis: 38%;
+  }
+
+  .home1-flowchart {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 42px 20px;
+  }
+
+  .home1-flowchart::before {
+    top: 40px;
+    left: 15%;
+    right: 15%;
+    width: auto;
+    height: 3px;
+  }
+
+  .home1-slot-widget-wrap {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .home1-slot-media {
+    min-height: 360px;
+    max-height: 420px;
+  }
+
+  .home1-testimonials {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home1-testimonial:last-child {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 9px);
+    width: 100%;
+    justify-self: center;
+  }
+
+  .home1-features-grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home1-feature-item:last-child {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 10px);
+    width: 100%;
+    justify-self: center;
+  }
+
+  .home1-cta-box {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 26px;
+  }
+}
+
+
+/* =========================================================
+   iPad Pro 11"
+   Width: 821px–1024px
+   ========================================================= */
+@media screen and (min-width: 821px) and (max-width: 1024px) {
+  .home1-hero-split {
+    min-height: auto;
+    padding: 60px 0 48px;
+  }
+
+  .home1-hero-split .container {
+    width: calc(100% - 64px);
+  }
+
+  .home1-hero-split-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+    gap: 24px;
+    min-height: auto;
+  }
+
+  .home1-hero-copy {
+    min-height: 520px;
+    padding: 20px 0;
+  }
+
+  .home1-hero-copy h2 {
+    font-size: clamp(42px, 5vw, 58px);
+  }
+
+  .home1-hero-text {
+    font-size: 18px;
+  }
+
+  .home1-hero-actions {
+    gap: 12px;
+  }
+
+  .home1-music-stage {
+    max-width: 460px;
+    height: 480px;
+    transform: scale(0.86);
+    transform-origin: center center;
+  }
+
+  .home1-rooms-grid,
+  .home1-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .home1-room-image {
+    height: 220px;
+  }
+
+  .home1-package-horizontal-image {
+    flex-basis: 36%;
+  }
+
+  .home1-flowchart {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .home1-flowchart::before {
+    left: 8%;
+    right: 8%;
+  }
+
+  .home1-flow-marker {
+    width: 68px;
+    height: 68px;
+  }
+
+  .home1-flow-box {
+    padding: 20px 14px;
+  }
+
+  .home1-flow-box h4 {
+    font-size: 18px;
+  }
+
+  .home1-flow-box p {
+    font-size: 14px;
+  }
+
+  .home1-slot-widget-wrap {
+    grid-template-columns: 0.9fr 1fr;
+    gap: 20px;
+  }
+
+  .home1-slot-media {
+    min-height: 500px;
+  }
+
+  .home1-slot-form-box {
+    padding: 24px;
+  }
+
+  .home1-testimonials {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .home1-testimonial {
+    padding: 18px;
+  }
+
+  .home1-testimonial-text {
+    font-size: 15px;
+  }
+
+  .home1-features-grid-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .home1-feature-item {
+    padding: 20px 16px;
+  }
+
+  .home1-cta-box {
+    gap: 24px;
+    padding: 32px;
+  }
+
+  .home1-cta-content h3 {
+    font-size: clamp(30px, 4vw, 42px);
+  }
+
+  .home1-cta-content > p:last-child {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   Nest Hub
+   Exact viewport: 1024px × 600px
+   ========================================================= */
+@media screen and (width: 1024px) and (height: 600px) {
+  .home1-hero-split {
+    min-height: auto;
+    padding: 28px 0 24px;
+  }
+
+  .home1-hero-split .container {
+    width: calc(100% - 56px);
+  }
+
+  .home1-hero-split-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
+    gap: 18px;
+    min-height: 500px;
+  }
+
+  .home1-hero-copy {
+    min-height: 500px;
+    padding: 10px 0;
+  }
+
+  .home1-hero-copy h2 {
+    font-size: 48px;
+    line-height: 1.02;
+    margin-bottom: 12px;
+  }
+
+  .home1-hero-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .home1-hero-actions {
+    margin-top: 20px;
+  }
+
+  .home1-music-stage {
+    max-width: 450px;
+    height: 470px;
+    transform: scale(0.82);
+    transform-origin: center center;
+  }
+
+  .home1-featured-rooms,
+  .home1-reviews,
+  .home1-benefits,
+  .home1-packages-horizontal,
+  .home1-how-flow,
+  .home1-slot-widget,
+  .home1-features-grid,
+  .home1-cta-banner {
+    padding: 34px 0;
+  }
+
+  .home1-rooms-grid,
+  .home1-benefits-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .home1-room-image {
+    height: 150px;
+  }
+
+  .home1-room-content {
+    padding: 15px;
+  }
+
+  .home1-room-content h4,
+  .home1-benefit-card h4 {
+    font-size: 18px;
+  }
+
+  .home1-room-capacity,
+  .home1-room-features,
+  .home1-room-price,
+  .home1-benefit-card p {
+    font-size: 14px;
+  }
+
+  .home1-benefit-card {
+    padding: 16px;
+  }
+
+  .home1-benefit-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+  }
+
+  .home1-package-horizontal-card {
+    min-height: 150px;
+  }
+
+  .home1-package-horizontal-image {
+    min-height: 150px;
+  }
+
+  .home1-package-horizontal-content {
+    padding: 15px 18px;
+  }
+
+  .home1-package-horizontal-content h4 {
+    font-size: 20px;
+  }
+
+  .home1-package-horizontal-desc {
+    font-size: 14px;
+  }
+
+  .home1-flowchart {
+    gap: 14px;
+  }
+
+  .home1-flow-marker {
+    width: 62px;
+    height: 62px;
+    margin-bottom: 12px;
+  }
+
+  .home1-flow-box {
+    padding: 16px 12px;
+  }
+
+  .home1-flow-box h4 {
+    font-size: 17px;
+  }
+
+  .home1-flow-box p {
+    font-size: 13px;
+  }
+
+  .home1-slot-widget-wrap {
+    gap: 18px;
+  }
+
+  .home1-slot-media {
+    min-height: 450px;
+  }
+
+  .home1-slot-form-box {
+    padding: 22px;
+  }
+
+  .home1-testimonials {
+    gap: 14px;
+  }
+
+  .home1-testimonial {
+    padding: 17px;
+  }
+
+  .home1-testimonial-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .home1-features-grid-container {
+    gap: 14px;
+  }
+
+  .home1-feature-item {
+    padding: 18px 14px;
+  }
+
+  .home1-feature-item h4 {
+    font-size: 18px;
+  }
+
+  .home1-feature-item p {
+    font-size: 14px;
+  }
+
+  .home1-cta-box {
+    gap: 24px;
+    padding: 28px;
+  }
+
+  .home1-cta-content h3 {
+    font-size: 36px;
+  }
+
+  .home1-cta-content > p:last-child {
+    font-size: 16px;
+  }
+}

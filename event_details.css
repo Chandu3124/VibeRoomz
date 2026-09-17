@@ -1091,3 +1091,381 @@ body.dark .event-detail-page .ed-ticket-guide{
   background:#141414;
 }
 
+/* Samsung Galaxy S8+ */
+@media screen and (min-width: 360px) and (max-width: 740px) {
+  .event-detail-page .ed-hero {
+    height: auto;
+    min-height: 520px;
+    padding: 50px 0;
+  }
+
+  .event-detail-page .ed-hero h1 {
+    font-size: clamp(36px, 7vw, 52px);
+    line-height: 1.02;
+  }
+
+  .event-detail-page .ed-hero-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 18px 0 22px;
+  }
+
+  .event-detail-page .ed-hero-meta {
+    gap: 10px 18px;
+    margin-bottom: 22px;
+  }
+
+  .event-detail-page .ed-hero-info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .event-detail-page .ed-hero-info {
+    padding: 14px;
+    gap: 11px;
+  }
+
+  .event-detail-page .ed-overview,
+  .event-detail-page .ed-itinerary,
+  .event-detail-page .ed-gallery,
+  .event-detail-page .ed-ticket-section {
+    padding: 60px 0;
+  }
+
+  .event-detail-page .ed-section-heading h2 {
+    font-size: clamp(28px, 5.5vw, 40px);
+  }
+
+  .event-detail-page .ed-overview-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .event-detail-page .ed-sticky-sidebar {
+    position: static;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .event-detail-page .ed-overview-block {
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .event-detail-page .ed-overview-number {
+    font-size: 22px;
+    padding-top: 2px;
+  }
+
+  .event-detail-page .ed-overview-block h3 {
+    font-size: 20px;
+  }
+
+  .event-detail-page .ed-audience-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .event-detail-page .ed-audience-grid span {
+    min-height: 40px;
+    font-size: 14px;
+  }
+
+  .event-detail-page .ed-itinerary-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .event-detail-page .ed-itinerary-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .event-detail-page .ed-itinerary-image {
+    height: 220px;
+  }
+
+  .event-detail-page .ed-itinerary-content {
+    padding: 20px;
+  }
+
+  .event-detail-page .ed-itinerary-number {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .event-detail-page .ed-itinerary-content h3 {
+    font-size: 21px;
+  }
+
+  .event-detail-page .ed-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .event-detail-page .ed-gallery-card {
+    height: 380px;
+  }
+
+  .event-detail-page .ed-gallery-theory {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .event-detail-page .ed-ticket-main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .event-detail-page .ed-ticket-pricing {
+    padding: 28px;
+  }
+
+  .event-detail-page .ed-ticket-pricing h3 {
+    font-size: 28px;
+  }
+
+  .event-detail-page .ed-ticket-price strong {
+    font-size: 46px;
+  }
+
+  .event-detail-page .ed-ticket-features {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .event-detail-page .ed-ticket-guide {
+    grid-template-columns: 1fr;
+  }
+
+  .event-detail-page .ed-ticket-guide-image {
+    height: 240px;
+    min-height: 240px;
+  }
+
+  .event-detail-page .ed-ticket-guide-content {
+    padding: 24px;
+  }
+
+  .event-detail-page .ed-ticket-guide-content h3 {
+    font-size: 24px;
+  }
+
+  .event-detail-page .ed-ticket-theory {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .event-detail-page .ed-final-cta {
+    padding: 30px 0 60px;
+  }
+
+  .event-detail-page .ed-final-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 26px 20px;
+    text-align: center;
+  }
+
+  .event-detail-page .ed-final-icon {
+    margin: 0 auto;
+  }
+
+  .event-detail-page .ed-final-kicker {
+    justify-content: center;
+    margin: 0 auto 8px;
+  }
+
+  .event-detail-page .ed-final-content h2 {
+    font-size: clamp(24px, 4.5vw, 34px);
+  }
+
+  .event-detail-page .ed-final-button {
+    width: 100%;
+    min-width: auto;
+    justify-content: center;
+  }
+}
+
+/* iPad Mini */
+@media screen and (min-width: 768px) and (max-width: 820px) {
+  .event-detail-page .ed-hero {
+    min-height: 70vh;
+  }
+
+  .event-detail-page .ed-hero h1 {
+    font-size: clamp(42px, 6vw, 62px);
+  }
+
+  .event-detail-page .ed-hero-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-detail-page .ed-overview-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .event-detail-page .ed-sticky-sidebar {
+    position: static;
+    width: 100%;
+  }
+
+  .event-detail-page .ed-itinerary-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .event-detail-page .ed-itinerary-card {
+    grid-template-columns: 180px minmax(0, 1fr);
+  }
+
+  .event-detail-page .ed-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-detail-page .ed-gallery-card {
+    height: 420px;
+  }
+
+  .event-detail-page .ed-gallery-theory {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-detail-page .ed-ticket-main {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .event-detail-page .ed-ticket-guide {
+    grid-template-columns: 1fr;
+  }
+
+  .event-detail-page .ed-ticket-guide-image {
+    height: 280px;
+    min-height: 280px;
+  }
+
+  .event-detail-page .ed-ticket-theory {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-detail-page .ed-final-card {
+    grid-template-columns: 64px minmax(0, 1fr) auto;
+    padding: 28px 24px;
+  }
+}
+
+/* iPad Pro 11" */
+@media screen and (min-width: 821px) and (max-width: 1024px) {
+  .event-detail-page .ed-hero {
+    min-height: 80vh;
+  }
+
+  .event-detail-page .ed-hero h1 {
+    font-size: clamp(44px, 5vw, 68px);
+  }
+
+  .event-detail-page .ed-hero-info-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .event-detail-page .ed-overview-layout {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 28px;
+  }
+
+  .event-detail-page .ed-itinerary-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .event-detail-page .ed-itinerary-card {
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
+
+  .event-detail-page .ed-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .event-detail-page .ed-gallery-card {
+    height: 480px;
+  }
+
+  .event-detail-page .ed-gallery-theory {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .event-detail-page .ed-ticket-main {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 22px;
+  }
+
+  .event-detail-page .ed-ticket-guide {
+    grid-template-columns: 260px minmax(0, 1fr);
+  }
+
+  .event-detail-page .ed-ticket-theory {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .event-detail-page .ed-final-card {
+    grid-template-columns: 68px minmax(0, 1fr) auto;
+    padding: 30px 28px;
+  }
+}
+
+/* Nest Hub */
+@media screen and (width: 1024px) and (height: 600px) {
+  .event-detail-page .ed-hero {
+    height: 100vh;
+    min-height: 600px;
+    padding: 0;
+  }
+
+  .event-detail-page .ed-hero h1 {
+    font-size: clamp(40px, 4.5vw, 58px);
+  }
+
+  .event-detail-page .ed-hero-description {
+    font-size: 16.5px;
+    margin: 20px 0 24px;
+  }
+
+  .event-detail-page .ed-overview,
+  .event-detail-page .ed-itinerary,
+  .event-detail-page .ed-gallery,
+  .event-detail-page .ed-ticket-section {
+    padding: 65px 0;
+  }
+
+  .event-detail-page .ed-itinerary-image {
+    height: 200px;
+  }
+
+  .event-detail-page .ed-gallery-card {
+    height: 440px;
+  }
+
+  .event-detail-page .ed-ticket-pricing {
+    padding: 30px;
+  }
+
+  .event-detail-page .ed-ticket-guide-image {
+    height: 260px;
+    min-height: 260px;
+  }
+
+  .event-detail-page .ed-final-cta {
+    padding: 30px 0 60px;
+  }
+
+  .event-detail-page .ed-final-card {
+    padding: 28px 28px;
+  }
+}

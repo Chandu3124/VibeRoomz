@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VibeRoomz</title>
+    <title>VibeRoomz Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -16,13 +16,13 @@
 
         <!-- SIDEBAR -->
         <aside class="vr-dashboard-sidebar" id="vrSidebar">
-            <div class="vr-sidebar-brand">
+            <a href="index.html" class="vr-sidebar-brand" id="vrSidebarBrand">
                 <img src="VibeRooms_light.png"
                      data-light-logo="VibeRooms_light.png"
                      data-dark-logo="VibeRooms_dark.png"
                      alt="VibeRoomz">
                 <h1>Vibe<span>Roomz</span></h1>
-            </div>
+            </a>
 
             <nav class="vr-dashboard-nav">
                 <button class="vr-nav-link active" data-section="dashboard">
@@ -69,7 +69,8 @@
             <header class="vr-dashboard-header">
                 <div class="vr-header-left">
                     <div class="vr-mobile-menu">
-                        <button class="vr-circle-btn" id="vrMobileMenu" type="button">
+                        <button class="vr-circle-btn" id="vrMobileMenu" type="button"
+                                aria-label="Open menu">
                             <i data-lucide="menu"></i>
                         </button>
                     </div>
@@ -92,13 +93,14 @@
                     </button>
 
                     <button class="vr-circle-btn vr-notification-btn" id="notificationBtn"
-                            type="button">
+                            type="button" aria-label="Notifications">
                         <i data-lucide="bell"></i>
                         <span class="vr-notification-dot"></span>
                     </button>
 
                     <div class="vr-profile-wrap">
-                        <button class="vr-profile-btn" id="profileBtn" type="button">
+                        <button class="vr-profile-btn" id="profileBtn" type="button"
+                                aria-label="Profile menu">
                             <div class="vr-profile-avatar">A</div>
                             <div class="vr-profile-info">
                                 <strong>Arjun</strong>

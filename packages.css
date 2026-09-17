@@ -1723,3 +1723,2087 @@ body.dark .party-cta-content p,
 body.dark .party-cta-note {
   color: var(--muted);
 }
+
+/* =========================================================
+   Shared responsive safety
+========================================================= */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.packages-light-hero,
+.package-category-section,
+.package-comparison-section,
+.included-benefits-section,
+.custom-package-section,
+.occasion-match-section,
+.party-cta-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.packages-light-layout,
+.package-category-layout,
+.package-comparison-board,
+.included-benefits-grid,
+.custom-package-layout,
+.occasion-match-board,
+.party-cta-card {
+  min-width: 0;
+}
+
+.packages-light-content,
+.package-featured,
+.package-category-card,
+.package-comparison-details,
+.package-comparison-sidebar,
+.included-benefit-card,
+.custom-package-summary,
+.custom-package-options,
+.custom-option,
+.occasion-item,
+.occasion-recommendation,
+.party-cta-content {
+  min-width: 0;
+}
+
+.packages-light-content h1,
+.package-category-heading h2,
+.package-comparison-heading h2,
+.included-benefits-heading h2,
+.custom-package-heading h2,
+.occasion-match-heading h2,
+.package-featured-content h3,
+.package-card-content h3,
+.included-benefit-content h3,
+.custom-option-content h3,
+.occasion-item-content h3,
+.recommendation-image-content h3,
+.party-cta-content h2 {
+  overflow-wrap: anywhere;
+}
+
+.packages-light-hero img,
+.package-featured img,
+.included-benefit-image img,
+.recommendation-image-wrap img {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   Samsung Galaxy S8+
+   360px - 740px
+========================================================= */
+
+@media screen and (min-width: 360px) and (max-width: 740px) {
+  .packages-light-hero {
+    height: auto;
+    min-height: calc(100svh - var(--header-height));
+  }
+
+  .packages-light-hero .container {
+    width: calc(100% - 28px);
+    max-width: none;
+  }
+
+  .packages-light-layout {
+    grid-template-columns: 1fr;
+    min-height: calc(100svh - var(--header-height));
+  }
+
+  .packages-light-visual {
+    display: none;
+  }
+
+  .packages-light-content {
+    max-width: 100%;
+    margin: 0;
+    padding: 58px 0 48px;
+    text-align: center;
+    transform: translateY(25px);
+    animation-name: packagesContentInMobile;
+  }
+
+  .packages-light-kicker {
+    gap: 7px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    letter-spacing: 1.3px;
+  }
+
+  .packages-light-kicker-line,
+  .packages-kicker-line,
+  .party-cta-line {
+    width: 24px;
+  }
+
+  .packages-light-content h1 {
+    font-size: clamp(36px, 10vw, 48px);
+    line-height: 1.06;
+    letter-spacing: -0.8px;
+  }
+
+  .packages-light-content h1 span {
+    width: auto;
+    margin-top: 5px;
+  }
+
+  .packages-light-content > p {
+    max-width: 100%;
+    margin: 17px auto 0;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .packages-light-actions {
+    justify-content: center;
+    gap: 9px;
+    margin-top: 22px;
+  }
+
+  .packages-light-btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+
+  .packages-light-features {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px 15px;
+    margin-top: 26px;
+  }
+
+  .packages-light-feature {
+    font-size: 13px;
+  }
+
+  .packages-light-feature svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .packages-light-divider {
+    height: 25px;
+  }
+
+  .orbit-one {
+    width: 240px;
+    height: 240px;
+    right: -150px;
+    bottom: -120px;
+  }
+
+  .orbit-two {
+    width: 170px;
+    height: 170px;
+    right: -90px;
+    bottom: -85px;
+  }
+
+  .packages-light-hero.packages-rtl .packages-light-content {
+    margin: 0;
+    padding: 58px 0 48px;
+    text-align: center;
+    transform: translateY(25px);
+  }
+
+  .packages-light-hero.packages-rtl .packages-light-kicker {
+    flex-direction: row-reverse;
+  }
+
+  .packages-light-hero.packages-rtl .packages-light-actions {
+    justify-content: center;
+  }
+
+  .package-category-section,
+  .package-comparison-section,
+  .included-benefits-section,
+  .custom-package-section,
+  .occasion-match-section {
+    padding: 44px 0;
+  }
+
+  .party-cta-section {
+    padding: 44px 0;
+  }
+
+  .package-category-heading,
+  .package-comparison-heading,
+  .included-benefits-heading,
+  .custom-package-heading,
+  .occasion-match-heading {
+    margin-bottom: 26px;
+  }
+
+  .packages-section-kicker,
+  .party-cta-kicker {
+    gap: 7px;
+    font-size: 12px;
+    letter-spacing: 1.3px;
+  }
+
+  .package-category-heading h2,
+  .package-comparison-heading h2,
+  .included-benefits-heading h2,
+  .custom-package-heading h2,
+  .occasion-match-heading h2 {
+    font-size: clamp(30px, 8vw, 40px);
+    line-height: 1.1;
+    letter-spacing: -.5px;
+  }
+
+  .package-category-heading p,
+  .package-comparison-heading p,
+  .included-benefits-heading p,
+  .custom-package-heading p,
+  .occasion-match-heading p {
+    margin-top: 11px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .package-category-layout {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    min-height: 0;
+  }
+
+  .package-featured {
+    min-height: 390px;
+    border-radius: 17px;
+  }
+
+  .package-featured-content {
+    left: 18px;
+    right: 18px;
+    bottom: 19px;
+  }
+
+  .package-featured-number {
+    top: 16px;
+    right: 17px;
+    font-size: 34px;
+  }
+
+  html[dir="rtl"] .package-featured-number {
+    right: auto;
+    left: 17px;
+  }
+
+  .package-category-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+
+  .package-category-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .package-featured-content > span {
+    margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 1.3px;
+  }
+
+  .package-featured-content h3 {
+    margin-top: 5px;
+    font-size: 28px;
+  }
+
+  .package-featured-content p {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .package-view-btn {
+    min-height: 40px;
+    margin-top: 13px;
+    padding: 8px 13px;
+    font-size: 14px;
+  }
+
+  .package-category-list {
+    grid-template-rows: none;
+    gap: 12px;
+  }
+
+  .package-category-card {
+    min-height: 205px;
+    padding: 18px 16px;
+    border-left-width: 3px;
+    border-radius: 15px;
+  }
+
+  html[dir="rtl"] .package-category-card {
+    border-left-width: 1px;
+    border-right: 3px solid transparent;
+  }
+
+  .package-card-top > span {
+    font-size: 14px;
+  }
+
+  .package-category-card .package-category-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .package-category-card .package-category-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .package-card-content {
+    margin-top: 10px;
+  }
+
+  .package-card-content small {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  .package-card-content h3 {
+    margin-top: 4px;
+    font-size: 22px;
+  }
+
+  .package-card-content p {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .package-comparison-board {
+    display: block;
+    overflow-x: auto;
+    border-radius: 15px;
+  }
+
+  .package-comparison-details {
+    min-width: 620px;
+  }
+
+  .package-compare-feature {
+    grid-template-columns: 145px minmax(475px, 1fr);
+    min-height: 70px;
+  }
+
+  .package-feature-label {
+    gap: 6px;
+    padding: 12px 9px;
+    font-size: 13px;
+  }
+
+  .package-feature-label svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .package-feature-values {
+    grid-template-columns: repeat(4, minmax(118px, 1fr));
+  }
+
+  .package-feature-values span {
+    padding: 10px 7px;
+    font-size: 12px;
+  }
+
+  .package-feature-values .included {
+    gap: 3px;
+  }
+
+  .package-feature-values .included svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .package-comparison-sidebar {
+    min-width: 620px;
+    padding: 12px;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .package-comparison-packages {
+    grid-template-columns: repeat(4, minmax(140px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 8px;
+  }
+
+  .package-compare-package {
+    gap: 8px;
+    padding: 9px;
+  }
+
+  .package-compare-package.active::before {
+    left: 50%;
+    top: auto;
+    bottom: -13px;
+    width: 35px;
+    height: 3px;
+    transform: translateX(-50%);
+    border-radius: 3px 3px 0 0;
+  }
+
+  .package-compare-icon {
+    width: 37px;
+    height: 37px;
+    border-radius: 9px;
+  }
+
+  .package-compare-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .package-compare-text span {
+    font-size: 11px;
+  }
+
+  .package-compare-text strong {
+    font-size: 14px;
+  }
+
+  .package-comparison-note {
+    align-items: flex-start;
+    margin-top: 14px;
+    font-size: 13px;
+  }
+
+  .package-comparison-note span {
+    font-size: 13px;
+  }
+
+  .included-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .included-benefit-card {
+    border-radius: 15px;
+  }
+
+  .included-benefit-image {
+    height: 190px;
+  }
+
+  .included-benefit-number {
+    right: 13px;
+    bottom: 11px;
+    font-size: 15px;
+  }
+
+  html[dir="rtl"] .included-benefit-number {
+    right: auto;
+    left: 13px;
+  }
+
+  .included-benefit-content {
+    gap: 11px;
+    padding: 17px 15px;
+  }
+
+  .included-benefit-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 10px;
+  }
+
+  .included-benefit-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .included-benefit-content h3 {
+    font-size: 21px;
+  }
+
+  .included-benefit-content p {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .custom-package-layout {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .custom-package-summary {
+    padding: 21px 17px;
+    border-radius: 16px;
+  }
+
+  .custom-summary-top {
+    gap: 11px;
+  }
+
+  .custom-summary-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 11px;
+  }
+
+  .custom-summary-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .custom-summary-top span {
+    font-size: 13px;
+  }
+
+  .custom-summary-top h3 {
+    font-size: 22px;
+  }
+
+  .custom-summary-text {
+    margin-top: 17px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .custom-summary-list {
+    gap: 10px;
+    margin-top: 17px;
+  }
+
+  .custom-summary-list div {
+    gap: 7px;
+    font-size: 14px;
+  }
+
+  .custom-summary-list svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .custom-summary-bottom {
+    margin-top: 21px;
+    padding-top: 17px;
+  }
+
+  .custom-summary-bottom span {
+    font-size: 12px;
+  }
+
+  .custom-summary-bottom strong {
+    font-size: 16px;
+  }
+
+  .custom-package-options {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 12px;
+  }
+
+  .custom-option {
+    min-height: 145px;
+    gap: 11px;
+    padding: 16px 13px;
+    border-radius: 14px;
+  }
+
+  .custom-option-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 11px;
+  }
+
+  .custom-option-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .custom-option-content > span {
+    font-size: 12px;
+    letter-spacing: .7px;
+  }
+
+  .custom-option-content h3 {
+    margin-top: 3px;
+    font-size: 20px;
+  }
+
+  .custom-option-content p {
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .custom-option-check {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+  }
+
+  .custom-option-check svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .custom-package-footer {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 15px;
+    padding: 15px;
+  }
+
+  .custom-footer-info {
+    align-items: flex-start;
+    font-size: 14px;
+  }
+
+  .custom-package-btn {
+    width: 100%;
+    min-height: 45px;
+    font-size: 15px;
+  }
+
+  .occasion-match-board {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .occasion-list {
+    grid-template-rows: none;
+    gap: 9px;
+  }
+
+  .occasion-item {
+    min-height: 78px;
+    gap: 9px;
+    padding: 12px 11px;
+    border-radius: 13px;
+  }
+
+  html[dir="rtl"] .occasion-item {
+    text-align: right;
+  }
+
+  .occasion-item.active::before {
+    width: 3px;
+  }
+
+  html[dir="rtl"] .occasion-item.active::before {
+    right: 0;
+    left: auto;
+  }
+
+  .occasion-number {
+    width: 23px;
+    font-size: 13px;
+  }
+
+  .occasion-item-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .occasion-item-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .occasion-item-content span {
+    font-size: 12px;
+    letter-spacing: .8px;
+  }
+
+  .occasion-item-content h3 {
+    margin-top: 3px;
+    font-size: 17px;
+  }
+
+  .occasion-arrow {
+    width: 17px;
+    height: 17px;
+  }
+
+  .occasion-recommendation {
+    min-height: 430px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .recommendation-top {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .recommendation-label {
+    gap: 5px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .recommendation-label svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .recommendation-match {
+    padding: 5px 7px;
+    font-size: 12px;
+  }
+
+  .recommendation-image-wrap {
+    min-height: 320px;
+    border-radius: 13px;
+  }
+
+  .recommendation-image-wrap img {
+    min-height: 320px;
+  }
+
+  .recommendation-image-content {
+    left: 17px;
+    right: 17px;
+    bottom: 17px;
+  }
+
+  .recommendation-image-content > span {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+
+  .recommendation-image-content h3 {
+    font-size: 25px;
+  }
+
+  .recommendation-btn {
+    min-height: 41px;
+    margin-top: 12px;
+    padding: 0 13px;
+    font-size: 14px;
+  }
+
+  .party-cta-card {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 18px;
+    min-height: 0;
+    padding: 25px 17px;
+    border-radius: 16px;
+  }
+
+  .party-cta-content {
+    max-width: 100%;
+  }
+
+  .party-cta-kicker {
+    justify-content: flex-start;
+    margin-bottom: 9px;
+    font-size: 12px;
+  }
+
+  .party-cta-content h2 {
+    font-size: clamp(29px, 8vw, 39px);
+    letter-spacing: -.4px;
+  }
+
+  .party-cta-content p {
+    margin-top: 9px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .party-cta-action {
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .party-cta-note {
+    justify-content: center;
+    font-size: 13px;
+  }
+
+  .party-cta-btn {
+    width: 100%;
+    min-height: 47px;
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   iPad Mini
+   768px - 820px
+========================================================= */
+
+@media screen and (min-width: 768px) and (max-width: 820px) {
+  .packages-light-hero {
+    height: 650px;
+    min-height: 650px;
+  }
+
+  .packages-light-hero .container {
+    width: calc(100% - 56px);
+  }
+
+  .packages-light-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .packages-light-visual {
+    display: none;
+  }
+
+  .packages-light-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 70px 0;
+    text-align: center;
+    transform: translateY(25px);
+    animation-name: packagesContentInMobile;
+  }
+
+  .packages-light-kicker {
+    margin-bottom: 17px;
+  }
+
+  .packages-light-content h1 {
+    font-size: clamp(50px, 7vw, 65px);
+  }
+
+  .packages-light-content > p {
+    max-width: 620px;
+    margin-inline: auto;
+    font-size: 17px;
+  }
+
+  .packages-light-actions {
+    justify-content: center;
+  }
+
+  .packages-light-features {
+    justify-content: center;
+  }
+
+  .packages-light-hero.packages-rtl .packages-light-content {
+    margin: 0 auto;
+    padding: 70px 0;
+    text-align: center;
+    transform: translateY(25px);
+  }
+
+  .packages-light-hero.packages-rtl .packages-light-actions {
+    justify-content: center;
+  }
+
+  .package-category-section,
+  .package-comparison-section,
+  .included-benefits-section,
+  .custom-package-section,
+  .occasion-match-section,
+  .party-cta-section {
+    padding: 60px 0;
+  }
+
+  .package-category-heading,
+  .package-comparison-heading,
+  .included-benefits-heading,
+  .custom-package-heading,
+  .occasion-match-heading {
+    margin-bottom: 33px;
+  }
+
+  .package-category-heading h2,
+  .package-comparison-heading h2,
+  .included-benefits-heading h2,
+  .custom-package-heading h2,
+  .occasion-match-heading h2 {
+    font-size: clamp(37px, 5vw, 49px);
+  }
+
+  .package-category-heading p,
+  .package-comparison-heading p,
+  .included-benefits-heading p,
+  .custom-package-heading p,
+  .occasion-match-heading p {
+    font-size: 16px;
+  }
+
+  .package-category-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    min-height: 0;
+  }
+
+  .package-featured {
+    min-height: 480px;
+  }
+
+  .package-category-list {
+    grid-template-rows: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 13px;
+  }
+
+  .package-category-card {
+    min-height: 260px;
+    padding: 19px 15px;
+  }
+
+  .package-card-top > span {
+    font-size: 14px;
+  }
+
+  .package-category-card .package-category-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .package-card-content h3 {
+    font-size: 22px;
+  }
+
+  .package-card-content p {
+    font-size: 14px;
+  }
+
+  .package-comparison-board {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .package-comparison-details {
+    min-width: 760px;
+  }
+
+  .package-compare-feature {
+    grid-template-columns: 175px minmax(585px, 1fr);
+  }
+
+  .package-feature-values {
+    grid-template-columns: repeat(4, minmax(145px, 1fr));
+  }
+
+  .package-comparison-sidebar {
+    min-width: 760px;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .package-comparison-packages {
+    grid-template-columns: repeat(4, minmax(160px, 1fr));
+    grid-template-rows: 1fr;
+  }
+
+  .package-compare-package.active::before {
+    left: 50%;
+    top: auto;
+    bottom: -14px;
+    width: 42px;
+    height: 4px;
+    transform: translateX(-50%);
+    border-radius: 4px 4px 0 0;
+  }
+
+  .included-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .included-benefit-card:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 9px);
+    justify-self: center;
+  }
+
+  .included-benefit-image {
+    height: 205px;
+  }
+
+  .included-benefit-content {
+    padding: 20px;
+  }
+
+  .custom-package-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .custom-package-summary {
+    padding: 25px;
+  }
+
+  .custom-package-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(180px, 1fr));
+  }
+
+  .custom-option {
+    min-height: 180px;
+    padding: 18px;
+  }
+
+  .custom-option-content h3 {
+    font-size: 21px;
+  }
+
+  .custom-package-footer {
+    margin-top: 18px;
+  }
+
+  .occasion-match-board {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .occasion-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+    gap: 11px;
+  }
+
+  .occasion-item {
+    min-height: 91px;
+    padding: 14px;
+  }
+
+  .occasion-recommendation {
+    min-height: 520px;
+  }
+
+  .recommendation-image-wrap,
+  .recommendation-image-wrap img {
+    min-height: 400px;
+  }
+
+  .party-cta-card {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 22px;
+    padding: 31px;
+  }
+
+  .party-cta-action {
+    align-items: center;
+  }
+
+  .party-cta-btn {
+    min-width: 270px;
+  }
+}
+
+
+/* =========================================================
+   iPad Pro 11"
+   821px - 1024px
+========================================================= */
+
+@media screen and (min-width: 821px) and (max-width: 1024px) {
+  .packages-light-hero {
+    height: 690px;
+    min-height: 690px;
+  }
+
+  .packages-light-hero .container {
+    width: calc(100% - 72px);
+  }
+
+  .packages-light-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .packages-light-visual {
+    display: none;
+  }
+
+  .packages-light-content {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 80px 0;
+    text-align: center;
+    transform: translateY(25px);
+    animation-name: packagesContentInMobile;
+  }
+
+  .packages-light-content h1 {
+    font-size: clamp(55px, 6.5vw, 72px);
+  }
+
+  .packages-light-content > p {
+    max-width: 700px;
+    margin-inline: auto;
+    font-size: 18px;
+  }
+
+  .packages-light-actions {
+    justify-content: center;
+  }
+
+  .packages-light-features {
+    justify-content: center;
+  }
+
+  .packages-light-hero.packages-rtl .packages-light-content {
+    margin: 0 auto;
+    padding: 80px 0;
+    text-align: center;
+    transform: translateY(25px);
+  }
+
+  .packages-light-hero.packages-rtl .packages-light-actions {
+    justify-content: center;
+  }
+
+  .package-category-section,
+  .package-comparison-section,
+  .included-benefits-section,
+  .custom-package-section,
+  .occasion-match-section,
+  .party-cta-section {
+    padding: 68px 0;
+  }
+
+  .package-category-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 17px;
+    min-height: 570px;
+  }
+
+  .package-featured {
+    min-height: 570px;
+  }
+
+  .package-featured-content {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+  }
+
+  .package-featured-content h3 {
+    font-size: 32px;
+  }
+
+  .package-category-list {
+    gap: 13px;
+  }
+
+  .package-category-card {
+    padding: 18px 17px;
+  }
+
+  .package-category-card .package-category-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .package-card-content h3 {
+    font-size: 22px;
+  }
+
+  .package-card-content p {
+    font-size: 14px;
+  }
+
+  .package-comparison-board {
+    grid-template-columns: minmax(0, 1fr) 230px;
+  }
+
+  .package-compare-feature {
+    grid-template-columns: 145px minmax(0, 1fr);
+  }
+
+  .package-feature-label {
+    gap: 7px;
+    padding: 15px 12px;
+    font-size: 14px;
+  }
+
+  .package-feature-values span {
+    padding: 12px 6px;
+    font-size: 13px;
+  }
+
+  .package-comparison-sidebar {
+    padding: 10px;
+  }
+
+  .package-compare-package {
+    gap: 8px;
+    padding: 9px;
+  }
+
+  .package-compare-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .package-compare-text span {
+    font-size: 12px;
+  }
+
+  .package-compare-text strong {
+    font-size: 15px;
+  }
+
+  .included-benefits-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .included-benefit-image {
+    height: 185px;
+  }
+
+  .included-benefit-content {
+    gap: 10px;
+    padding: 18px 14px;
+  }
+
+  .included-benefit-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .included-benefit-content h3 {
+    font-size: 21px;
+  }
+
+  .included-benefit-content p {
+    font-size: 14px;
+  }
+
+  .custom-package-layout {
+    grid-template-columns: 275px minmax(0, 1fr);
+    gap: 17px;
+  }
+
+  .custom-package-summary {
+    padding: 21px;
+  }
+
+  .custom-summary-top {
+    gap: 10px;
+  }
+
+  .custom-summary-icon {
+    width: 49px;
+    height: 49px;
+  }
+
+  .custom-summary-top h3 {
+    font-size: 21px;
+  }
+
+  .custom-summary-text {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .custom-summary-list {
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .custom-summary-list div {
+    font-size: 14px;
+  }
+
+  .custom-package-options {
+    gap: 12px;
+  }
+
+  .custom-option {
+    min-height: 165px;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .custom-option-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .custom-option-content h3 {
+    font-size: 20px;
+  }
+
+  .custom-option-content p {
+    font-size: 14px;
+  }
+
+  .custom-package-footer {
+    margin-top: 17px;
+    padding: 15px;
+  }
+
+  .custom-footer-info {
+    font-size: 14px;
+  }
+
+  .custom-package-btn {
+    min-height: 44px;
+    padding-inline: 14px;
+    font-size: 14px;
+  }
+
+  .occasion-match-board {
+    grid-template-columns: 1fr 1fr;
+    gap: 17px;
+  }
+
+  .occasion-list {
+    gap: 9px;
+  }
+
+  .occasion-item {
+    min-height: 86px;
+    gap: 9px;
+    padding: 13px;
+  }
+
+  .occasion-number {
+    width: 24px;
+    font-size: 13px;
+  }
+
+  .occasion-item-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .occasion-item-content span {
+    font-size: 12px;
+  }
+
+  .occasion-item-content h3 {
+    font-size: 17px;
+  }
+
+  .occasion-recommendation {
+    padding: 18px;
+  }
+
+  .recommendation-image-wrap,
+  .recommendation-image-wrap img {
+    min-height: 375px;
+  }
+
+  .recommendation-image-content {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .recommendation-image-content h3 {
+    font-size: 27px;
+  }
+
+  .party-cta-card {
+    gap: 25px;
+    padding: 30px;
+  }
+
+  .party-cta-content h2 {
+    font-size: 39px;
+  }
+
+  .party-cta-content p {
+    font-size: 15px;
+  }
+
+  .party-cta-action {
+    gap: 11px;
+  }
+
+  .party-cta-note {
+    font-size: 13px;
+  }
+
+  .party-cta-btn {
+    min-height: 46px;
+    padding-inline: 17px;
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   Nest Hub
+   1024px x 600px
+========================================================= */
+
+@media screen and (width: 1024px) and (height: 600px) {
+  .packages-light-hero {
+    height: 522px;
+    min-height: 522px;
+  }
+
+  .packages-light-hero .container {
+    width: calc(100% - 48px);
+  }
+
+  .packages-light-content {
+    padding: 50px 0;
+  }
+
+  .packages-light-content h1 {
+    font-size: 52px;
+  }
+
+  .packages-light-content > p {
+    max-width: 680px;
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .packages-light-actions {
+    margin-top: 20px;
+  }
+
+  .packages-light-btn {
+    min-height: 44px;
+  }
+
+  .packages-light-features {
+    margin-top: 24px;
+  }
+
+  .package-category-section,
+  .package-comparison-section,
+  .included-benefits-section,
+  .custom-package-section,
+  .occasion-match-section,
+  .party-cta-section {
+    padding: 40px 0;
+  }
+
+  .package-category-heading,
+  .package-comparison-heading,
+  .included-benefits-heading,
+  .custom-package-heading,
+  .occasion-match-heading {
+    margin-bottom: 24px;
+  }
+
+  .package-category-heading h2,
+  .package-comparison-heading h2,
+  .included-benefits-heading h2,
+  .custom-package-heading h2,
+  .occasion-match-heading h2 {
+    font-size: 36px;
+  }
+
+  .package-category-heading p,
+  .package-comparison-heading p,
+  .included-benefits-heading p,
+  .custom-package-heading p,
+  .occasion-match-heading p {
+    margin-top: 9px;
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .package-category-layout {
+    min-height: 455px;
+    gap: 14px;
+  }
+
+  .package-featured {
+    min-height: 455px;
+    border-radius: 17px;
+  }
+
+  .package-featured-content {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .package-featured-number {
+    top: 16px;
+    right: 18px;
+    font-size: 34px;
+  }
+
+  .package-featured-content h3 {
+    font-size: 28px;
+  }
+
+  .package-featured-content p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .package-category-list {
+    gap: 10px;
+  }
+
+  .package-category-card {
+    padding: 14px 16px;
+    border-radius: 14px;
+  }
+
+  .package-category-card .package-category-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .package-card-content {
+    margin-top: 8px;
+  }
+
+  .package-card-content small,
+  .package-card-content p {
+    font-size: 13px;
+  }
+
+  .package-card-content h3 {
+    font-size: 21px;
+  }
+
+  .package-view-btn {
+    min-height: 37px;
+    margin-top: 9px;
+    padding: 7px 11px;
+    font-size: 13px;
+  }
+
+  .package-comparison-board {
+    grid-template-columns: minmax(0, 1fr) 205px;
+  }
+
+  .package-compare-feature {
+    grid-template-columns: 125px minmax(0, 1fr);
+    min-height: 68px;
+  }
+
+  .package-feature-label {
+    gap: 5px;
+    padding: 11px 9px;
+    font-size: 12px;
+  }
+
+  .package-feature-label svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .package-feature-values span {
+    padding: 9px 5px;
+    font-size: 12px;
+  }
+
+  .package-comparison-sidebar {
+    padding: 8px;
+  }
+
+  .package-comparison-packages {
+    gap: 6px;
+  }
+
+  .package-compare-package {
+    gap: 6px;
+    padding: 7px;
+  }
+
+  .package-compare-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .package-compare-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .package-compare-text {
+    gap: 2px;
+  }
+
+  .package-compare-text span {
+    font-size: 10px;
+  }
+
+  .package-compare-text strong {
+    font-size: 13px;
+  }
+
+  .included-benefits-grid {
+    gap: 14px;
+  }
+
+  .included-benefit-image {
+    height: 175px;
+  }
+
+  .included-benefit-content {
+    gap: 8px;
+    padding: 15px 12px;
+  }
+
+  .included-benefit-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .included-benefit-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .included-benefit-content h3 {
+    font-size: 19px;
+  }
+
+  .included-benefit-content p {
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .custom-package-layout {
+    grid-template-columns: 245px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .custom-package-summary {
+    padding: 17px;
+  }
+
+  .custom-summary-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .custom-summary-top span {
+    font-size: 12px;
+  }
+
+  .custom-summary-top h3 {
+    font-size: 19px;
+  }
+
+  .custom-summary-text {
+    margin-top: 13px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .custom-summary-list {
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .custom-summary-list div {
+    gap: 7px;
+    font-size: 13px;
+  }
+
+  .custom-summary-bottom {
+    padding-top: 15px;
+  }
+
+  .custom-summary-bottom span {
+    font-size: 12px;
+  }
+
+  .custom-summary-bottom strong {
+    font-size: 15px;
+  }
+
+  .custom-package-options {
+    gap: 10px;
+  }
+
+  .custom-option {
+    min-height: 150px;
+    gap: 8px;
+    padding: 13px;
+  }
+
+  .custom-option-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .custom-option-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .custom-option-content > span {
+    font-size: 11px;
+  }
+
+  .custom-option-content h3 {
+    font-size: 18px;
+  }
+
+  .custom-option-content p {
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .custom-option-check {
+    width: 26px;
+    height: 26px;
+  }
+
+  .custom-package-footer {
+    gap: 12px;
+    margin-top: 14px;
+    padding: 13px;
+  }
+
+  .custom-footer-info {
+    font-size: 13px;
+  }
+
+  .custom-package-btn {
+    min-height: 40px;
+    padding-inline: 12px;
+    font-size: 13px;
+  }
+
+  .occasion-match-board {
+    gap: 14px;
+  }
+
+  .occasion-list {
+    gap: 7px;
+  }
+
+  .occasion-item {
+    min-height: 70px;
+    gap: 7px;
+    padding: 10px;
+  }
+
+  .occasion-number {
+    width: 22px;
+    font-size: 12px;
+  }
+
+  .occasion-item-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .occasion-item-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .occasion-item-content span {
+    font-size: 11px;
+  }
+
+  .occasion-item-content h3 {
+    font-size: 15px;
+  }
+
+  .occasion-arrow {
+    width: 16px;
+    height: 16px;
+  }
+
+  .occasion-recommendation {
+    padding: 15px;
+    border-radius: 16px;
+  }
+
+  .recommendation-top {
+    margin-bottom: 11px;
+  }
+
+  .recommendation-label,
+  .recommendation-match {
+    font-size: 12px;
+  }
+
+  .recommendation-image-wrap,
+  .recommendation-image-wrap img {
+    min-height: 300px;
+  }
+
+  .recommendation-image-content {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .recommendation-image-content > span {
+    font-size: 12px;
+  }
+
+  .recommendation-image-content h3 {
+    font-size: 24px;
+  }
+
+  .recommendation-btn {
+    min-height: 39px;
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+  .party-cta-card {
+    gap: 25px;
+    min-height: 175px;
+    padding: 25px 28px;
+  }
+
+  .party-cta-content h2 {
+    font-size: 34px;
+  }
+
+  .party-cta-content p {
+    margin-top: 9px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .party-cta-kicker {
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+
+  .party-cta-action {
+    gap: 10px;
+  }
+
+  .party-cta-note {
+    font-size: 12px;
+  }
+
+  .party-cta-btn {
+    min-height: 43px;
+    padding-inline: 15px;
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   RTL corrections
+========================================================= */
+
+html[dir="rtl"] .packages-light-content {
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 48px;
+  text-align: right;
+  transform: translateX(-40px);
+  animation-name: packagesContentInRTL;
+}
+
+html[dir="rtl"] .package-category-card {
+  border-left: 1px solid var(--border);
+  border-right: 4px solid transparent;
+}
+
+html[dir="rtl"] .package-category-card:hover {
+  border-left-color: var(--border);
+  border-right-color: var(--primary);
+  transform: translateX(5px);
+}
+
+html[dir="rtl"] .package-category-card::before {
+  left: auto;
+  right: 0;
+  background: linear-gradient(270deg, rgba(255, 90, 0, 0.08), transparent);
+}
+
+html[dir="rtl"] .package-category-card::after {
+  right: auto;
+  left: -60px;
+}
+
+html[dir="rtl"] .package-featured-content {
+  left: 35px;
+  right: 35px;
+  text-align: right;
+}
+
+html[dir="rtl"] .package-featured-number {
+  right: auto;
+  left: 28px;
+}
+
+html[dir="rtl"] .package-feature-values span {
+  border-left: 0;
+  border-right: 1px solid var(--border);
+}
+
+html[dir="rtl"] .package-feature-values span:first-child {
+  border-right: 0;
+}
+
+html[dir="rtl"] .package-comparison-sidebar {
+  border-left: 0;
+  border-right: 1px solid var(--border);
+}
+
+html[dir="rtl"] .package-compare-package:hover {
+  transform: translateX(4px);
+}
+
+html[dir="rtl"] .package-compare-package.active::before {
+  left: auto;
+  right: -15px;
+  border-radius: 4px 0 0 4px;
+}
+
+html[dir="rtl"] .included-benefit-number {
+  right: auto;
+  left: 16px;
+}
+
+html[dir="rtl"] .custom-package-summary::after {
+  right: auto;
+  left: -85px;
+}
+
+html[dir="rtl"] .custom-option,
+html[dir="rtl"] .occasion-item {
+  text-align: right;
+}
+
+html[dir="rtl"] .occasion-item:hover {
+  transform: translateX(-5px);
+}
+
+html[dir="rtl"] .occasion-item.active::before {
+  right: 0;
+  left: auto;
+}
+
+html[dir="rtl"] .occasion-arrow {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .occasion-item.active .occasion-arrow {
+  transform: translateX(-3px) scaleX(-1);
+}
+
+html[dir="rtl"] .recommendation-image-content {
+  left: 26px;
+  right: 26px;
+  text-align: right;
+}
+
+html[dir="rtl"] .party-cta-card::before {
+  right: auto;
+  left: 250px;
+}
+
+html[dir="rtl"] .party-cta-card::after {
+  left: auto;
+  right: -90px;
+}
+
+html[dir="rtl"] .party-cta-action {
+  align-items: flex-start;
+}
+
+
+/* Mobile RTL overrides */
+
+@media screen and (min-width: 360px) and (max-width: 740px) {
+  html[dir="rtl"] .packages-light-content {
+    margin: 0;
+    padding: 58px 0 48px;
+    text-align: center;
+    transform: translateY(25px);
+  }
+
+  html[dir="rtl"] .packages-light-hero.packages-rtl .packages-light-actions {
+    justify-content: center;
+  }
+
+  html[dir="rtl"] .package-featured-content,
+  html[dir="rtl"] .recommendation-image-content {
+    left: 17px;
+    right: 17px;
+    text-align: right;
+  }
+
+  html[dir="rtl"] .party-cta-action {
+    align-items: stretch;
+  }
+}
+
+
+/* Tablet centered hero overrides */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  html[dir="rtl"] .packages-light-content {
+    margin: 0 auto;
+    padding: 70px 0;
+    text-align: center;
+    transform: translateY(25px);
+  }
+
+  html[dir="rtl"] .packages-light-hero.packages-rtl .packages-light-actions {
+    justify-content: center;
+  }
+
+  html[dir="rtl"] .party-cta-action {
+    align-items: center;
+  }
+}
+
+
+/* Nest Hub RTL override */
+
+@media screen and (width: 1024px) and (height: 600px) {
+  html[dir="rtl"] .packages-light-content {
+    padding: 50px 0;
+  }
+}
+
+
+/* =========================================================
+   Reduced motion
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .packages-light-content,
+  .packages-light-bg,
+  .packages-light-orbit,
+  .package-featured-bg,
+  .package-category-card,
+  .package-comparison-board *,
+  .included-benefit-card,
+  .included-benefit-image img,
+  .custom-option,
+  .occasion-item,
+  .recommendation-image-wrap img,
+  .party-cta-btn {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+@keyframes packagesContentInMobile {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
