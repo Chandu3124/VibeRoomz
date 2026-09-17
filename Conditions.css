@@ -1,0 +1,450 @@
+/* =================================
+   VIBEROOMZ TERMS & CONDITIONS
+   ================================= */
+
+html:has(.vr-terms-page),
+body.vr-terms-body{
+  margin:0;
+  padding:0 !important;
+  width:100%;
+  min-height:100%;
+}
+
+.vr-terms-page{
+  min-height:100vh;
+
+  padding:35px 20px 50px;
+
+  background:var(--soft-bg);
+  color:var(--text);
+
+  position:relative;
+}
+
+
+/* ================================
+   TOP CONTROLS
+   ================================ */
+
+.vr-terms-controls{
+  position:fixed;
+
+  top:16px;
+  right:18px;
+
+  display:flex;
+  gap:8px;
+
+  z-index:100;
+}
+
+.vr-terms-control{
+  width:44px;
+  height:44px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:0;
+
+  border:1px solid var(--primary);
+  border-radius:14px;
+
+  background:var(--card-bg);
+  color:var(--text);
+
+  cursor:pointer;
+
+  transition:.25s ease;
+}
+
+.vr-terms-control svg{
+  width:19px;
+  height:19px;
+}
+
+.vr-terms-control:hover{
+  background:var(--primary);
+  color:#fff;
+
+  transform:translateY(-2px);
+}
+
+
+/* ================================
+   MAIN CARD
+   ================================ */
+
+.vr-terms-card{
+  width:92%;
+  max-width:1050px;
+
+  margin:25px auto 0;
+
+  padding:35px 50px 25px;
+
+  background:var(--card-bg);
+
+  border:1px solid var(--border);
+  border-radius:22px;
+
+  box-shadow:0 18px 50px rgba(0,0,0,.10);
+}
+
+
+/* ================================
+   LOGO
+   ================================ */
+
+.vr-terms-logo{
+  width:max-content;
+
+  margin:0 auto 28px;
+
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+
+  color:var(--secondary);
+}
+
+.vr-terms-logo img{
+  width:80px;
+  height:80px;
+
+  object-fit:contain;
+
+  flex:0 0 80px;
+}
+
+.vr-terms-logo h1{
+  margin:0;
+
+  font-size:32px;
+  line-height:1;
+
+  font-weight:600;
+
+  color:var(--secondary);
+}
+
+.vr-terms-logo span{
+  color:var(--primary);
+}
+
+
+/* ================================
+   HEADER
+   ================================ */
+
+.vr-terms-header{
+  text-align:center;
+
+  padding-bottom:30px;
+
+  border-bottom:1px solid var(--border);
+}
+
+.vr-terms-title-icon{
+  width:58px;
+  height:58px;
+
+  margin:0 auto 12px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid var(--primary);
+  border-radius:16px;
+
+  color:var(--primary);
+
+  background:var(--soft-bg);
+}
+
+.vr-terms-title-icon svg{
+  width:27px;
+  height:27px;
+}
+
+.vr-terms-header > span{
+  display:block;
+
+  margin-bottom:6px;
+
+  font-size:15px;
+  font-weight:700;
+
+  letter-spacing:1.5px;
+
+  color:var(--secondary);
+}
+
+.vr-terms-header h2{
+  margin:0 0 10px;
+
+  font-size:38px;
+  line-height:1.1;
+
+  color:var(--text);
+}
+
+.vr-terms-header h2 strong{
+  color:var(--primary);
+}
+
+.vr-terms-header p{
+  max-width:680px;
+
+  margin:0 auto 10px;
+
+  font-size:17px;
+  line-height:1.5;
+
+  color:var(--muted);
+}
+
+.vr-terms-header small{
+  font-size:15px;
+  color:var(--muted);
+}
+
+
+/* ================================
+   CONTENT
+   ================================ */
+
+.vr-terms-content{
+  padding-top:28px;
+}
+
+.vr-terms-content section{
+  padding:0 0 28px;
+
+  margin-bottom:28px;
+
+  border-bottom:1px solid var(--border);
+}
+
+.vr-terms-content section:last-child{
+  margin-bottom:0;
+}
+
+.vr-terms-section-title{
+  display:flex;
+  align-items:center;
+
+  gap:10px;
+
+  margin-bottom:10px;
+}
+
+.vr-terms-section-title svg{
+  width:21px;
+  height:21px;
+
+  flex:0 0 21px;
+
+  color:var(--primary);
+}
+
+.vr-terms-section-title h3{
+  margin:0;
+
+  font-size:22px;
+  line-height:1.2;
+
+  color:var(--secondary);
+}
+
+.vr-terms-content p{
+  margin:0 0 11px;
+
+  font-size:16px;
+  line-height:1.7;
+
+  color:var(--text);
+}
+
+.vr-terms-content p:last-child{
+  margin-bottom:0;
+}
+
+
+/* ================================
+   LIST
+   ================================ */
+
+.vr-terms-content ul{
+  margin:10px 0 0;
+  padding:0;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  gap:8px 30px;
+
+  list-style:none;
+}
+
+.vr-terms-content li{
+  position:relative;
+
+  padding-left:22px;
+
+  font-size:16px;
+  line-height:1.5;
+
+  color:var(--text);
+}
+
+.vr-terms-content li::before{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:9px;
+
+  width:7px;
+  height:7px;
+
+  border-radius:50%;
+
+  background:var(--primary);
+}
+
+
+/* ================================
+   CONTACT
+   ================================ */
+
+.vr-terms-contact{
+  border-bottom:0 !important;
+
+  padding-bottom:10px !important;
+}
+
+.vr-terms-contact-box{
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:12px;
+
+  margin-top:18px;
+}
+
+.vr-terms-contact-box div{
+  display:flex;
+  align-items:center;
+
+  gap:9px;
+
+  padding:12px 16px;
+
+  border:1px solid var(--border);
+  border-radius:12px;
+
+  background:var(--soft-bg);
+
+  font-size:15px;
+
+  color:var(--text);
+}
+
+.vr-terms-contact-box svg{
+  width:18px;
+  height:18px;
+
+  color:var(--primary);
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+.vr-terms-footer{
+  padding-top:22px;
+
+  border-top:1px solid var(--border);
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:15px;
+
+  font-size:15px;
+
+  color:var(--muted);
+}
+
+.vr-terms-footer a{
+  display:flex;
+  align-items:center;
+
+  gap:6px;
+
+  color:var(--primary);
+
+  font-weight:700;
+}
+
+.vr-terms-footer a:hover{
+  color:var(--secondary);
+}
+
+.vr-terms-footer svg{
+  width:15px;
+  height:15px;
+}
+
+
+/* ================================
+   DARK MODE
+   ================================ */
+
+body.dark .vr-terms-page{
+  background:var(--soft-bg);
+}
+
+body.dark .vr-terms-title-icon{
+  background:var(--card-bg);
+}
+
+body.dark .vr-terms-contact-box{
+  background:var(--card-bg);
+}
+
+
+/* ================================
+   RTL
+   ================================ */
+
+html[dir="rtl"] .vr-terms-controls{
+  left:18px;
+  right:auto;
+}
+
+html[dir="rtl"] .vr-terms-card{
+  direction:rtl;
+}
+
+html[dir="rtl"] .vr-terms-content li{
+  padding-left:0;
+  padding-right:22px;
+}
+
+html[dir="rtl"] .vr-terms-content li::before{
+  left:auto;
+  right:0;
+}
+
+html[dir="rtl"] .vr-terms-footer a svg{
+  transform:rotate(180deg);
+}
+

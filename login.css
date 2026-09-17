@@ -1,0 +1,776 @@
+/* =========================================================
+   VIBEROOMZ AUTH PAGE
+   ========================================================= */
+
+/* Prevent page scrolling only on auth page */
+html:has(.vr-auth-page),
+body.vr-auth-body{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0 !important;
+  overflow:hidden;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+   ========================================================= */
+
+.vr-auth-page{
+  width:100%;
+  height:100vh;
+  height:100dvh;
+  min-height:0;
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin:0;
+  padding:0;
+
+  background-image:url("https://images.openai.com/static-rsc-4/-5fEtq1rOWCTJMXK8IxJnWm8sYtkp-tNv7tcjYT6OjupJZAuWK9LRPmppMHmMSGcqvwLW1Troc17F7u1vQ1yrZW-7AbGyLg_6XSz2UxyqPGGc_Qb2UUUmz30xx0HPYc7uUFYOoHcMGghL5qNCgbKfV5d1uH0HhJxu6poZikSi4BUmooJo9xNHG41IWkP8We_?purpose=fullsize");
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+
+  color:var(--text);
+
+  overflow:hidden;
+}
+
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.vr-auth-overlay{
+  position:absolute;
+  inset:0;
+
+  background:rgba(0,0,0,.50);
+
+  z-index:0;
+}
+
+
+/* =========================================================
+   TOP RIGHT CONTROLS
+   ========================================================= */
+
+.vr-auth-controls{
+  position:absolute;
+
+  top:18px;
+  right:18px;
+
+  z-index:20;
+
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:flex-end;
+
+  gap:10px;
+}
+
+
+.vr-auth-control{
+  width:48px;
+  height:48px;
+
+  flex:0 0 48px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:0;
+
+  border:1px solid var(--primary);
+  border-radius:14px;
+
+  background:var(--card-bg);
+  color:var(--text);
+
+  cursor:pointer;
+
+  transition:
+    background .25s ease,
+    color .25s ease,
+    transform .25s ease,
+    border-color .25s ease;
+}
+
+
+.vr-auth-control svg{
+  width:21px;
+  height:21px;
+  stroke-width:2.2;
+}
+
+
+.vr-auth-control:hover{
+  background:var(--primary);
+  color:var(--white);
+
+  transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   AUTH CONTAINER
+   ========================================================= */
+
+.vr-auth-container{
+  width:100%;
+  max-width:520px;
+
+  max-height:calc(100vh - 30px);
+  max-height:calc(100dvh - 30px);
+
+  position:relative;
+
+  z-index:2;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin:0;
+  padding:0;
+}
+
+
+/* =========================================================
+   AUTH CARD
+   ========================================================= */
+
+.vr-auth-card{
+  width:100%;
+
+  max-height:calc(100vh - 30px);
+  max-height:calc(100dvh - 30px);
+
+  margin:0;
+
+  padding:20px 30px;
+
+  background:var(--card-bg);
+
+  border:1px solid var(--border);
+
+  border-radius:18px;
+
+  box-shadow:
+    0 20px 55px rgba(0,0,0,.28);
+
+  overflow:hidden;
+
+  animation:vrAuthAppear .35s ease;
+}
+
+
+@keyframes vrAuthAppear{
+
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.vr-auth-logo{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:10px;
+
+  width:max-content;
+
+  margin:0 auto 6px;
+
+  color:var(--secondary);
+
+  cursor:pointer;
+}
+
+
+.vr-auth-logo img{
+  width:58px;
+  height:58px;
+
+  object-fit:contain;
+}
+
+
+.vr-auth-logo h1{
+  margin:0;
+
+  font-size:30px;
+  font-weight:600;
+
+  line-height:1;
+
+  letter-spacing:.4px;
+
+  color:var(--secondary);
+}
+
+
+.vr-auth-logo span{
+  color:var(--primary);
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.vr-auth-heading{
+  text-align:center;
+
+  margin-bottom:14px;
+}
+
+
+.vr-auth-heading h2{
+  margin:0 0 4px;
+
+  font-size:26px;
+  font-weight:700;
+
+  line-height:1.15;
+
+  color:var(--text);
+}
+
+
+.vr-auth-heading h2 span{
+  color:var(--primary);
+}
+
+
+.vr-auth-heading p{
+  margin:0;
+
+  font-size:15px;
+  line-height:1.3;
+
+  color:var(--muted);
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.vr-auth-form{
+  width:100%;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:10px;
+}
+
+
+/* =========================================================
+   FORM FIELD
+   ========================================================= */
+
+.vr-auth-field{
+  width:100%;
+}
+
+
+.vr-auth-field label{
+  display:block;
+
+  margin-bottom:5px;
+
+  font-size:15px;
+  font-weight:600;
+
+  color:var(--text);
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+   ========================================================= */
+
+.vr-input-wrap{
+  width:100%;
+  min-height:44px;
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+
+  border:1px solid var(--border);
+
+  border-radius:10px;
+
+  background:var(--white);
+
+  transition:
+    border-color .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+}
+
+
+.vr-input-wrap > svg{
+  width:18px;
+  height:18px;
+
+  flex:0 0 18px;
+
+  margin-left:13px;
+
+  color:var(--secondary);
+
+  stroke-width:2;
+}
+
+
+.vr-input-wrap:focus-within{
+  border-color:var(--primary);
+
+  box-shadow:
+    0 0 0 3px rgba(255,90,0,.10);
+}
+
+
+.vr-input-wrap input{
+  width:100%;
+  min-width:0;
+
+  height:42px;
+
+  border:0;
+  outline:0;
+
+  padding:0 12px;
+
+  background:transparent;
+
+  color:var(--text);
+
+  font-size:15px;
+}
+
+
+.vr-input-wrap input::placeholder{
+  color:var(--muted);
+  opacity:.8;
+}
+
+
+/* =========================================================
+   PASSWORD TOGGLE
+   ========================================================= */
+
+.vr-password-toggle{
+  width:40px;
+  height:40px;
+
+  flex:0 0 40px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-right:2px;
+
+  border:0;
+  background:transparent;
+
+  color:var(--muted);
+
+  cursor:pointer;
+
+  border-radius:8px;
+}
+
+
+.vr-password-toggle:hover{
+  color:var(--primary);
+}
+
+
+.vr-password-toggle svg{
+  width:18px;
+  height:18px;
+}
+
+
+/* =========================================================
+   REMEMBER / FORGOT
+   ========================================================= */
+
+.vr-auth-options{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:10px;
+
+  margin-top:1px;
+}
+
+
+.vr-remember{
+  display:flex;
+  align-items:center;
+
+  gap:7px;
+
+  cursor:pointer;
+
+  font-size:15px;
+  color:var(--text);
+}
+
+
+.vr-remember input{
+  width:16px;
+  height:16px;
+
+  margin:0;
+
+  accent-color:var(--primary);
+
+  cursor:pointer;
+}
+
+
+.vr-forgot{
+  font-size:15px;
+  font-weight:600;
+
+  color:var(--secondary);
+
+  transition:color .25s ease;
+}
+
+
+.vr-forgot:hover{
+  color:var(--primary);
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.vr-auth-primary-btn{
+  width:100%;
+  min-height:44px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:8px;
+
+  border:1px solid var(--primary);
+  border-radius:14px;
+
+  background:var(--primary);
+  color:var(--white);
+
+  font-size:16px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    transform .25s ease;
+}
+
+
+.vr-auth-primary-btn svg{
+  width:18px;
+  height:18px;
+}
+
+
+.vr-auth-primary-btn:hover{
+  background:var(--secondary);
+  border-color:var(--secondary);
+
+  transform:translateY(-1px);
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.vr-auth-divider{
+  display:flex;
+  align-items:center;
+
+  gap:10px;
+
+  margin:12px 0 10px;
+
+  color:var(--muted);
+
+  font-size:14px;
+}
+
+
+.vr-auth-divider::before,
+.vr-auth-divider::after{
+  content:"";
+
+  height:1px;
+
+  flex:1;
+
+  background:var(--border);
+}
+
+
+.vr-auth-divider span{
+  white-space:nowrap;
+}
+
+
+/* =========================================================
+   SOCIAL BUTTONS
+   ========================================================= */
+
+.vr-social-buttons{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:10px;
+}
+
+
+.vr-social-btn{
+  min-height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:7px;
+
+  padding:0 10px;
+
+  border:1px solid var(--border);
+  border-radius:10px;
+
+  background:var(--white);
+  color:var(--text);
+
+  font-size:15px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:
+    border-color .25s ease,
+    color .25s ease,
+    background .25s ease,
+    transform .25s ease;
+}
+
+
+.vr-social-btn svg{
+  width:17px;
+  height:17px;
+}
+
+
+.vr-social-btn:hover{
+  border-color:var(--secondary);
+
+  color:var(--secondary);
+
+  transform:translateY(-1px);
+}
+
+
+/* =========================================================
+   AUTH SWITCH
+   ========================================================= */
+
+.vr-auth-switch{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:6px;
+
+  margin-top:12px;
+
+  font-size:15px;
+
+  color:var(--muted);
+}
+
+
+.vr-auth-switch button{
+  border:0;
+  padding:0;
+
+  background:transparent;
+
+  color:var(--primary);
+
+  font-size:15px;
+  font-weight:700;
+
+  cursor:pointer;
+}
+
+
+.vr-auth-switch button:hover{
+  color:var(--secondary);
+}
+
+
+/* =========================================================
+   SIGNUP
+   ========================================================= */
+
+#signupCard{
+  display:none;
+}
+
+
+.vr-signup-card .vr-auth-heading{
+  margin-bottom:10px;
+}
+
+
+.vr-signup-card .vr-auth-form{
+  gap:7px;
+}
+
+
+.vr-signup-card .vr-auth-field label{
+  margin-bottom:3px;
+}
+
+
+.vr-signup-card .vr-input-wrap{
+  min-height:40px;
+}
+
+
+.vr-signup-card .vr-input-wrap input{
+  height:38px;
+}
+
+
+.vr-terms{
+  display:flex;
+  align-items:flex-start;
+
+  gap:7px;
+
+  margin-top:2px;
+
+  font-size:14px;
+  line-height:1.3;
+
+  color:var(--muted);
+
+  cursor:pointer;
+}
+
+
+.vr-terms input{
+  width:16px;
+  height:16px;
+
+  flex:0 0 16px;
+
+  margin:1px 0 0;
+
+  accent-color:var(--primary);
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+.vr-auth-page[dir="rtl"] .vr-auth-controls{
+  left:18px;
+  right:auto;
+}
+
+
+.vr-auth-page[dir="rtl"] .vr-auth-options{
+  flex-direction:row-reverse;
+}
+
+
+.vr-auth-page[dir="rtl"] .vr-input-wrap > svg{
+  margin-left:0;
+  margin-right:13px;
+}
+
+
+.vr-auth-page[dir="rtl"] .vr-input-wrap input{
+  text-align:right;
+}
+
+
+.vr-auth-page[dir="rtl"] .vr-password-toggle{
+  margin-right:0;
+  margin-left:2px;
+}
+
+
+.vr-auth-page[dir="rtl"] .vr-social-btn,
+.vr-auth-page[dir="rtl"] .vr-auth-primary-btn{
+  flex-direction:row-reverse;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark .vr-auth-overlay{
+  background:rgba(0,0,0,.64);
+}
+
+
+body.dark .vr-input-wrap,
+body.dark .vr-social-btn{
+  background:var(--card-bg);
+}
+
+
+body.dark .vr-auth-control:hover,
+body.dark .vr-auth-primary-btn:hover{
+  color:#ffffff;
+}

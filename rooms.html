@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VibeRoomz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="rooms.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html" class="logo" aria-label="VibeRoomz home">
+        <img
+          id="siteLogo"
+          src="VibeRooms_light.png"
+          alt="VibeRoomz logo"
+          data-light-logo="VibeRooms_light.png"
+          data-dark-logo="VibeRooms_dark.png"
+        />
+        <h1>Vibe<span>Roomz</span></h1>
+      </a>
+
+
+      <ul class="menu" id="primaryMenu">
+        <li class="dropdown">
+          <a href="index.html" data-page="index.html">
+            <span>Home</span>
+            <i data-lucide="chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html" data-page="index.html">Home 1</a></li>
+            <li><a href="home2.html" data-page="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+
+
+        <li><a href="rooms.html" data-page="rooms.html">Rooms</a></li>
+        <li><a href="packages.html" data-page="packages.html">Packages</a></li>
+        <li><a href="events.html" data-page="events.html">Events</a></li>
+        <li><a href="pricing.html" data-page="pricing.html">Pricing</a></li>
+        <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+        <li><a href="dashboard.html" data-page="dashboard.html">Dashboard</a></li>
+
+
+        <li class="mobile-login-item">
+          <a href="login.html" data-page="login.html">Login</a>
+        </li>
+      </ul>
+
+
+      <div class="nav-right">
+        <button
+          class="circle rtl-btn"
+          id="rtlToggle"
+          type="button"
+          aria-label="Switch to right to left layout"
+          aria-pressed="false"
+        >
+          <i data-lucide="arrow-right-left"></i>
+        </button>
+
+
+        <button
+          class="circle theme-btn"
+          id="themeToggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+        >
+          <i data-lucide="moon-star"></i>
+        </button>
+
+
+        <a href="login.html" class="login login-btn desktop-login" data-page="login.html">Login</a>
+
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primaryMenu"
+          type="button"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+<section class="room-hero" id="roomHero">
+  <div class="room-hero-bg"></div>
+  <div class="room-hero-overlay"></div>
+
+  <div class="container">
+    <div class="room-hero-content">
+      <div class="room-section-tag">
+        <span class="room-tag-line"></span>
+        <span>YOUR PERFECT PARTY AWAITS</span>
+        <span class="room-tag-line room-tag-line-right"></span>
+      </div>
+
+      <h1>
+        Find Your
+        <span>Perfect Party Room</span>
+      </h1>
+
+      <p>
+        From cozy karaoke rooms to vibrant party spaces, find the perfect vibe
+        for every celebration.
+      </p>
+
+      <div class="room-hero-actions">
+        <a href="rooms.html" class="room-hero-btn room-btn-primary">
+          <i data-lucide="search"></i>
+          <span>Find Your Room</span>
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+
+        <a href="#allRooms" class="room-hero-btn room-btn-outline">
+          <i data-lucide="layout-grid"></i>
+          <span>Explore Rooms</span>
+        </a>
+      </div>
+
+      <div class="room-hero-features">
+        <div class="room-hero-feature">
+          <div class="room-feature-icon">
+            <i data-lucide="mic-2"></i>
+          </div>
+
+          <div>
+            <strong>Karaoke Rooms</strong>
+            <span>Sing it your way</span>
+          </div>
+        </div>
+
+        <div class="room-hero-feature">
+          <div class="room-feature-icon">
+            <i data-lucide="palette"></i>
+          </div>
+
+          <div>
+            <strong>Theme Rooms</strong>
+            <span>Unique party vibes</span>
+          </div>
+        </div>
+
+        <div class="room-hero-feature">
+          <div class="room-feature-icon">
+            <i data-lucide="lock-keyhole"></i>
+          </div>
+
+          <div>
+            <strong>Private &amp; Cozy</strong>
+            <span>Your space, your party</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="room-filter-section">
+  <div class="container">
+    <div class="room-filter-heading">
+      <div class="room-section-tag">
+        <span class="room-tag-line"></span>
+        <span>FIND YOUR SPACE</span>
+        <span class="room-tag-line room-tag-line-right"></span>
+      </div>
+
+      <h2>
+        Find Your
+        <span>Perfect Room</span>
+      </h2>
+
+      <p>
+        Choose your preferences and discover a party room that fits your group,
+        style and celebration.
+      </p>
+    </div>
+
+    <div class="room-filter-box">
+      <div class="filter-topbar">
+        <div class="filter-title">
+          <div class="filter-title-icon">
+            <i data-lucide="sliders-horizontal"></i>
+          </div>
+
+          <div>
+            <strong>Room Preferences</strong>
+            <span>Customize your room search</span>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="clear-filters"
+          id="clearFilters"
+        >
+          <i data-lucide="rotate-ccw"></i>
+          Clear Filters
+        </button>
+      </div>
+
+      <div class="filter-options">
+        <div class="filter-item">
+          <label>
+            <i data-lucide="users"></i>
+            Guest Capacity
+          </label>
+
+          <select id="guestCapacity">
+            <option value="">Any Capacity</option>
+            <option value="4-8">4 - 8 Guests</option>
+            <option value="6-10">6 - 10 Guests</option>
+            <option value="8-12">8 - 12 Guests</option>
+            <option value="10-15">10 - 15 Guests</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label>
+            <i data-lucide="palette"></i>
+            Room Theme
+          </label>
+
+          <select id="roomTheme">
+            <option value="">Any Theme</option>
+            <option value="neon">Neon</option>
+            <option value="retro">Retro</option>
+            <option value="luxury">Luxury</option>
+            <option value="dance">Dance</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label>
+            <i data-lucide="volume-2"></i>
+            Sound System
+          </label>
+
+          <select id="soundSystem">
+            <option value="">Any Sound System</option>
+            <option value="standard">Standard</option>
+            <option value="premium">Premium</option>
+            <option value="pro">Professional</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label>
+            <i data-lucide="lightbulb"></i>
+            Lighting
+          </label>
+
+          <select id="lightingOption">
+            <option value="">Any Lighting</option>
+            <option value="ambient">Ambient</option>
+            <option value="neon">Neon</option>
+            <option value="dynamic">Dynamic</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="filter-bottom">
+        <div class="price-filter">
+          <div class="price-filter-head">
+            <label>
+              <i data-lucide="indian-rupee"></i>
+              Maximum Price
+            </label>
+
+            <strong id="priceValue">Up to ₹3,000</strong>
+          </div>
+
+          <input
+            type="range"
+            id="priceRange"
+            min="1000"
+            max="3000"
+            step="500"
+            value="3000"
+          />
+        </div>
+
+        <div class="availability-filter">
+          <label>
+            <i data-lucide="calendar-check"></i>
+            Availability
+          </label>
+
+          <div class="availability-options">
+            <button
+              type="button"
+              class="availability-chip active"
+              data-value=""
+            >
+              Any Day
+            </button>
+
+            <button
+              type="button"
+              class="availability-chip"
+              data-value="today"
+            >
+              Today
+            </button>
+
+            <button
+              type="button"
+              class="availability-chip"
+              data-value="weekend"
+            >
+              Weekend
+            </button>
+
+            <button
+              type="button"
+              class="availability-chip"
+              data-value="weekday"
+            >
+              Weekday
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-submit-row">
+        <div class="filter-status">
+          <i data-lucide="circle-check"></i>
+          <span id="filterStatus">Ready to find your room</span>
+        </div>
+
+        <a
+          href="rooms.html"
+          class="apply-filter-btn"
+          id="applyRoomFilters"
+        >
+          <i data-lucide="search"></i>
+          Apply Filters
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="all-rooms-section" id="allRooms">
+  <div class="container">
+    <div class="all-rooms-heading">
+      <div class="room-section-tag">
+        <span class="room-tag-line"></span>
+        <span>EXPLORE OUR ROOMS</span>
+        <span class="room-tag-line room-tag-line-right"></span>
+      </div>
+
+      <h2>
+        Choose Your
+        <span>Party Vibe</span>
+      </h2>
+
+      <p>
+        Every VibeRoomz space is designed to give your celebration its own
+        personality, atmosphere and unforgettable experience.
+      </p>
+    </div>
+
+    <div class="all-rooms-grid">
+      <article
+        class="room-card"
+        data-capacity="4-8"
+        data-theme="neon"
+        data-sound="premium"
+        data-lighting="neon"
+        data-price="1800"
+      >
+        <div class="room-card-image">
+          <img
+            src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1000&q=85"
+            alt="Neon Beat Room"
+          />
+
+          <div class="room-theme">
+            <i data-lucide="sparkles"></i>
+            Neon Vibes
+          </div>
+        </div>
+
+        <div class="room-card-content">
+          <span class="room-card-label">ROOM 01</span>
+          <h3>Neon Beat Room</h3>
+
+          <p>
+            A vibrant neon-lit karaoke space designed for energetic
+            celebrations, music nights and unforgettable group moments.
+          </p>
+
+          <div class="room-card-action">
+            <span class="room-guests">
+              <i data-lucide="users"></i>
+              4 - 8 Guests
+            </span>
+
+            <a href="neon-beat-room.html" class="room-view-btn">
+              <span>View Room</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article
+        class="room-card"
+        data-capacity="6-10"
+        data-theme="retro"
+        data-sound="premium"
+        data-lighting="ambient"
+        data-price="2200"
+      >
+        <div class="room-card-image">
+          <img
+            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=85"
+            alt="Retro Groove Room"
+          />
+
+          <div class="room-theme">
+            <i data-lucide="disc-3"></i>
+            Retro Groove
+          </div>
+        </div>
+
+        <div class="room-card-content">
+          <span class="room-card-label">ROOM 02</span>
+          <h3>Retro Groove Room</h3>
+
+          <p>
+            Bring classic party energy to life with a retro-inspired room,
+            rich sound and a relaxed atmosphere for group celebrations.
+          </p>
+
+          <div class="room-card-action">
+            <span class="room-guests">
+              <i data-lucide="users"></i>
+              6 - 10 Guests
+            </span>
+
+            <a href="retro-groove-room.html" class="room-view-btn">
+              <span>View Room</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article
+        class="room-card"
+        data-capacity="8-12"
+        data-theme="luxury"
+        data-sound="pro"
+        data-lighting="ambient"
+        data-price="2600"
+      >
+        <div class="room-card-image">
+          <img
+            src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=85"
+            alt="Royal Lounge"
+          />
+
+          <div class="room-theme">
+            <i data-lucide="crown"></i>
+            Luxury Lounge
+          </div>
+        </div>
+
+        <div class="room-card-content">
+          <span class="room-card-label">ROOM 03</span>
+          <h3>Royal Lounge</h3>
+
+          <p>
+            A sophisticated private lounge combining premium interiors,
+            powerful audio and a comfortable setting for special occasions.
+          </p>
+
+          <div class="room-card-action">
+            <span class="room-guests">
+              <i data-lucide="users"></i>
+              8 - 12 Guests
+            </span>
+
+            <a href="royal-lounge.html" class="room-view-btn">
+              <span>View Room</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article
+        class="room-card"
+        data-capacity="10-15"
+        data-theme="dance"
+        data-sound="pro"
+        data-lighting="dynamic"
+        data-price="3000"
+      >
+        <div class="room-card-image">
+          <img
+            src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1000&q=85"
+            alt="Party Pulse Room"
+          />
+
+          <div class="room-theme">
+            <i data-lucide="music-2"></i>
+            Dance Setup
+          </div>
+        </div>
+
+        <div class="room-card-content">
+          <span class="room-card-label">ROOM 04</span>
+          <h3>Party Pulse Room</h3>
+
+          <p>
+            Go all out with a high-energy party setup featuring dynamic
+            lighting, powerful sound and plenty of space to celebrate.
+          </p>
+
+          <div class="room-card-action">
+            <span class="room-guests">
+              <i data-lucide="users"></i>
+              10 - 15 Guests
+            </span>
+
+            <a href="party-pulse-room.html" class="room-view-btn">
+              <span>View Room</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="all-rooms-footer">
+      <span>
+        <i data-lucide="sparkles"></i>
+        More rooms are waiting for your celebration.
+      </span>
+
+      <a href="rooms.html" class="all-rooms-all-btn">
+        <span>Explore All Rooms</span>
+        <i data-lucide="arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="compare-rooms-section">
+  <div class="container">
+    <div class="compare-heading">
+      <div class="room-section-tag">
+        <span class="room-tag-line"></span>
+        <span>COMPARE YOUR OPTIONS</span>
+        <span class="room-tag-line room-tag-line-right"></span>
+      </div>
+
+      <h2>
+        Room
+        <span>Comparison</span>
+      </h2>
+
+      <p>
+        Compare room capacity, audio, lighting and special features before
+        choosing the space that matches your celebration.
+      </p>
+    </div>
+
+    <div class="compare-table">
+      <div class="compare-row compare-header">
+        <div class="compare-feature-title">
+          <i data-lucide="list-checks"></i>
+          <span>Features</span>
+        </div>
+
+        <div class="compare-room-name">
+          <span>ROOM 01</span>
+          <strong>Neon Beat</strong>
+        </div>
+
+        <div class="compare-room-name">
+          <span>ROOM 02</span>
+          <strong>Retro Groove</strong>
+        </div>
+
+        <div class="compare-room-name">
+          <span>ROOM 03</span>
+          <strong>Royal Lounge</strong>
+        </div>
+      </div>
+
+      <div class="compare-row">
+        <div class="compare-feature">
+          <i data-lucide="maximize-2"></i>
+          Room Size
+        </div>
+
+        <div><strong>Medium</strong></div>
+        <div><strong>Medium+</strong></div>
+        <div><strong>Large</strong></div>
+      </div>
+
+      <div class="compare-row">
+        <div class="compare-feature">
+          <i data-lucide="users"></i>
+          Capacity
+        </div>
+
+        <div>
+          <span class="compare-check">
+            <i data-lucide="check"></i>
+            4 - 8
+          </span>
+        </div>
+
+        <div>
+          <span class="compare-check">
+            <i data-lucide="check"></i>
+            6 - 10
+          </span>
+        </div>
+
+        <div>
+          <span class="compare-check">
+            <i data-lucide="check"></i>
+            8 - 12
+          </span>
+        </div>
+      </div>
+
+      <div class="compare-row">
+        <div class="compare-feature">
+          <i data-lucide="volume-2"></i>
+          Audio Quality
+        </div>
+
+        <div>Premium</div>
+        <div>Premium</div>
+        <div>Professional</div>
+      </div>
+
+      <div class="compare-row">
+        <div class="compare-feature">
+          <i data-lucide="lightbulb"></i>
+          Lighting Setup
+        </div>
+
+        <div>Neon</div>
+        <div>Ambient</div>
+        <div>Dynamic</div>
+      </div>
+
+      <div class="compare-row">
+        <div class="compare-feature">
+          <i data-lucide="monitor"></i>
+          Display / Screens
+        </div>
+
+        <div>Large Display</div>
+        <div>Dual Display</div>
+        <div>Dual Display</div>
+      </div>
+
+      <div class="compare-row compare-last">
+        <div class="compare-feature">
+          <i data-lucide="star"></i>
+          Special Features
+        </div>
+
+        <div>Neon Atmosphere</div>
+        <div>Retro Styling</div>
+        <div>Luxury Interior</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ambience-showcase">
+  <div class="container">
+    <div class="ambience-showcase-heading">
+      <div class="room-section-tag">
+        <span class="room-tag-line"></span>
+        <span>CHOOSE YOUR ATMOSPHERE</span>
+        <span class="room-tag-line room-tag-line-right"></span>
+      </div>
+
+      <h2>
+        Every Room Has
+        <strong>Its Own Vibe</strong>
+      </h2>
+
+      <p>
+        From glowing neon spaces to elegant lounges, choose an atmosphere that
+        makes your celebration feel completely yours.
+      </p>
+    </div>
+
+    <div class="ambience-rooms">
+      <article class="ambience-room ambience-room-1">
+        <div class="ambience-room-image">
+          <img
+            src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=90"
+            alt="Neon Vibes party room"
+          />
+        </div>
+
+        <span class="ambience-room-number">01</span>
+
+        <div class="ambience-room-content">
+          <div class="ambience-room-icon">
+            <i data-lucide="sparkles"></i>
+          </div>
+
+          <span>NEON ENERGY</span>
+          <h3>Neon Vibes</h3>
+
+          <p>
+            Bright colours, glowing lights and energetic karaoke moments.
+          </p>
+        </div>
+      </article>
+
+      <article class="ambience-room ambience-room-2">
+        <div class="ambience-room-image">
+          <img
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=90"
+            alt="Luxury Lounge party room"
+          />
+        </div>
+
+        <span class="ambience-room-number">02</span>
+
+        <div class="ambience-room-content">
+          <div class="ambience-room-icon">
+            <i data-lucide="crown"></i>
+          </div>
+
+          <span>PREMIUM COMFORT</span>
+          <h3>Luxury Lounge</h3>
+
+          <p>
+            Sophisticated interiors designed for relaxed premium celebrations.
+          </p>
+        </div>
+      </article>
+
+      <article class="ambience-room ambience-room-3">
+        <div class="ambience-room-image">
+          <img
+            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=90"
+            alt="Retro Party room"
+          />
+        </div>
+
+        <span class="ambience-room-number">03</span>
+
+        <div class="ambience-room-content">
+          <div class="ambience-room-icon">
+            <i data-lucide="disc-3"></i>
+          </div>
+
+          <span>CLASSIC GROOVE</span>
+          <h3>Retro Party</h3>
+
+          <p>
+            A nostalgic party setting packed with character and music.
+          </p>
+        </div>
+      </article>
+
+      <article class="ambience-room ambience-room-4">
+        <div class="ambience-room-image">
+          <img
+            src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=90"
+            alt="Dance Setup party room"
+          />
+        </div>
+
+        <span class="ambience-room-number">04</span>
+
+        <div class="ambience-room-content">
+          <div class="ambience-room-icon">
+            <i data-lucide="music-2"></i>
+          </div>
+
+          <span>HIGH ENERGY</span>
+          <h3>Dance Setup</h3>
+
+          <p>
+            Dynamic lighting and space to turn your celebration into a party.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="before-book-section">
+  <div class="container">
+    <div class="before-book-heading">
+      <div class="room-section-tag">
+        <span class="room-tag-line"></span>
+        <span>PLAN WITH CONFIDENCE</span>
+        <span class="room-tag-line room-tag-line-right"></span>
+      </div>
+
+      <h2>
+        Before You
+        <span>Book</span>
+      </h2>
+
+      <p>
+        Everything you need to know before selecting your room and planning your
+        celebration.
+      </p>
+    </div>
+
+    <div class="before-book-layout">
+      <div class="before-book-visual">
+        <img
+          src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1200&q=90"
+          alt="Premium VibeRoomz party room"
+        />
+
+        <div class="before-book-visual-overlay"></div>
+
+        <div class="before-book-badge">
+          <i data-lucide="shield-check"></i>
+
+          <div>
+            <strong>Book With Confidence</strong>
+            <span>Private • Premium • Easy</span>
+          </div>
+        </div>
+
+        <div class="before-book-visual-content">
+          <span>YOUR CELEBRATION</span>
+
+          <h3>
+            Choose a room that feels
+            <strong>made for you.</strong>
+          </h3>
+
+          <p>
+            Check the essentials, select your preferred vibe and make your next
+            celebration a VibeRoomz experience.
+          </p>
+        </div>
+      </div>
+
+      <div class="before-book-info">
+        <div class="before-book-item active">
+          <span class="before-book-number">01</span>
+
+          <div class="before-book-icon">
+            <i data-lucide="users"></i>
+          </div>
+
+          <div class="before-book-item-content">
+            <h3>Guest Capacity</h3>
+            <p>Select a room that comfortably fits your entire group.</p>
+          </div>
+
+          <span class="before-book-status">
+            <i data-lucide="check"></i>
+          </span>
+        </div>
+
+        <div class="before-book-item">
+          <span class="before-book-number">02</span>
+
+          <div class="before-book-icon">
+            <i data-lucide="clock-3"></i>
+          </div>
+
+          <div class="before-book-item-content">
+            <h3>Booking Duration</h3>
+            <p>Choose a suitable duration based on your celebration plans.</p>
+          </div>
+
+          <span class="before-book-status">
+            <i data-lucide="check"></i>
+          </span>
+        </div>
+
+        <div class="before-book-item">
+          <span class="before-book-number">03</span>
+
+          <div class="before-book-icon">
+            <i data-lucide="mic-2"></i>
+          </div>
+
+          <div class="before-book-item-content">
+            <h3>Equipment Included</h3>
+            <p>
+              Enjoy the available karaoke, audio, display and lighting setup.
+            </p>
+          </div>
+
+          <span class="before-book-status">
+            <i data-lucide="check"></i>
+          </span>
+        </div>
+
+        <div class="before-book-item">
+          <span class="before-book-number">04</span>
+
+          <div class="before-book-icon">
+            <i data-lucide="utensils"></i>
+          </div>
+
+          <div class="before-book-item-content">
+            <h3>Food &amp; Beverage</h3>
+            <p>Explore available food and beverage options for your event.</p>
+          </div>
+
+          <span class="before-book-status">
+            <i data-lucide="check"></i>
+          </span>
+        </div>
+
+        <div class="before-book-item">
+          <span class="before-book-number">05</span>
+
+          <div class="before-book-icon">
+            <i data-lucide="calendar-clock"></i>
+          </div>
+
+          <div class="before-book-item-content">
+            <h3>Cancellation &amp; Rescheduling</h3>
+            <p>
+              Review the booking policy before confirming your reservation.
+            </p>
+          </div>
+
+          <span class="before-book-status">
+            <i data-lucide="check"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="simple-vibe-cta">
+  <div class="container">
+    <div class="simple-vibe-cta-card">
+      <div class="simple-vibe-cta-icon">
+        <i data-lucide="music-2"></i>
+      </div>
+
+      <div class="simple-vibe-cta-content">
+        <div class="simple-vibe-cta-kicker">
+          <span class="room-tag-line"></span>
+          <span>MAKE IT YOUR MOMENT</span>
+          <span class="room-tag-line room-tag-line-right"></span>
+        </div>
+
+        <h2>
+          Find the Room That Matches
+          <span>Your Vibe.</span>
+        </h2>
+
+        <p>
+          Pick your perfect space, bring your people and create a celebration
+          that feels completely yours.
+        </p>
+      </div>
+
+      <div class="simple-vibe-cta-action">
+        <a href="booking.html" class="simple-vibe-cta-btn">
+          <span>Book a Room</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
+
+        <small>
+          <i data-lucide="lock"></i>
+          Easy &amp; Private Booking
+        </small>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <footer class="footer">
+  <div class="container footer-grid">
+    <section class="footer-about">
+      <div class="footer-logo">
+        <img
+          id="footerLogo"
+          src="VibeRooms_light.png"
+          alt="VibeRoomz logo"
+          data-light-logo="VibeRooms_light.png"
+          data-dark-logo="VibeRooms_dark.png"
+        />
+        <h2>Vibe<span>Roomz</span></h2>
+      </div>
+
+
+      <p>VibeRoomz is your premium room booking space for parties, music, and unforgettable indoor experiences.</p>
+
+
+      <div class="socials">
+        <a href="#" aria-label="Visit VibeRoomz on YouTube"><i data-lucide="youtube"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on Instagram"><i data-lucide="instagram"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on X"><i data-lucide="twitter"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on LinkedIn"><i data-lucide="linkedin"></i></a>
+      </div>
+    </section>
+
+
+    <nav aria-label="Quick links">
+      <h3>Quick Links</h3>
+      <div class="line"></div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+
+    <nav aria-label="Services links">
+      <h3>Our Services</h3>
+      <div class="line"></div>
+      <ul>
+        <li><a href="rooms.html">Private Rooms</a></li>
+        <li><a href="packages.html">Party Packages</a></li>
+        <li><a href="events.html">Event Hosting</a></li>
+        <li><a href="pricing.html">Transparent Pricing</a></li>
+        <li><a href="dashboard.html">Booking Dashboard</a></li>
+      </ul>
+    </nav>
+
+<section class="footer-extra">
+      <h3>Additional Pages</h3>
+      <div class="line"></div>
+
+
+      <ul class="footer-extra-list">
+        <li><a href="rooms.html">Error 404</a></li>
+        <li><a href="packages.html">Coming soon</a></li>
+        <li><a href="contact.html">Support</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+
+
+      
+    </section>
+    <section class="footer-contact-wrap" aria-labelledby="footer-contact-title">
+      <h3 id="footer-contact-title">Contact Us</h3>
+      <div class="line"></div>
+
+
+      <ul class="contact">
+        <li><i data-lucide="map-pin"></i><span>Hyderabad, India</span></li>
+        <li><i data-lucide="phone"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+        <li><i data-lucide="mail"></i><a href="mailto:info@viberoomz.com">info@viberoomz.com</a></li>
+        <li><i data-lucide="clock-3"></i><span>9:30 am - 4:30 pm</span></li>
+      </ul>
+    </section>
+
+
+    
+  </div>
+
+
+  <div class="footer-bottom">
+    <p>© <span id="footerYear"></span> <span class="next">Vibe</span><span class="gear">Roomz</span>. All Rights Reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="pp.html">Privacy Policy</a>
+      <a href="tc.html">Terms &amp; Conditions</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+  </div>
+
+
+  <script src="main.js"></script>
+  <script src="rooms.js"></script>
+  <script>lucide.createIcons();</script>
+  <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+</body>
+</html>

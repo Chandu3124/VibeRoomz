@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeRoomz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="vr-dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="vr-dashboard-sidebar" id="vrSidebar">
+            <div class="vr-sidebar-brand">
+                <img src="VibeRooms_light.png"
+                     data-light-logo="VibeRooms_light.png"
+                     data-dark-logo="VibeRooms_dark.png"
+                     alt="VibeRoomz">
+                <h1>Vibe<span>Roomz</span></h1>
+            </div>
+
+            <nav class="vr-dashboard-nav">
+                <button class="vr-nav-link active" data-section="dashboard">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </button>
+
+                <button class="vr-nav-link" data-section="booking">
+                    <i data-lucide="calendar-plus"></i>
+                    <span>Book a Room</span>
+                </button>
+
+                <button class="vr-nav-link" data-section="reservations">
+                    <i data-lucide="calendar-check"></i>
+                    <span>My Reservations</span>
+                </button>
+
+                <button class="vr-nav-link" data-section="payments">
+                    <i data-lucide="credit-card"></i>
+                    <span>Payments & Billing</span>
+                </button>
+
+                <button class="vr-nav-link" data-section="profile">
+                    <i data-lucide="user-round"></i>
+                    <span>Profile & Settings</span>
+                </button>
+
+                <button class="vr-nav-link" data-section="offers">
+                    <i data-lucide="badge-percent"></i>
+                    <span>Offers & Promotions</span>
+                </button>
+
+                <button class="vr-nav-link" data-section="help">
+                    <i data-lucide="headphones"></i>
+                    <span>Help & Support</span>
+                </button>
+            </nav>
+        </aside>
+
+        <!-- MAIN AREA -->
+        <div class="vr-dashboard-area">
+
+            <!-- HEADER -->
+            <header class="vr-dashboard-header">
+                <div class="vr-header-left">
+                    <div class="vr-mobile-menu">
+                        <button class="vr-circle-btn" id="vrMobileMenu" type="button">
+                            <i data-lucide="menu"></i>
+                        </button>
+                    </div>
+
+                    <div class="vr-header-title">
+                        <span>Customer Dashboard</span>
+                        <strong>Manage your VibeRoomz experience</strong>
+                    </div>
+                </div>
+
+                <div class="vr-header-actions">
+                    <button class="vr-circle-btn" id="rtlToggle" type="button"
+                            aria-label="Toggle RTL">
+                        <i data-lucide="arrow-right-left"></i>
+                    </button>
+
+                    <button class="vr-circle-btn" id="themeToggle" type="button"
+                            aria-label="Toggle dark mode">
+                        <i data-lucide="moon-star"></i>
+                    </button>
+
+                    <button class="vr-circle-btn vr-notification-btn" id="notificationBtn"
+                            type="button">
+                        <i data-lucide="bell"></i>
+                        <span class="vr-notification-dot"></span>
+                    </button>
+
+                    <div class="vr-profile-wrap">
+                        <button class="vr-profile-btn" id="profileBtn" type="button">
+                            <div class="vr-profile-avatar">A</div>
+                            <div class="vr-profile-info">
+                                <strong>Arjun</strong>
+                                <span>Customer</span>
+                            </div>
+                            <i data-lucide="chevron-down"></i>
+                        </button>
+
+                        <div class="vr-profile-dropdown" id="profileDropdown">
+                            <button data-profile-action="profile">
+                                <i data-lucide="user-round"></i>
+                                <span>Profile</span>
+                            </button>
+
+                            <button data-profile-action="settings">
+                                <i data-lucide="settings"></i>
+                                <span>Settings</span>
+                            </button>
+
+                            <button data-profile-action="logout">
+                                <i data-lucide="log-out"></i>
+                                <span>Logout</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- MAIN CONTENT -->
+            <main class="vr-dashboard-main">
+
+                <!-- DASHBOARD -->
+                <section class="vr-panel active" data-panel="dashboard">
+                    <div class="vr-section-heading">
+                        <div>
+                            <h2>Welcome back, <span>Arjun</span></h2>
+                            <p>Here's what's happening with your VibeRoomz bookings.</p>
+                        </div>
+                    </div>
+
+                    <div class="vr-stats-grid">
+                        <article class="vr-stat-card">
+                            <div class="vr-stat-icon">
+                                <i data-lucide="calendar-days"></i>
+                            </div>
+                            <div>
+                                <span>Upcoming Reservations</span>
+                                <strong>02</strong>
+                                <small>Next booking in 3 days</small>
+                            </div>
+                        </article>
+
+                        <article class="vr-stat-card">
+                            <div class="vr-stat-icon">
+                                <i data-lucide="history"></i>
+                            </div>
+                            <div>
+                                <span>Total Bookings</span>
+                                <strong>18</strong>
+                                <small>Since joining VibeRoomz</small>
+                            </div>
+                        </article>
+
+                        <article class="vr-stat-card">
+                            <div class="vr-stat-icon">
+                                <i data-lucide="wallet-cards"></i>
+                            </div>
+                            <div>
+                                <span>Pending Payments</span>
+                                <strong>₹1,200</strong>
+                                <small>Payment due soon</small>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="vr-content-grid vr-dashboard-grid">
+                        <div class="vr-card">
+                            <div class="vr-card-heading">
+                                <h3>Quick Actions</h3>
+                                <i data-lucide="zap"></i>
+                            </div>
+
+                            <div class="vr-quick-actions">
+                                <button data-open-panel="booking">
+                                    <i data-lucide="calendar-plus"></i>
+                                    <span>Book a Room</span>
+                                </button>
+
+                                <button data-open-panel="offers">
+                                    <i data-lucide="package"></i>
+                                    <span>View Packages</span>
+                                </button>
+
+                                <button data-open-panel="reservations">
+                                    <i data-lucide="calendar-check"></i>
+                                    <span>My Reservations</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="vr-card">
+                            <div class="vr-card-heading">
+                                <h3>Upcoming Booking</h3>
+                                <span class="vr-status confirmed">Confirmed</span>
+                            </div>
+
+                            <div class="vr-booking-preview">
+                                <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80"
+                                     alt="Karaoke room">
+
+                                <div>
+                                    <h4>Neon Beats Room</h4>
+                                    <p><i data-lucide="calendar"></i> 18 Sep 2026</p>
+                                    <p><i data-lucide="clock-3"></i> 7:00 PM – 10:00 PM</p>
+                                    <p><i data-lucide="users"></i> 8 Guests</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vr-content-grid">
+                        <div class="vr-card">
+                            <div class="vr-card-heading">
+                                <h3>Notifications</h3>
+                                <span class="vr-count">03</span>
+                            </div>
+
+                            <div class="vr-notification-list">
+                                <div>
+                                    <i data-lucide="clock-3"></i>
+                                    <span>Your upcoming booking starts in 3 days.</span>
+                                </div>
+
+                                <div>
+                                    <i data-lucide="credit-card"></i>
+                                    <span>₹1,200 payment is pending for your booking.</span>
+                                </div>
+
+                                <div>
+                                    <i data-lucide="gift"></i>
+                                    <span>New birthday offers are available for you.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="vr-card">
+                            <div class="vr-card-heading">
+                                <h3>Special Offers</h3>
+                                <button class="vr-text-action" data-open-panel="offers">
+                                    View all
+                                </button>
+                            </div>
+
+                            <div class="vr-mini-offer">
+                                <div>
+                                    <strong>Birthday Bash</strong>
+                                    <span>Get 20% off on birthday bookings.</span>
+                                </div>
+                                <i data-lucide="party-popper"></i>
+                            </div>
+
+                            <div class="vr-mini-offer">
+                                <div>
+                                    <strong>Weekday Vibes</strong>
+                                    <span>Enjoy special weekday room pricing.</span>
+                                </div>
+                                <i data-lucide="calendar-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BOOK A ROOM -->
+                <section class="vr-panel" data-panel="booking">
+                    <div class="vr-section-heading">
+                        <div>
+                            <h2>Book a <span>Room</span></h2>
+                            <p>Plan your perfect karaoke and party experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="vr-booking-layout">
+                        <article class="vr-book-step">
+                            <div class="vr-step-head">
+                                <div class="vr-step-number">01</div>
+                                <div>
+                                    <h3>Date & Time</h3>
+                                    <p>Select your preferred date and booking slot.</p>
+                                </div>
+                            </div>
+
+                            <div class="vr-book-fields">
+                                <label>
+                                    <span>Date</span>
+                                    <input type="date" value="2026-09-18">
+                                </label>
+
+                                <label>
+                                    <span>Time Slot</span>
+                                    <select>
+                                        <option>07:00 PM</option>
+                                        <option>08:00 PM</option>
+                                        <option>09:00 PM</option>
+                                    </select>
+                                </label>
+
+                                <label>
+                                    <span>Duration</span>
+                                    <select>
+                                        <option>3 Hours</option>
+                                        <option>2 Hours</option>
+                                        <option>4 Hours</option>
+                                    </select>
+                                </label>
+
+                                <label>
+                                    <span>Party Size</span>
+                                    <select>
+                                        <option>8 Guests</option>
+                                        <option>6 Guests</option>
+                                        <option>10 Guests</option>
+                                        <option>12 Guests</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="vr-availability">
+                                <i data-lucide="circle-check"></i>
+                                <span>Selected slot is available</span>
+                            </div>
+                        </article>
+
+                        <article class="vr-book-step">
+                            <div class="vr-step-head">
+                                <div class="vr-step-number">02</div>
+                                <div>
+                                    <h3>Choose Room</h3>
+                                    <p>Select a room based on your party size.</p>
+                                </div>
+                            </div>
+
+                            <div class="vr-room-option selected">
+                                <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=700&q=80"
+                                     alt="Neon Beats room">
+
+                                <div class="vr-room-info">
+                                    <h4>Neon Beats Room</h4>
+                                    <p>Up to 10 guests · Premium sound · LED lights</p>
+                                    <strong>₹2,499 / 3 hrs</strong>
+                                </div>
+
+                                <span class="vr-live-status">Available</span>
+                            </div>
+
+                            <div class="vr-room-option">
+                                <img src="https://images.unsplash.com/photo-1598387993281-cecf8b71a8f8?auto=format&fit=crop&w=700&q=80"
+                                     alt="Party room">
+
+                                <div class="vr-room-info">
+                                    <h4>Party Pulse</h4>
+                                    <p>Up to 12 guests · Dance floor · Karaoke system</p>
+                                    <strong>₹2,999 / 3 hrs</strong>
+                                </div>
+
+                                <span class="vr-live-status">Available</span>
+                            </div>
+                        </article>
+
+                        <article class="vr-book-step">
+                            <div class="vr-step-head">
+                                <div class="vr-step-number">03</div>
+                                <div>
+                                    <h3>Packages & Add-ons</h3>
+                                    <p>Enhance your party with optional extras.</p>
+                                </div>
+                            </div>
+
+                            <div class="vr-addon-list">
+                                <label class="vr-addon">
+                                    <input type="checkbox" checked>
+                                    <span>
+                                        <strong>Birthday Decor</strong>
+                                        <small>Decorations and celebration setup</small>
+                                    </span>
+                                    <b>₹799</b>
+                                </label>
+
+                                <label class="vr-addon">
+                                    <input type="checkbox">
+                                    <span>
+                                        <strong>Party Lights & Laser</strong>
+                                        <small>Premium lighting effects</small>
+                                    </span>
+                                    <b>₹599</b>
+                                </label>
+
+                                <label class="vr-addon">
+                                    <input type="checkbox" checked>
+                                    <span>
+                                        <strong>Premium Sound</strong>
+                                        <small>Enhanced speaker experience</small>
+                                    </span>
+                                    <b>₹499</b>
+                                </label>
+
+                                <label class="vr-addon">
+                                    <input type="checkbox">
+                                    <span>
+                                        <strong>Food & Beverage</strong>
+                                        <small>Snacks and refreshments</small>
+                                    </span>
+                                    <b>₹999</b>
+                                </label>
+                            </div>
+                        </article>
+
+                        <article class="vr-book-step vr-review-step">
+                            <div class="vr-step-head">
+                                <div class="vr-step-number">04</div>
+                                <div>
+                                    <h3>Review & Confirm</h3>
+                                    <p>Check your booking before payment.</p>
+                                </div>
+                            </div>
+
+                            <div class="vr-review-list">
+                                <div>
+                                    <span>Room</span>
+                                    <strong>Neon Beats Room</strong>
+                                </div>
+
+                                <div>
+                                    <span>Date & Time</span>
+                                    <strong>18 Sep · 7:00 PM</strong>
+                                </div>
+
+                                <div>
+                                    <span>Duration</span>
+                                    <strong>3 Hours</strong>
+                                </div>
+
+                                <div>
+                                    <span>Add-ons</span>
+                                    <strong>₹1,298</strong>
+                                </div>
+
+                                <div class="vr-total-row">
+                                    <span>Total</span>
+                                    <strong>₹3,797</strong>
+                                </div>
+                            </div>
+
+                            <div class="vr-payment-choice">
+                                <label>
+                                    <input type="radio" name="payment" checked>
+                                    <span>Pay Now</span>
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="payment">
+                                    <span>Pay at Venue</span>
+                                </label>
+                            </div>
+
+                            <button class="vr-primary-btn">
+                                Confirm Booking
+                                <i data-lucide="arrow-right"></i>
+                            </button>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- RESERVATIONS -->
+                <section class="vr-panel" data-panel="reservations">
+                    <div class="vr-section-heading">
+                        <div>
+                            <h2>My <span>Reservations</span></h2>
+                            <p>Track your upcoming and previous VibeRoomz bookings.</p>
+                        </div>
+                    </div>
+
+                    <div class="vr-card">
+                        <div class="vr-card-heading">
+                            <h3>Upcoming Reservations</h3>
+                            <span class="vr-status confirmed">Confirmed</span>
+                        </div>
+
+                        <div class="vr-reservation-card">
+                            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=700&q=80"
+                                 alt="Neon Beats">
+
+                            <div>
+                                <h4>Neon Beats Room</h4>
+                                <p>Booking ID: VRZ-180926</p>
+                                <p>18 Sep 2026 · 7:00 PM · 3 Hours</p>
+                                <p>8 Guests · ₹3,797</p>
+                            </div>
+
+                            <div class="vr-card-actions">
+                                <button>View Details</button>
+                                <button>Reschedule</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vr-card">
+                        <div class="vr-card-heading">
+                            <h3>Past Bookings</h3>
+                        </div>
+
+                        <div class="vr-history-row">
+                            <span>12 Aug 2026</span>
+                            <strong>Retro Beats</strong>
+                            <span>3 Hours</span>
+                            <span>₹2,499</span>
+                            <button>Rebook</button>
+                        </div>
+
+                        <div class="vr-history-row">
+                            <span>20 Jul 2026</span>
+                            <strong>Party Pulse</strong>
+                            <span>4 Hours</span>
+                            <span>₹3,299</span>
+                            <button>Rebook</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PAYMENTS -->
+                <section class="vr-panel" data-panel="payments">
+                    <div class="vr-section-heading">
+                        <div>
+                            <h2>Payments & <span>Billing</span></h2>
+                            <p>Manage payments, invoices and outstanding balances.</p>
+                        </div>
+                    </div>
+
+                    <div class="vr-stats-grid">
+                        <article class="vr-stat-card">
+                            <div class="vr-stat-icon">
+                                <i data-lucide="wallet"></i>
+                            </div>
+                            <div>
+                                <span>Outstanding Due</span>
+                                <strong>₹1,200</strong>
+                                <small>Due before your next booking</small>
+                            </div>
+                        </article>
+
+                        <article class="vr-stat-card">
+                            <div class="vr-stat-icon">
+                                <i data-lucide="receipt"></i>
+                            </div>
+                            <div>
+                                <span>Total Paid</span>
+                                <strong>₹34,890</strong>
+                                <small>Across all bookings</small>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="vr-content-grid">
+                        <div class="vr-card">
+                            <div class="vr-card-heading">
+                                <h3>Saved Payment Methods</h3>
+                                <button class="vr-outline-btn">Add Method</button>
+                            </div>
+
+                            <div class="vr-payment-method">
+                                <i data-lucide="credit-card"></i>
+                                <div>
+                                    <strong>HDFC Bank Card</strong>
+                                    <span>•••• •••• •••• 4288</span>
+                                </div>
+                                <span>Default</span>
+                            </div>
+
+                            <div class="vr-payment-method">
+                                <i data-lucide="smartphone"></i>
+                                <div>
+                                    <strong>UPI</strong>
+                                    <span>arjun@upi</span>
+                                </div>
+                                <span>Saved</span>
+                            </div>
+                        </div>
+
+                        <div class="vr-card">
+                            <div class="vr-card-heading">
+                                <h3>Recent Transactions</h3>
+                            </div>
+
+                            <div class="vr-transaction">
+                                <div>
+                                    <strong>Neon Beats Room</strong>
+                                    <span>18 Sep 2026</span>
+                                </div>
+                                <b>₹2,597</b>
+                            </div>
+
+                            <div class="vr-transaction">
+                                <div>
+                                    <strong>Retro Beats Room</strong>
+                                    <span>12 Aug 2026</span>
+                                </div>
+                                <b>₹2,499</b>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PROFILE -->
+                <section class="vr-panel" data-panel="profile">
+                    <div class="vr-section-heading">
+                        <div>
+                            <h2>Profile & <span>Settings</span></h2>
+                            <p>Manage your personal information and preferences.</p>
+                        </div>
+                    </div>
+
+                    <div class="vr-content-grid">
+                        <div class="vr-card">
+                            <div class="vr-card-heading">
+                                <h3>Personal Information</h3>
+                            </div>
+
+                            <div class="vr-form-grid">
+                                <label>
+                                    <span>Full Name</span>
+                                    <input value="Arjun Kumar">
+                                </label>
+
+                                <label>
+                                    <span>Email</span>
+                                    <input value="arjun@example.com">
+                                </label>
+
+                                <label>
+                                    <span>Phone</span>
+                                    <input value="+91 98765 43210">
+                                </label>
+
+                                <label>
+                                    <span>Password</span>
+                                    <input type="password" value="password">
+                                </label>
+                            </div>
+
+                            <button class="vr-primary-btn">Save Changes</button>
+                        </div>
+
+                        <div class="vr-card">
+                            <div class="vr-card-heading">
+                                <h3>Preferences</h3>
+                            </div>
+
+                            <div class="vr-preference-row">
+                                <span>Default Party Size</span>
+                                <select>
+                                    <option>8 Guests</option>
+                                    <option>6 Guests</option>
+                                    <option>10 Guests</option>
+                                </select>
+                            </div>
+
+                            <div class="vr-preference-row">
+                                <span>Preferred Room</span>
+                                <select>
+                                    <option>Premium Rooms</option>
+                                    <option>Standard Rooms</option>
+                                </select>
+                            </div>
+
+                            <div class="vr-preference-row">
+                                <span>Booking Notifications</span>
+                                <input type="checkbox" checked>
+                            </div>
+
+                            <div class="vr-preference-row">
+                                <span>Special Offers</span>
+                                <input type="checkbox" checked>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- OFFERS -->
+                <section class="vr-panel" data-panel="offers">
+                    <div class="vr-section-heading">
+                        <div>
+                            <h2>Offers & <span>Promotions</span></h2>
+                            <p>Save more on your next VibeRoomz experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="vr-offer-grid">
+                        <article class="vr-offer-card">
+                            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80"
+                                 alt="Birthday party">
+
+                            <div>
+                                <span>Birthday Special</span>
+                                <h3>20% Off Birthday Bookings</h3>
+                                <p>Celebrate your special day with exclusive room discounts.</p>
+                                <strong>BIRTHDAY20</strong>
+                            </div>
+                        </article>
+
+                        <article class="vr-offer-card">
+                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"
+                                 alt="Party">
+
+                            <div>
+                                <span>Weekday Offer</span>
+                                <h3>Save ₹500 on Weekdays</h3>
+                                <p>Enjoy premium rooms at special weekday prices.</p>
+                                <strong>WEEKDAY500</strong>
+                            </div>
+                        </article>
+
+                        <article class="vr-offer-card">
+                            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80"
+                                 alt="Music event">
+
+                            <div>
+                                <span>Festive Season</span>
+                                <h3>Festive Party Upgrade</h3>
+                                <p>Get complimentary party lighting on selected bookings.</p>
+                                <strong>VIBEUP</strong>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="vr-card vr-rewards-card">
+                        <div>
+                            <h3>VibePoints Rewards</h3>
+                            <p>You currently have <strong>1,850 VibePoints</strong>.</p>
+                        </div>
+
+                        <i data-lucide="trophy"></i>
+                    </div>
+                </section>
+
+                <!-- HELP -->
+                <section class="vr-panel" data-panel="help">
+                    <div class="vr-section-heading">
+                        <div>
+                            <h2>Help & <span>Support</span></h2>
+                            <p>Need help? Our support team is here for you.</p>
+                        </div>
+                    </div>
+
+                    <div class="vr-support-grid">
+                        <article class="vr-card vr-support-card">
+                            <i data-lucide="message-circle"></i>
+                            <h3>WhatsApp Support</h3>
+                            <p>Chat with our support team for quick assistance.</p>
+                            <button>Start Chat</button>
+                        </article>
+
+                        <article class="vr-card vr-support-card">
+                            <i data-lucide="phone"></i>
+                            <h3>Call Us</h3>
+                            <p>Speak directly with our booking assistance team.</p>
+                            <button>Call Support</button>
+                        </article>
+
+                        <article class="vr-card vr-support-card">
+                            <i data-lucide="circle-help"></i>
+                            <h3>FAQs</h3>
+                            <p>Find answers about bookings, payments and cancellations.</p>
+                            <button>View FAQs</button>
+                        </article>
+                    </div>
+
+                    <div class="vr-card vr-house-rules">
+                        <div class="vr-card-heading">
+                            <h3>Important House Rules</h3>
+                        </div>
+
+                        <div class="vr-rules-grid">
+                            <span><i data-lucide="check"></i> Arrive 10 minutes before your slot.</span>
+                            <span><i data-lucide="check"></i> Outside alcohol is not permitted.</span>
+                            <span><i data-lucide="check"></i> Cancellation terms depend on booking time.</span>
+                            <span><i data-lucide="check"></i> Please respect room equipment and facilities.</span>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

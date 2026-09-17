@@ -1,0 +1,1289 @@
+/* =========================================================
+   VIBEROOMZ DASHBOARD - FIXED VERSION
+   ========================================================= */
+
+.vr-dashboard {
+    --vr-sidebar-width: 280px;
+    min-height: 100vh;
+    width: 100%;
+    background: var(--white);
+    color: var(--text);
+    position: relative;
+}
+
+/* ================= SIDEBAR ================= */
+
+.vr-dashboard-sidebar {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    bottom: 18px;
+    width: var(--vr-sidebar-width);
+    z-index: 1000;
+
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.vr-sidebar-brand {
+    height: 90px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.vr-sidebar-brand img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.vr-sidebar-brand h1 {
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.vr-sidebar-brand h1 span {
+    color: var(--primary);
+}
+
+.vr-dashboard-nav {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+}
+
+.vr-nav-link {
+    width: 100%;
+    flex: 1;
+    min-height: 55px;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    background: transparent;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0 18px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    transition: .25s ease;
+}
+
+.vr-nav-link svg {
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+    color: var(--text);
+}
+
+.vr-nav-link:hover {
+    background: rgba(255, 90, 0, .07);
+    color: var(--primary);
+}
+
+.vr-nav-link:hover svg {
+    color: var(--primary);
+}
+
+.vr-nav-link.active {
+    background: rgba(255, 90, 0, .10);
+    border-color: rgba(255, 90, 0, .20);
+    color: var(--primary);
+}
+
+.vr-nav-link.active svg {
+    color: var(--primary);
+}
+
+/* ================= MAIN AREA ================= */
+
+.vr-dashboard-area {
+    width: 100%;
+    min-height: 100vh;
+    margin-left: calc(var(--vr-sidebar-width) + 36px);
+    width: calc(100% - var(--vr-sidebar-width) - 54px);
+    padding: 18px 18px 30px 0;
+}
+
+/* ================= HEADER ================= */
+
+.vr-dashboard-header {
+    width: 100%;
+    min-height: 96px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+}
+
+.vr-header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.vr-header-title {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.vr-header-title span {
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.vr-header-title strong {
+    color: var(--text);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.vr-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vr-circle-btn {
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--primary);
+    border-radius: 14px;
+    background: var(--card-bg);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: .25s ease;
+}
+
+.vr-circle-btn svg {
+    width: 23px;
+    height: 23px;
+    color: var(--text);
+}
+
+.vr-circle-btn:hover {
+    color: var(--primary);
+    background: rgba(255, 90, 0, .07);
+}
+
+.vr-circle-btn:hover svg {
+    color: var(--primary);
+}
+
+.vr-notification-dot {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.vr-profile-wrap {
+    position: relative;
+}
+
+.vr-profile-btn {
+    min-height: 58px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card-bg);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 12px 5px 7px;
+    cursor: pointer;
+}
+
+.vr-profile-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.vr-profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.vr-profile-info strong {
+    color: var(--text);
+    font-size: 20px;
+}
+
+.vr-profile-info span {
+    color: var(--muted);
+    font-size: 20px;
+}
+
+.vr-profile-btn > svg {
+    width: 20px;
+    color: var(--text);
+}
+
+.vr-profile-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 220px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--dropdown-shadow);
+    padding: 7px;
+    display: none;
+    z-index: 2000;
+}
+
+.vr-profile-dropdown.show {
+    display: block;
+}
+
+.vr-profile-dropdown button {
+    width: 100%;
+    min-height: 50px;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 13px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: left;
+}
+
+.vr-profile-dropdown button:hover {
+    background: rgba(255, 90, 0, .08);
+    color: var(--primary);
+}
+
+.vr-profile-dropdown svg {
+    width: 21px;
+}
+
+.vr-mobile-menu {
+    display: none;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.vr-dashboard-main {
+    width: 100%;
+    padding-top: 0;
+}
+
+.vr-panel {
+    display: none;
+}
+
+.vr-panel.active {
+    display: block;
+}
+
+.vr-section-heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 12px;
+}
+
+.vr-section-heading h2 {
+    font-size: 34px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.vr-section-heading h2 span {
+    color: var(--secondary);
+}
+
+.vr-section-heading p {
+    margin-top: 3px;
+    font-size: 20px;
+    color: var(--text);
+}
+
+.vr-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.vr-stat-card {
+    min-height: 130px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 7px 22px rgba(0, 0, 0, .05);
+}
+
+.vr-stat-icon {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: rgba(255, 90, 0, .09);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vr-stat-icon svg {
+    width: 27px;
+    height: 27px;
+    color: var(--primary);
+}
+
+.vr-stat-card span,
+.vr-stat-card strong,
+.vr-stat-card small {
+    display: block;
+}
+
+.vr-stat-card span {
+    font-size: 20px;
+    color: var(--text);
+}
+
+.vr-stat-card strong {
+    font-size: 30px;
+    color: var(--primary);
+    line-height: 1.1;
+}
+
+.vr-stat-card small {
+    margin-top: 3px;
+    font-size: 20px;
+    color: var(--muted);
+}
+
+/* ================= CARDS ================= */
+
+.vr-content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.vr-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 7px 22px rgba(0, 0, 0, .05);
+}
+
+.vr-card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.vr-card-heading h3 {
+    font-size: 24px;
+    color: var(--text);
+}
+
+.vr-card-heading > svg {
+    color: var(--primary);
+    width: 25px;
+}
+
+.vr-status {
+    padding: 5px 10px;
+    border-radius: 9px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.vr-status.confirmed {
+    color: var(--success);
+    background: rgba(22, 163, 74, .10);
+}
+
+.vr-count {
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* ================= QUICK ACTIONS ================= */
+
+.vr-quick-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.vr-quick-actions button {
+    min-height: 95px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--white);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.vr-quick-actions button:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.vr-quick-actions svg {
+    color: var(--primary);
+    width: 26px;
+    height: 26px;
+}
+
+/* ================= BOOKING PREVIEW ================= */
+
+.vr-booking-preview {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.vr-booking-preview img {
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.vr-booking-preview h4 {
+    font-size: 24px;
+    color: var(--primary);
+    margin-bottom: 7px;
+}
+
+.vr-booking-preview p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    color: var(--text);
+    margin-top: 5px;
+}
+
+.vr-booking-preview svg {
+    width: 19px;
+    color: var(--primary);
+}
+
+/* ================= NOTIFICATIONS ================= */
+
+.vr-notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.vr-notification-list div {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-size: 20px;
+}
+
+.vr-notification-list div:last-child {
+    border-bottom: 0;
+}
+
+.vr-notification-list svg {
+    flex-shrink: 0;
+    color: var(--primary);
+    width: 22px;
+}
+
+/* ================= OFFERS MINI ================= */
+
+.vr-mini-offer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.vr-mini-offer:last-child {
+    border-bottom: 0;
+}
+
+.vr-mini-offer div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.vr-mini-offer strong {
+    font-size: 22px;
+    color: var(--text);
+}
+
+.vr-mini-offer span {
+    font-size: 20px;
+    color: var(--muted);
+}
+
+.vr-mini-offer svg {
+    color: var(--primary);
+    width: 27px;
+}
+
+/* ================= BOOK A ROOM ================= */
+
+.vr-booking-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    align-items: stretch;
+}
+
+.vr-book-step {
+    min-width: 0;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 7px 22px rgba(0, 0, 0, .05);
+    display: flex;
+    flex-direction: column;
+}
+
+.vr-step-head {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 14px;
+}
+
+.vr-step-number {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: rgba(255, 90, 0, .10);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.vr-step-head h3 {
+    font-size: 25px;
+    color: var(--text);
+}
+
+.vr-step-head p {
+    font-size: 20px;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+/* BOOK FIELDS */
+
+.vr-book-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.vr-book-fields label,
+.vr-form-grid label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.vr-book-fields span,
+.vr-form-grid span {
+    font-size: 20px;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.vr-book-fields input,
+.vr-book-fields select,
+.vr-form-grid input,
+.vr-form-grid select,
+.vr-preference-row select {
+    width: 100%;
+    min-height: 48px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--white);
+    color: var(--text);
+    padding: 0 12px;
+    font-size: 20px;
+    outline: none;
+}
+
+.vr-book-fields input:focus,
+.vr-book-fields select:focus,
+.vr-form-grid input:focus {
+    border-color: var(--primary);
+}
+
+.vr-availability {
+    margin-top: 12px;
+    min-height: 48px;
+    border-radius: 12px;
+    background: rgba(22, 163, 74, .08);
+    color: var(--success);
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0 12px;
+    font-size: 20px;
+}
+
+/* ROOM OPTIONS */
+
+.vr-room-option {
+    min-height: 115px;
+    display: grid;
+    grid-template-columns: 105px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--white);
+}
+
+.vr-room-option:last-child {
+    margin-bottom: 0;
+}
+
+.vr-room-option.selected {
+    border-color: var(--primary);
+}
+
+.vr-room-option img {
+    width: 105px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.vr-room-info h4 {
+    font-size: 22px;
+    color: var(--text);
+}
+
+.vr-room-info p {
+    font-size: 20px;
+    color: var(--muted);
+    margin: 3px 0;
+}
+
+.vr-room-info strong {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.vr-live-status {
+    color: var(--success);
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* ADDONS */
+
+.vr-addon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vr-addon {
+    min-height: 55px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 8px 11px;
+    display: grid;
+    grid-template-columns: 25px 1fr auto;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.vr-addon input {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary);
+}
+
+.vr-addon span {
+    display: flex;
+    flex-direction: column;
+}
+
+.vr-addon strong {
+    font-size: 20px;
+    color: var(--text);
+}
+
+.vr-addon small {
+    font-size: 20px;
+    color: var(--muted);
+}
+
+.vr-addon b {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+/* REVIEW */
+
+.vr-review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vr-review-list > div {
+    min-height: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    font-size: 20px;
+}
+
+.vr-review-list span {
+    color: var(--muted);
+}
+
+.vr-review-list strong {
+    color: var(--text);
+}
+
+.vr-review-list .vr-total-row {
+    border-bottom: 0;
+    margin-top: 4px;
+    padding-top: 8px;
+}
+
+.vr-total-row strong {
+    color: var(--primary);
+    font-size: 27px;
+}
+
+.vr-payment-choice {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.vr-payment-choice label {
+    min-height: 45px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 10px;
+    font-size: 20px;
+    color: var(--text);
+}
+
+.vr-payment-choice input {
+    accent-color: var(--primary);
+}
+
+/* BUTTONS */
+
+.vr-primary-btn,
+.vr-outline-btn,
+.vr-text-action,
+.vr-card-actions button,
+.vr-history-row button,
+.vr-support-card button {
+    min-height: 48px;
+    border-radius: 14px;
+    padding: 0 17px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.vr-primary-btn {
+    border: 1px solid var(--primary);
+    background: var(--primary);
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.vr-primary-btn:hover {
+    opacity: .9;
+}
+
+.vr-primary-btn svg {
+    width: 20px;
+}
+
+.vr-outline-btn {
+    border: 1px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+}
+
+.vr-text-action {
+    border: 0;
+    background: transparent;
+    color: var(--primary);
+    padding: 0;
+}
+
+/* ================= RESERVATIONS ================= */
+
+.vr-reservation-card {
+    display: grid;
+    grid-template-columns: 170px 1fr auto;
+    gap: 18px;
+    align-items: center;
+}
+
+.vr-reservation-card img {
+    width: 170px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.vr-reservation-card h4 {
+    font-size: 25px;
+    color: var(--primary);
+}
+
+.vr-reservation-card p {
+    font-size: 20px;
+    color: var(--text);
+    margin-top: 4px;
+}
+
+.vr-card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vr-card-actions button,
+.vr-history-row button {
+    border: 1px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+}
+
+.vr-history-row {
+    min-height: 58px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr auto;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--border);
+    font-size: 20px;
+}
+
+.vr-history-row:last-child {
+    border-bottom: 0;
+}
+
+.vr-history-row strong {
+    color: var(--text);
+}
+
+/* ================= PAYMENTS ================= */
+
+.vr-payment-method {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-bottom: 1px solid var(--border);
+}
+
+.vr-payment-method:last-child {
+    border-bottom: 0;
+}
+
+.vr-payment-method > svg {
+    width: 28px;
+    color: var(--primary);
+}
+
+.vr-payment-method div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.vr-payment-method strong {
+    font-size: 20px;
+    color: var(--text);
+}
+
+.vr-payment-method span {
+    font-size: 20px;
+    color: var(--muted);
+}
+
+.vr-transaction {
+    min-height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.vr-transaction:last-child {
+    border-bottom: 0;
+}
+
+.vr-transaction div {
+    display: flex;
+    flex-direction: column;
+}
+
+.vr-transaction strong {
+    font-size: 20px;
+    color: var(--text);
+}
+
+.vr-transaction span {
+    font-size: 20px;
+    color: var(--muted);
+}
+
+.vr-transaction b {
+    font-size: 21px;
+    color: var(--primary);
+}
+
+/* ================= PROFILE ================= */
+
+.vr-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.vr-preference-row {
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    font-size: 20px;
+    color: var(--text);
+}
+
+.vr-preference-row:last-child {
+    border-bottom: 0;
+}
+
+.vr-preference-row select {
+    width: 220px;
+}
+
+.vr-preference-row input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    accent-color: var(--primary);
+}
+
+/* ================= OFFERS ================= */
+
+.vr-offer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.vr-offer-card {
+    overflow: hidden;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 7px 22px rgba(0, 0, 0, .05);
+}
+
+.vr-offer-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.vr-offer-card > div {
+    padding: 16px;
+}
+
+.vr-offer-card span {
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.vr-offer-card h3 {
+    font-size: 25px;
+    color: var(--text);
+    margin: 4px 0;
+}
+
+.vr-offer-card p {
+    font-size: 20px;
+    color: var(--muted);
+    margin-bottom: 9px;
+}
+
+.vr-offer-card strong {
+    display: inline-block;
+    border: 1px dashed var(--primary);
+    border-radius: 9px;
+    padding: 5px 9px;
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.vr-rewards-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vr-rewards-card h3 {
+    font-size: 25px;
+    color: var(--primary);
+}
+
+.vr-rewards-card p {
+    font-size: 20px;
+    color: var(--text);
+    margin-top: 3px;
+}
+
+.vr-rewards-card > svg {
+    width: 42px;
+    height: 42px;
+    color: var(--primary);
+}
+
+/* ================= SUPPORT ================= */
+
+.vr-support-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.vr-support-card {
+    text-align: center;
+}
+
+.vr-support-card > svg {
+    width: 38px;
+    height: 38px;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.vr-support-card h3 {
+    font-size: 25px;
+    color: var(--text);
+}
+
+.vr-support-card p {
+    min-height: 50px;
+    font-size: 20px;
+    color: var(--muted);
+    margin: 5px 0 12px;
+}
+
+.vr-support-card button {
+    border: 1px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+}
+
+.vr-rules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.vr-rules-grid span {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 20px;
+    color: var(--text);
+}
+
+.vr-rules-grid svg {
+    width: 21px;
+    color: var(--primary);
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark .vr-dashboard {
+    background: var(--white);
+}
+
+body.dark .vr-dashboard-sidebar,
+body.dark .vr-dashboard-header,
+body.dark .vr-card,
+body.dark .vr-book-step,
+body.dark .vr-stat-card,
+body.dark .vr-offer-card {
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .25);
+}
+
+body.dark .vr-nav-link,
+body.dark .vr-circle-btn,
+body.dark .vr-profile-btn,
+body.dark .vr-profile-dropdown button,
+body.dark .vr-quick-actions button,
+body.dark .vr-book-fields input,
+body.dark .vr-book-fields select,
+body.dark .vr-form-grid input,
+body.dark .vr-form-grid select,
+body.dark .vr-preference-row select,
+body.dark .vr-room-option {
+    color: var(--text);
+}
+
+body.dark .vr-circle-btn svg,
+body.dark .vr-nav-link svg,
+body.dark .vr-profile-btn > svg {
+    color: var(--text);
+}
+
+body.dark .vr-profile-info strong,
+body.dark .vr-profile-info span,
+body.dark .vr-section-heading p,
+body.dark .vr-card-heading h3,
+body.dark .vr-stat-card span,
+body.dark .vr-stat-card small,
+body.dark .vr-booking-preview p,
+body.dark .vr-step-head h3,
+body.dark .vr-step-head p,
+body.dark .vr-room-info h4,
+body.dark .vr-room-info p,
+body.dark .vr-addon strong,
+body.dark .vr-addon small,
+body.dark .vr-review-list strong,
+body.dark .vr-history-row strong,
+body.dark .vr-payment-method strong,
+body.dark .vr-transaction strong,
+body.dark .vr-preference-row,
+body.dark .vr-support-card h3,
+body.dark .vr-rules-grid span {
+    color: var(--text);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+    .vr-dashboard-sidebar {
+        left: -290px;
+        transition: left 0.3s ease;
+    }
+
+    .vr-dashboard-sidebar.mobile-open {
+        left: 18px;
+    }
+
+    .vr-dashboard-area {
+        margin-left: 0;
+        width: 100%;
+        padding-right: 18px;
+    }
+
+    .vr-mobile-menu {
+        display: block;
+    }
+
+    .vr-stats-grid,
+    .vr-content-grid,
+    .vr-booking-layout,
+    .vr-offer-grid,
+    .vr-support-grid {
+        grid-template-columns: 1fr;
+    }
+}

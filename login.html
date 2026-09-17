@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VibeRoomz - Login</title>
+
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="vr-auth-body">
+
+  <div class="vr-auth-page">
+
+    <!-- Background Overlay -->
+    <div class="vr-auth-overlay"></div>
+
+    <!-- Top Right Controls -->
+    <div class="vr-auth-controls">
+
+      <button
+        class="vr-auth-control"
+        id="authRtlToggle"
+        type="button"
+        aria-label="Toggle RTL"
+        aria-pressed="false"
+      >
+        <i data-lucide="arrow-right-left"></i>
+      </button>
+
+      <button
+        class="vr-auth-control"
+        id="authThemeToggle"
+        type="button"
+        aria-label="Switch to dark mode"
+        aria-pressed="false"
+      >
+        <i data-lucide="moon-star"></i>
+      </button>
+
+    </div>
+
+
+    <!-- Authentication Container -->
+    <main class="vr-auth-container">
+
+      <!-- ================= LOGIN ================= -->
+
+      <section class="vr-auth-card" id="loginCard">
+
+        <!-- Logo -->
+        <a href="index.html" class="vr-auth-logo" aria-label="VibeRoomz Home">
+
+          <img
+            id="authLogo"
+            src="VibeRooms_light.png"
+            data-light-logo="VibeRooms_light.png"
+            data-dark-logo="VibeRooms_dark.png"
+            alt="VibeRoomz"
+          >
+
+          <h1>
+            Vibe<span>Roomz</span>
+          </h1>
+
+        </a>
+
+
+        <!-- Heading -->
+        <div class="vr-auth-heading">
+
+          <h2>
+            Customer <span>Login</span>
+          </h2>
+
+          <p>
+            Welcome back! Sign in to manage your bookings.
+          </p>
+
+        </div>
+
+
+        <!-- Login Form -->
+        <form class="vr-auth-form" id="loginForm">
+
+          <!-- Email -->
+          <div class="vr-auth-field">
+
+            <label for="loginEmail">
+              Email Address
+            </label>
+
+            <div class="vr-input-wrap">
+
+              <i data-lucide="mail"></i>
+
+              <input
+                type="email"
+                id="loginEmail"
+                name="email"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <!-- Password -->
+          <div class="vr-auth-field">
+
+            <label for="loginPassword">
+              Password
+            </label>
+
+            <div class="vr-input-wrap">
+
+              <i data-lucide="lock-keyhole"></i>
+
+              <input
+                type="password"
+                id="loginPassword"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              >
+
+              <button
+                type="button"
+                class="vr-password-toggle"
+                id="loginPasswordToggle"
+                aria-label="Show password"
+              >
+                <i data-lucide="eye"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- Remember + Forgot -->
+          <div class="vr-auth-options">
+
+            <label class="vr-remember">
+
+              <input
+                type="checkbox"
+                id="rememberMe"
+              >
+
+              <span>
+                Remember me
+              </span>
+
+            </label>
+
+            <a href="#" class="vr-forgot">
+              Forgot password?
+            </a>
+
+          </div>
+
+
+          <!-- Login Button -->
+          <button
+            type="submit"
+            class="vr-auth-primary-btn"
+          >
+            <span>Login</span>
+            <i data-lucide="arrow-right"></i>
+          </button>
+
+        </form>
+
+
+        <!-- Divider -->
+        <div class="vr-auth-divider">
+          <span>or continue with</span>
+        </div>
+
+
+        <!-- Social Buttons -->
+        <div class="vr-social-buttons">
+
+          <button
+            type="button"
+            class="vr-social-btn"
+          >
+            <i data-lucide="apple"></i>
+            <span>Continue with Apple</span>
+          </button>
+
+          <button
+            type="button"
+            class="vr-social-btn"
+          >
+            <i data-lucide="chrome"></i>
+            <span>Continue with Google</span>
+          </button>
+
+        </div>
+
+
+        <!-- Signup Switch -->
+        <div class="vr-auth-switch">
+
+          <span>
+            New customer?
+          </span>
+
+          <button
+            type="button"
+            id="showSignup"
+          >
+            Create account
+          </button>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ================= SIGNUP ================= -->
+
+      <section
+        class="vr-auth-card vr-signup-card"
+        id="signupCard"
+      >
+
+        <!-- Logo -->
+        <a href="index.html" class="vr-auth-logo" aria-label="VibeRoomz Home">
+
+          <img
+            class="authSignupLogo"
+            src="VibeRooms_light.png"
+            data-light-logo="VibeRooms_light.png"
+            data-dark-logo="VibeRooms_dark.png"
+            alt="VibeRoomz"
+          >
+
+          <h1>
+            Vibe<span>Roomz</span>
+          </h1>
+
+        </a>
+
+
+        <!-- Heading -->
+        <div class="vr-auth-heading">
+
+          <h2>
+            Create <span>Account</span>
+          </h2>
+
+          <p>
+            Join VibeRoomz and start planning your next party.
+          </p>
+
+        </div>
+
+
+        <!-- Signup Form -->
+        <form class="vr-auth-form" id="signupForm">
+
+          <!-- Name -->
+          <div class="vr-auth-field">
+
+            <label for="signupName">
+              Full Name
+            </label>
+
+            <div class="vr-input-wrap">
+
+              <i data-lucide="user-round"></i>
+
+              <input
+                type="text"
+                id="signupName"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <!-- Email -->
+          <div class="vr-auth-field">
+
+            <label for="signupEmail">
+              Email Address
+            </label>
+
+            <div class="vr-input-wrap">
+
+              <i data-lucide="mail"></i>
+
+              <input
+                type="email"
+                id="signupEmail"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <!-- Phone -->
+          <div class="vr-auth-field">
+
+            <label for="signupPhone">
+              Phone Number
+            </label>
+
+            <div class="vr-input-wrap">
+
+              <i data-lucide="phone"></i>
+
+              <input
+                type="tel"
+                id="signupPhone"
+                placeholder="Enter your phone number"
+                autocomplete="tel"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <!-- Password -->
+          <div class="vr-auth-field">
+
+            <label for="signupPassword">
+              Create Password
+            </label>
+
+            <div class="vr-input-wrap">
+
+              <i data-lucide="lock-keyhole"></i>
+
+              <input
+                type="password"
+                id="signupPassword"
+                placeholder="Create a password"
+                autocomplete="new-password"
+                required
+              >
+
+              <button
+                type="button"
+                class="vr-password-toggle"
+                id="signupPasswordToggle"
+                aria-label="Show password"
+              >
+                <i data-lucide="eye"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- Confirm Password -->
+          <div class="vr-auth-field">
+
+            <label for="signupConfirmPassword">
+              Confirm Password
+            </label>
+
+            <div class="vr-input-wrap">
+
+              <i data-lucide="shield-check"></i>
+
+              <input
+                type="password"
+                id="signupConfirmPassword"
+                placeholder="Confirm your password"
+                autocomplete="new-password"
+                required
+              >
+
+              <button
+                type="button"
+                class="vr-password-toggle"
+                id="signupConfirmPasswordToggle"
+                aria-label="Show password"
+              >
+                <i data-lucide="eye"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- Terms -->
+          <label class="vr-terms">
+
+            <input
+              type="checkbox"
+              required
+            >
+
+            <span>
+              I agree to the Terms & Conditions and Privacy Policy.
+            </span>
+
+          </label>
+
+
+          <!-- Signup Button -->
+          <button
+            type="submit"
+            class="vr-auth-primary-btn"
+          >
+            <span>Create Account</span>
+            <i data-lucide="user-plus"></i>
+          </button>
+
+        </form>
+
+
+        <!-- Login Switch -->
+        <div class="vr-auth-switch">
+
+          <span>
+            Already have an account?
+          </span>
+
+          <button
+            type="button"
+            id="showLogin"
+          >
+            Login
+          </button>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <script src="auth.js"></script>
+<script src="login.js"></script>
+</body>
+</html>

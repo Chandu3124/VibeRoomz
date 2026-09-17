@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VibeRoomz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="pricing.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html" class="logo" aria-label="VibeRoomz home">
+        <img
+          id="siteLogo"
+          src="VibeRooms_light.png"
+          alt="VibeRoomz logo"
+          data-light-logo="VibeRooms_light.png"
+          data-dark-logo="VibeRooms_dark.png"
+        />
+        <h1>Vibe<span>Roomz</span></h1>
+      </a>
+
+
+      <ul class="menu" id="primaryMenu">
+        <li class="dropdown">
+          <a href="index.html" data-page="index.html">
+            <span>Home</span>
+            <i data-lucide="chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html" data-page="index.html">Home 1</a></li>
+            <li><a href="home2.html" data-page="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+
+
+        <li><a href="rooms.html" data-page="rooms.html">Rooms</a></li>
+        <li><a href="packages.html" data-page="packages.html">Packages</a></li>
+        <li><a href="events.html" data-page="events.html">Events</a></li>
+        <li><a href="pricing.html" data-page="pricing.html">Pricing</a></li>
+        <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+        <li><a href="dashboard.html" data-page="dashboard.html">Dashboard</a></li>
+
+
+        <li class="mobile-login-item">
+          <a href="login.html" data-page="login.html">Login</a>
+        </li>
+      </ul>
+
+
+      <div class="nav-right">
+        <button
+          class="circle rtl-btn"
+          id="rtlToggle"
+          type="button"
+          aria-label="Switch to right to left layout"
+          aria-pressed="false"
+        >
+          <i data-lucide="arrow-right-left"></i>
+        </button>
+
+
+        <button
+          class="circle theme-btn"
+          id="themeToggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+        >
+          <i data-lucide="moon-star"></i>
+        </button>
+
+
+        <a href="login.html" class="login login-btn desktop-login" data-page="login.html">Login</a>
+
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primaryMenu"
+          type="button"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="pricing-hero" id="pricingHero">
+  <div class="container">
+    <div class="pricing-hero-layout">
+
+      <div class="pricing-hero-content">
+
+       <div class="pricing-hero-kicker">
+  <span class="pricing-tag-line"></span>
+  <i data-lucide="tag"></i>
+  <span>TRANSPARENT PRICING</span>
+  <span class="pricing-tag-line pricing-tag-line-right"></span>
+</div>
+        <h1>
+          <span class="pricing-primary">Amazing Party Rooms.</span>
+          <span class="pricing-secondary">Fair & Transparent Pricing.</span>
+        </h1>
+
+        <p>
+          No hidden fees. No surprise charges. Just great spaces,
+          clear pricing and unforgettable moments at VibeRoomz.
+        </p>
+
+        <a href="rooms.html" class="pricing-hero-btn">
+          <span>Check Availability</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
+
+      </div>
+
+      <div class="pricing-hero-visual">
+
+        <div class="pricing-decor pricing-decor-one"></div>
+        <div class="pricing-decor pricing-decor-two"></div>
+
+        <div class="pricing-rate-card">
+
+          <span class="pricing-card-label">
+            PARTY ROOM RATES
+          </span>
+
+          <div class="pricing-from">Starting from</div>
+
+          <div class="pricing-price">
+            <strong>₹45</strong>
+            <span>/ hour</span>
+          </div>
+
+          <div class="pricing-card-list">
+
+            <div>
+              <i data-lucide="check"></i>
+              <span>No hidden fees</span>
+            </div>
+
+            <div>
+              <i data-lucide="check"></i>
+              <span>Transparent pricing</span>
+            </div>
+
+            <div>
+              <i data-lucide="check"></i>
+              <span>Flexible booking hours</span>
+            </div>
+
+            <div>
+              <i data-lucide="check"></i>
+              <span>Premium party spaces</span>
+            </div>
+
+          </div>
+
+          <a href="rooms.html" class="pricing-card-btn">
+            <i data-lucide="calendar-days"></i>
+            <span>Check Availability</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="hourly-sale-section" id="hourlyRates">
+  <div class="container">
+
+    <div class="hourly-sale-heading">
+     <div class="hourly-sale-kicker">
+  <span class="pricing-tag-line"></span>
+  <i data-lucide="clock-3"></i>
+  <span>SIMPLE &amp; TRANSPARENT</span>
+  <span class="pricing-tag-line pricing-tag-line-right"></span>
+</div>
+
+      <h2>Hourly Room <span>Rates</span></h2>
+
+      <p>
+        Choose the room that fits your group and enjoy clear hourly pricing
+        with premium party essentials included.
+      </p>
+    </div>
+
+    <div class="hourly-sale-grid">
+
+      <!-- CARD 1 -->
+      <article class="hourly-sale-card">
+
+        <div class="hourly-sale-image">
+          <img
+            src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=85"
+            alt="Neon Beat Room"
+          >
+
+          <span class="hourly-sale-badge">STANDARD</span>
+        </div>
+
+        <div class="hourly-sale-body">
+
+          <div class="hourly-sale-room-head">
+            <div>
+              <h3>Neon Beat Room</h3>
+              <span>
+                <i data-lucide="users"></i>
+                4–8 Guests
+              </span>
+            </div>
+
+            <div class="hourly-sale-room-icon">
+              <i data-lucide="mic-2"></i>
+            </div>
+          </div>
+
+          <div class="hourly-sale-pricing">
+
+            <div>
+              <span>1 Hour</span>
+              <strong>₹999</strong>
+            </div>
+
+            <div>
+              <span>2 Hours</span>
+              <strong>₹1,799</strong>
+            </div>
+
+            <div>
+              <span>3 Hours</span>
+              <strong>₹2,499</strong>
+            </div>
+
+            <div class="hourly-sale-extra">
+              <span>Extra Hour</span>
+              <strong>₹799</strong>
+            </div>
+
+          </div>
+
+          <div class="hourly-sale-included">
+            <span>WHAT'S INCLUDED</span>
+
+            <div>
+              <b><i data-lucide="check"></i>Karaoke</b>
+              <b><i data-lucide="check"></i>Sound System</b>
+              <b><i data-lucide="check"></i>Basic Lighting</b>
+            </div>
+          </div>
+
+          <a href="rooms.html" class="hourly-sale-btn">
+            <span>Check Availability</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </div>
+      </article>
+
+
+      <!-- CARD 2 -->
+      <article class="hourly-sale-card hourly-sale-popular-card">
+
+        <div class="hourly-sale-image">
+          <img
+            src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1000&q=85"
+            alt="Retro Groove Room"
+          >
+
+          <span class="hourly-sale-badge">MOST POPULAR</span>
+        </div>
+
+        <div class="hourly-sale-body">
+
+          <div class="hourly-sale-room-head">
+            <div>
+              <h3>Retro Groove Room</h3>
+              <span>
+                <i data-lucide="users"></i>
+                6–10 Guests
+              </span>
+            </div>
+
+            <div class="hourly-sale-room-icon">
+              <i data-lucide="music-2"></i>
+            </div>
+          </div>
+
+          <div class="hourly-sale-pricing">
+
+            <div>
+              <span>1 Hour</span>
+              <strong>₹1,299</strong>
+            </div>
+
+            <div>
+              <span>2 Hours</span>
+              <strong>₹2,299</strong>
+            </div>
+
+            <div>
+              <span>3 Hours</span>
+              <strong>₹3,199</strong>
+            </div>
+
+            <div class="hourly-sale-extra">
+              <span>Extra Hour</span>
+              <strong>₹999</strong>
+            </div>
+
+          </div>
+
+          <div class="hourly-sale-included">
+            <span>WHAT'S INCLUDED</span>
+
+            <div>
+              <b><i data-lucide="check"></i>Karaoke</b>
+              <b><i data-lucide="check"></i>Premium Audio</b>
+              <b><i data-lucide="check"></i>Neon Lighting</b>
+            </div>
+          </div>
+
+          <a href="rooms.html" class="hourly-sale-btn">
+            <span>Check Availability</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </div>
+      </article>
+
+
+      <!-- CARD 3 -->
+      <article class="hourly-sale-card">
+
+        <div class="hourly-sale-image">
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+            alt="Royal Lounge Room"
+          >
+
+          <span class="hourly-sale-badge">LUXURY</span>
+        </div>
+
+        <div class="hourly-sale-body">
+
+          <div class="hourly-sale-room-head">
+            <div>
+              <h3>Royal Lounge</h3>
+              <span>
+                <i data-lucide="users"></i>
+                8–12 Guests
+              </span>
+            </div>
+
+            <div class="hourly-sale-room-icon">
+              <i data-lucide="crown"></i>
+            </div>
+          </div>
+
+          <div class="hourly-sale-pricing">
+
+            <div>
+              <span>1 Hour</span>
+              <strong>₹1,599</strong>
+            </div>
+
+            <div>
+              <span>2 Hours</span>
+              <strong>₹2,899</strong>
+            </div>
+
+            <div>
+              <span>3 Hours</span>
+              <strong>₹3,999</strong>
+            </div>
+
+            <div class="hourly-sale-extra">
+              <span>Extra Hour</span>
+              <strong>₹1,199</strong>
+            </div>
+
+          </div>
+
+          <div class="hourly-sale-included">
+            <span>WHAT'S INCLUDED</span>
+
+            <div>
+              <b><i data-lucide="check"></i>Karaoke</b>
+              <b><i data-lucide="check"></i>Premium Audio</b>
+              <b><i data-lucide="check"></i>Premium Lighting</b>
+            </div>
+          </div>
+
+          <a href="rooms.html" class="hourly-sale-btn">
+            <span>Check Availability</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </div>
+      </article>
+
+
+      <!-- CARD 4 -->
+      <article class="hourly-sale-card">
+
+        <div class="hourly-sale-image">
+          <img
+            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=85"
+            alt="Party Pulse Room"
+          >
+
+          <span class="hourly-sale-badge">PARTY</span>
+        </div>
+
+        <div class="hourly-sale-body">
+
+          <div class="hourly-sale-room-head">
+            <div>
+              <h3>Party Pulse Room</h3>
+              <span>
+                <i data-lucide="users"></i>
+                10–15 Guests
+              </span>
+            </div>
+
+            <div class="hourly-sale-room-icon">
+              <i data-lucide="party-popper"></i>
+            </div>
+          </div>
+
+          <div class="hourly-sale-pricing">
+
+            <div>
+              <span>1 Hour</span>
+              <strong>₹1,899</strong>
+            </div>
+
+            <div>
+              <span>2 Hours</span>
+              <strong>₹3,399</strong>
+            </div>
+
+            <div>
+              <span>3 Hours</span>
+              <strong>₹4,599</strong>
+            </div>
+
+            <div class="hourly-sale-extra">
+              <span>Extra Hour</span>
+              <strong>₹1,399</strong>
+            </div>
+
+          </div>
+
+          <div class="hourly-sale-included">
+            <span>WHAT'S INCLUDED</span>
+
+            <div>
+              <b><i data-lucide="check"></i>Karaoke</b>
+              <b><i data-lucide="check"></i>Premium Audio</b>
+              <b><i data-lucide="check"></i>Party Lighting</b>
+            </div>
+          </div>
+
+          <a href="rooms.html" class="hourly-sale-btn">
+            <span>Check Availability</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </div>
+      </article>
+
+    </div>
+
+    <div class="hourly-sale-note">
+      <i data-lucide="info"></i>
+      <span>
+        All rates include room access, karaoke equipment, sound system and
+        basic lighting. Food, decorations and special add-ons are charged separately.
+      </span>
+    </div>
+
+  </div>
+</section>
+
+<section class="membership-tiers-section" id="membershipTiers">
+  <div class="container">
+
+    <div class="membership-tiers-heading">
+      <div class="membership-tiers-kicker">
+  <span class="pricing-tag-line"></span>
+  <i data-lucide="sparkles"></i>
+  <span>VIBEROOMZ MEMBERSHIP</span>
+  <span class="pricing-tag-line pricing-tag-line-right"></span>
+</div>
+
+      <h2>Choose Your <span>Membership</span></h2>
+
+      <p>
+        Unlock exclusive rewards, better savings and more reasons to
+        celebrate with every VibeRoomz visit.
+      </p>
+    </div>
+
+
+    <div class="membership-tiers-grid">
+
+      <!-- BASIC -->
+      <article class="membership-tier-card">
+
+        <div class="membership-tier-top">
+          <div class="membership-tier-icon">
+            <i data-lucide="smile"></i>
+          </div>
+
+          <span class="membership-tier-label">BASIC</span>
+          <h3>Good Vibes</h3>
+
+          <p>
+            A simple way to start enjoying member-only rewards.
+          </p>
+        </div>
+
+        <div class="membership-tier-price">
+          <strong>₹499</strong>
+          <span>/ year</span>
+        </div>
+
+        <div class="membership-tier-divider"></div>
+
+        <div class="membership-tier-benefits">
+          <span>MEMBERSHIP BENEFITS</span>
+
+          <ul>
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span>5% Member Discount</span>
+            </li>
+
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span>Standard Booking Access</span>
+            </li>
+
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span>Member-Only Offers</span>
+            </li>
+
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span>Birthday Greeting Perks</span>
+            </li>
+
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span>Selected Event Access</span>
+            </li>
+          </ul>
+        </div>
+
+        <a href="membership.html" class="membership-tier-btn">
+          <span>Join Basic</span>
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+
+      </article>
+
+
+      <!-- PLUS -->
+      <article class="membership-tier-card membership-tier-featured">
+
+        <div class="membership-tier-popular">
+          <i data-lucide="star"></i>
+          MOST POPULAR
+        </div>
+
+        <div class="membership-tier-top">
+          <div class="membership-tier-icon">
+            <i data-lucide="zap"></i>
+          </div>
+
+          <span class="membership-tier-label">PLUS</span>
+          <h3>Party Pro</h3>
+
+          <p>
+            More savings, priority access and better party perks.
+          </p>
+        </div>
+
+        <div class="membership-tier-price">
+          <strong>₹999</strong>
+          <span>/ year</span>
+        </div>
+
+        <div class="membership-tier-divider"></div>
+
+        <div class="membership-tier-benefits">
+          <span>MEMBERSHIP BENEFITS</span>
+
+          <ul>
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span>10% Member Discount</span>
+            </li>
+
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span>Priority Booking</span>
+            </li>
+
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span>Exclusive Member Offers</span>
+            </li>
+
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span>Birthday Room Perks</span>
+            </li>
+
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span>Early Event Access</span>
+            </li>
+          </ul>
+        </div>
+
+        <a href="membership.html" class="membership-tier-btn">
+          <span>Join Plus</span>
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+
+      </article>
+
+
+      <!-- PREMIUM -->
+      <article class="membership-tier-card">
+
+        <div class="membership-tier-top">
+          <div class="membership-tier-icon">
+            <i data-lucide="crown"></i>
+          </div>
+
+          <span class="membership-tier-label">PREMIUM</span>
+          <h3>Vibe Elite</h3>
+
+          <p>
+            The ultimate membership for serious party lovers.
+          </p>
+        </div>
+
+        <div class="membership-tier-price">
+          <strong>₹1,499</strong>
+          <span>/ year</span>
+        </div>
+
+        <div class="membership-tier-divider"></div>
+
+        <div class="membership-tier-benefits">
+          <span>MEMBERSHIP BENEFITS</span>
+
+          <ul>
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span>15% Member Discount</span>
+            </li>
+
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span>VIP Priority Booking</span>
+            </li>
+
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span>Premium Exclusive Offers</span>
+            </li>
+
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span>Premium Birthday Perks</span>
+            </li>
+
+            <li>
+              <i data-lucide="check-circle-2"></i>
+              <span>VIP Event Access</span>
+            </li>
+          </ul>
+        </div>
+
+        <a href="membership.html" class="membership-tier-btn">
+          <span>Join Premium</span>
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="addon-pricing-section" id="addonPricing">
+  <div class="container">
+
+    <div class="addon-pricing-heading">
+      <div class="addon-pricing-kicker">
+  <span class="pricing-tag-line"></span>
+  <i data-lucide="plus-circle"></i>
+  <span>ADD-ON PRICING</span>
+  <span class="pricing-tag-line pricing-tag-line-right"></span>
+</div>
+      <h2>Make It <span>Extra Special</span></h2>
+
+      <p>
+        Enhance your celebration with optional extras and create the perfect
+        party experience your way.
+      </p>
+    </div>
+
+    <div class="addon-pricing-grid">
+
+      <article class="addon-card">
+        <div class="addon-icon">
+          <i data-lucide="party-popper"></i>
+        </div>
+        <div class="addon-content">
+          <h3>Decorations</h3>
+          <p>Custom themes, balloons and party setups for your celebration.</p>
+          <div class="addon-price">
+            <strong>₹999</strong>
+            <span>/ package</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="addon-card">
+        <div class="addon-icon">
+          <i data-lucide="utensils"></i>
+        </div>
+        <div class="addon-content">
+          <h3>Food & Beverages</h3>
+          <p>Delicious food and refreshing drinks for you and your guests.</p>
+          <div class="addon-price">
+            <strong>₹499</strong>
+            <span>/ person</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="addon-card">
+        <div class="addon-icon">
+          <i data-lucide="clock-3"></i>
+        </div>
+        <div class="addon-content">
+          <h3>Extra Room Time</h3>
+          <p>Extend your celebration with additional booking hours.</p>
+          <div class="addon-price">
+            <strong>₹1,000</strong>
+            <span>/ hour</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="addon-card">
+        <div class="addon-icon">
+          <i data-lucide="camera"></i>
+        </div>
+        <div class="addon-content">
+          <h3>Photography</h3>
+          <p>Capture your special moments with professional photography.</p>
+          <div class="addon-price">
+            <strong>₹2,499</strong>
+            <span>/ session</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="addon-card">
+        <div class="addon-icon">
+          <i data-lucide="lightbulb"></i>
+        </div>
+        <div class="addon-content">
+          <h3>Special Lighting</h3>
+          <p>Custom lighting options to create the perfect party atmosphere.</p>
+          <div class="addon-price">
+            <strong>₹799</strong>
+            <span>/ package</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="addon-card">
+        <div class="addon-icon">
+          <i data-lucide="sparkles"></i>
+        </div>
+        <div class="addon-content">
+          <h3>Party Upgrades</h3>
+          <p>DJ effects, confetti and premium upgrades for your celebration.</p>
+          <div class="addon-price">
+            <strong>₹1,999</strong>
+            <span>/ package</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="pricing-faq-section" id="pricingFaq">
+  <div class="container">
+
+    <!-- CENTER HEADING -->
+    <div class="pricing-faq-heading">
+      <div class="pricing-faq-kicker">
+  <span class="pricing-tag-line"></span>
+  <i data-lucide="circle-help"></i>
+  <span>PRICING FAQ</span>
+  <span class="pricing-tag-line pricing-tag-line-right"></span>
+</div>
+
+      <h2>Pricing Questions, <span>Answered.</span></h2>
+
+      <p>
+        Everything you need to know about room rates, bookings,
+        cancellations and optional add-ons.
+      </p>
+    </div>
+
+    <!-- FAQ + ANIMATION -->
+    <div class="pricing-faq-layout">
+
+      <!-- LEFT FAQ -->
+      <div class="pricing-faq-content">
+
+        <div class="pricing-faq-list">
+
+          <div class="pricing-faq-item active">
+            <button class="pricing-faq-question" type="button">
+              <span>Are prices per room or per person?</span>
+              <i data-lucide="plus"></i>
+            </button>
+
+            <div class="pricing-faq-answer">
+              <p>
+                Our room rates are charged per room, not per person.
+                You can enjoy the room with your entire group within
+                the selected capacity.
+              </p>
+            </div>
+          </div>
+
+          <div class="pricing-faq-item">
+            <button class="pricing-faq-question" type="button">
+              <span>Is there a minimum booking duration?</span>
+              <i data-lucide="plus"></i>
+            </button>
+
+            <div class="pricing-faq-answer">
+              <p>
+                Our standard booking starts from 1 hour, with longer
+                booking slots available for selected rooms.
+              </p>
+            </div>
+          </div>
+
+          <div class="pricing-faq-item">
+            <button class="pricing-faq-question" type="button">
+              <span>Are weekends priced differently?</span>
+              <i data-lucide="plus"></i>
+            </button>
+
+            <div class="pricing-faq-answer">
+              <p>
+                Weekend and peak-time rates may vary depending on
+                demand and the room you choose.
+              </p>
+            </div>
+          </div>
+
+          <div class="pricing-faq-item">
+            <button class="pricing-faq-question" type="button">
+              <span>Can I cancel or reschedule?</span>
+              <i data-lucide="plus"></i>
+            </button>
+
+            <div class="pricing-faq-answer">
+              <p>
+                Yes. Cancellation and rescheduling are available
+                according to the booking policy and selected slot.
+              </p>
+            </div>
+          </div>
+
+          <div class="pricing-faq-item">
+            <button class="pricing-faq-question" type="button">
+              <span>Are add-ons charged separately?</span>
+              <i data-lucide="plus"></i>
+            </button>
+
+            <div class="pricing-faq-answer">
+              <p>
+                Yes. Decorations, food, photography, lighting and
+                other upgrades are optional and charged separately.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT ANIMATED VISUAL -->
+      <div class="pricing-faq-visual">
+
+        <div class="pricing-faq-orbit pricing-faq-orbit-one"></div>
+        <div class="pricing-faq-orbit pricing-faq-orbit-two"></div>
+
+        <div class="pricing-faq-price-card">
+
+          <div class="pricing-faq-card-icon">
+            <i data-lucide="wallet-cards"></i>
+          </div>
+
+          <span>VIBEROOMZ PRICING</span>
+
+          <h3>
+            Simple.<br>
+            <strong>Transparent.</strong>
+          </h3>
+
+          <div class="pricing-faq-rate">
+            <small>ROOMS FROM</small>
+
+            <div>
+              <strong>₹45</strong>
+              <span>/ hour</span>
+            </div>
+          </div>
+
+          <div class="pricing-faq-check">
+            <i data-lucide="check-circle-2"></i>
+            <span>No hidden charges</span>
+          </div>
+
+          <div class="pricing-faq-check">
+            <i data-lucide="check-circle-2"></i>
+            <span>Optional add-ons</span>
+          </div>
+
+          <div class="pricing-faq-check">
+            <i data-lucide="check-circle-2"></i>
+            <span>Clear booking prices</span>
+          </div>
+
+        </div>
+
+        <div class="pricing-faq-floating pricing-faq-floating-one">
+          <i data-lucide="tag"></i>
+          <span>Fair Pricing</span>
+        </div>
+
+        <div class="pricing-faq-floating pricing-faq-floating-two">
+          <i data-lucide="sparkles"></i>
+          <span>Premium Vibe</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="pricing-cta-section" id="pricingCta">
+  <div class="container">
+
+    <div class="pricing-cta-card">
+
+      <div class="pricing-cta-decoration pricing-cta-decoration-one"></div>
+      <div class="pricing-cta-decoration pricing-cta-decoration-two"></div>
+
+      <div class="pricing-cta-icon">
+        <i data-lucide="calendar-clock"></i>
+      </div>
+
+      <div class="pricing-cta-content">
+
+       <div class="pricing-cta-kicker">
+  <span class="pricing-cta-line"></span>
+  <span>READY TO PARTY?</span>
+  <span class="pricing-cta-line pricing-cta-line-right"></span>
+</div>
+
+        <h2>
+          Pick Your Time. Pick Your Vibe.
+          <span>Know Your Price.</span>
+        </h2>
+
+        <p>
+          Choose the room and time that work best for your party.
+        </p>
+
+        <div class="pricing-cta-points">
+
+          <span>
+            <i data-lucide="check-circle-2"></i>
+            Transparent Pricing
+          </span>
+
+          <span>
+            <i data-lucide="clock-3"></i>
+            Flexible Hours
+          </span>
+
+          <span>
+            <i data-lucide="party-popper"></i>
+            Premium Vibes
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="pricing-cta-action">
+
+        <a href="rooms.html" class="pricing-cta-btn">
+          <span>Book Your Room</span>
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+
+        <small>
+          <i data-lucide="shield-check"></i>
+          No hidden charges
+        </small>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+ <footer class="footer">
+  <div class="container footer-grid">
+    <section class="footer-about">
+      <div class="footer-logo">
+        <img
+          id="footerLogo"
+          src="VibeRooms_light.png"
+          alt="VibeRoomz logo"
+          data-light-logo="VibeRooms_light.png"
+          data-dark-logo="VibeRooms_dark.png"
+        />
+        <h2>Vibe<span>Roomz</span></h2>
+      </div>
+
+
+      <p>VibeRoomz is your premium room booking space for parties, music, and unforgettable indoor experiences.</p>
+
+
+      <div class="socials">
+        <a href="#" aria-label="Visit VibeRoomz on YouTube"><i data-lucide="youtube"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on Instagram"><i data-lucide="instagram"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on X"><i data-lucide="twitter"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on LinkedIn"><i data-lucide="linkedin"></i></a>
+      </div>
+    </section>
+
+
+    <nav aria-label="Quick links">
+      <h3>Quick Links</h3>
+      <div class="line"></div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+
+    <nav aria-label="Services links">
+      <h3>Our Services</h3>
+      <div class="line"></div>
+      <ul>
+        <li><a href="rooms.html">Private Rooms</a></li>
+        <li><a href="packages.html">Party Packages</a></li>
+        <li><a href="events.html">Event Hosting</a></li>
+        <li><a href="pricing.html">Transparent Pricing</a></li>
+        <li><a href="dashboard.html">Booking Dashboard</a></li>
+      </ul>
+    </nav>
+
+<section class="footer-extra">
+      <h3>Additional Pages</h3>
+      <div class="line"></div>
+
+
+      <ul class="footer-extra-list">
+        <li><a href="rooms.html">Error 404</a></li>
+        <li><a href="packages.html">Coming soon</a></li>
+        <li><a href="contact.html">Support</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+
+
+      
+    </section>
+    <section class="footer-contact-wrap" aria-labelledby="footer-contact-title">
+      <h3 id="footer-contact-title">Contact Us</h3>
+      <div class="line"></div>
+
+
+      <ul class="contact">
+        <li><i data-lucide="map-pin"></i><span>Hyderabad, India</span></li>
+        <li><i data-lucide="phone"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+        <li><i data-lucide="mail"></i><a href="mailto:info@viberoomz.com">info@viberoomz.com</a></li>
+        <li><i data-lucide="clock-3"></i><span>9:30 am - 4:30 pm</span></li>
+      </ul>
+    </section>
+
+
+    
+  </div>
+
+
+  <div class="footer-bottom">
+    <p>© <span id="footerYear"></span> <span class="next">Vibe</span><span class="gear">Roomz</span>. All Rights Reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="pp.html">Privacy Policy</a>
+      <a href="tc.html">Terms &amp; Conditions</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+  </div>
+
+
+  <script src="main.js"></script>
+  <script src="pricing.js"></script>
+  <script>lucide.createIcons();</script>
+  <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+</body>
+</html>

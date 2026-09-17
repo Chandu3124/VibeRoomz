@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VibeRoomz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="home2.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html" class="logo" aria-label="VibeRoomz home">
+        <img
+          id="siteLogo"
+          src="VibeRooms_light.png"
+          alt="VibeRoomz logo"
+          data-light-logo="VibeRooms_light.png"
+          data-dark-logo="VibeRooms_dark.png"
+        />
+        <h1>Vibe<span>Roomz</span></h1>
+      </a>
+
+
+      <ul class="menu" id="primaryMenu">
+        <li class="dropdown">
+          <a href="index.html" data-page="index.html">
+            <span>Home</span>
+            <i data-lucide="chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html" data-page="index.html">Home 1</a></li>
+            <li><a href="home2.html" data-page="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+
+
+        <li><a href="rooms.html" data-page="rooms.html">Rooms</a></li>
+        <li><a href="packages.html" data-page="packages.html">Packages</a></li>
+        <li><a href="events.html" data-page="events.html">Events</a></li>
+        <li><a href="pricing.html" data-page="pricing.html">Pricing</a></li>
+        <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+        <li><a href="dashboard.html" data-page="dashboard.html">Dashboard</a></li>
+
+
+        <li class="mobile-login-item">
+          <a href="login.html" data-page="login.html">Login</a>
+        </li>
+      </ul>
+
+
+      <div class="nav-right">
+        <button
+          class="circle rtl-btn"
+          id="rtlToggle"
+          type="button"
+          aria-label="Switch to right to left layout"
+          aria-pressed="false"
+        >
+          <i data-lucide="arrow-right-left"></i>
+        </button>
+
+
+        <button
+          class="circle theme-btn"
+          id="themeToggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+        >
+          <i data-lucide="moon-star"></i>
+        </button>
+
+
+        <a href="login.html" class="login login-btn desktop-login" data-page="login.html">Login</a>
+
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primaryMenu"
+          type="button"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- =========================================================
+     VIBEROOMZ HOME PAGE
+========================================================= -->
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+<section class="vibe-hero" id="vibeHero">
+
+  <div class="vibe-hero-overlay"></div>
+
+  <div class="container vibe-hero-inner">
+
+    <div class="vibe-hero-content">
+
+      <div class="vibe-hero-kicker">
+        <span class="vibe-kicker-line"></span>
+        <span>PREMIUM PRIVATE PARTY ROOMS</span>
+        <span class="vibe-kicker-line vibe-kicker-line-blue"></span>
+      </div>
+
+      <h1 class="vibe-hero-title">
+        Your Private
+        <br>
+        <span>Party Room</span> Awaits
+      </h1>
+
+      <p class="vibe-hero-text">
+        Premium party rooms designed for unforgettable nights.
+        <br>
+        Music, lights, and vibes – all in one place.
+      </p>
+
+      <div class="vibe-features">
+
+        <div class="vibe-feature">
+          <div class="vibe-feature-icon orange">
+            <i data-lucide="mic-2"></i>
+          </div>
+
+          <h3>Karaoke</h3>
+          <p>Sing your heart out</p>
+        </div>
+
+        <div class="vibe-feature">
+          <div class="vibe-feature-icon blue">
+            <i data-lucide="sun"></i>
+          </div>
+
+          <h3>Neon Lights</h3>
+          <p>Set the perfect mood</p>
+        </div>
+
+        <div class="vibe-feature">
+          <div class="vibe-feature-icon purple">
+            <i data-lucide="volume-2"></i>
+          </div>
+
+          <h3>Premium Sound</h3>
+          <p>Feel every beat</p>
+        </div>
+
+      </div>
+
+      <div class="vibe-hero-actions">
+
+        <a href="booking.html" class="vibe-btn vibe-btn-primary">
+          <span>Book a Room</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
+
+        <a href="packages.html" class="vibe-btn vibe-btn-outline">
+          <span>Explore Packages</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROMOTIONAL BANNERS
+========================================================= -->
+<section class="promo-banners" id="promoBanners">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div class="section-kicker">
+        <span class="kicker-line"></span>
+        <span>SPECIAL DEALS</span>
+        <span class="kicker-line blue"></span>
+      </div>
+
+      <h2 class="section-title">
+        <span class="title-primary">Hot</span>
+        <span class="title-secondary">Offers</span>
+      </h2>
+
+      <p class="section-subtitle">
+        Exclusive deals made to make your celebration even better.
+      </p>
+
+    </div>
+
+
+    <div class="promo-grid">
+
+      <article class="promo-card">
+
+        <div
+          class="promo-bg"
+          style="background-image:url('https://images.openai.com/static-rsc-4/0tnq_Y61ymxq0dDhYYgkFTDTTQhdbydE9UjDNLBgrgPCik5BnDnI3S2o8iJjXjCWOh0FeCxWOrCp1Uyu8Zrrx2Uxk8r1agM8QboaxEY3NLT4LGhqgSYPECYk7AhYCovIv3ufzg4BvwAJZfMg6UiKSafHixnqsdq62PYxqBOizFKnnsQzc9cKrYfzNW4mSaCY?purpose=fullsize');">
+        </div>
+
+        <div class="promo-overlay"></div>
+
+        <div class="promo-content">
+
+          <span class="promo-badge">
+            Birthday Special
+          </span>
+
+          <h3 class="promo-title">
+            Free Decor on Birthdays
+          </h3>
+
+          <p class="promo-text">
+            Celebrate your special day with complimentary themed decor.
+          </p>
+
+          <a href="packages.html" class="btn btn-promo">
+            <span>Grab the Offer</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="promo-card">
+
+        <div
+          class="promo-bg"
+          style="background-image:url('https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=1200&auto=format&fit=crop');">
+        </div>
+
+        <div class="promo-overlay"></div>
+
+        <div class="promo-content">
+
+          <span class="promo-badge">
+            Weekday Deal
+          </span>
+
+          <h3 class="promo-title">
+            Midweek Madness
+          </h3>
+
+          <p class="promo-text">
+            Enjoy flat 25% off on room bookings Monday to Thursday.
+          </p>
+
+          <a href="packages.html" class="btn btn-promo">
+            <span>Grab the Offer</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="promo-card">
+
+        <div
+          class="promo-bg"
+          style="background-image:url('https://images.openai.com/static-rsc-4/TgNsloZWWMroLKuO_sBHoDD7irbFzBZ5NdO_Ez5Bua77erjKqFpsAnw2fJ8JteLDe4UiQPiLQy6JddfUt7LQ-3r7UVd82iFs7QQlihmgw16sXtDzlsGJsU63oyzy89GnROIHRNnT1Bd8MoHpNPDC1LWq7vCd7gt0gFZJPBjGCez0YVOelIzV6MnPN8NIXmAd?purpose=fullsize');">
+        </div>
+
+        <div class="promo-overlay"></div>
+
+        <div class="promo-content">
+
+          <span class="promo-badge">
+            Limited Time
+          </span>
+
+          <h3 class="promo-title">
+            Festive Season Offer
+          </h3>
+
+          <p class="promo-text">
+            Get an extra hour free on 4+ hour bookings this season.
+          </p>
+
+          <a href="packages.html" class="btn btn-promo">
+            <span>Grab the Offer</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     QUICK SEARCH
+========================================================= -->
+<section class="quick-search" id="quickSearch">
+
+  <div class="container">
+
+    <div class="quick-search-box">
+
+      <div class="quick-search-header">
+
+        <div class="section-kicker">
+          <span class="kicker-line"></span>
+          <span>FIND YOUR SPACE</span>
+          <span class="kicker-line blue"></span>
+        </div>
+
+        <h2>
+          <span>Quick</span>
+          <strong>Room Search</strong>
+        </h2>
+
+        <p>
+          Choose your date, time and guests to find the perfect room.
+        </p>
+
+      </div>
+
+
+      <div class="search-form">
+
+        <div class="search-field">
+
+          <label for="searchDate">
+            <i data-lucide="calendar-days"></i>
+            Date
+          </label>
+
+          <div class="input-wrap">
+            <input type="date" id="searchDate" name="date">
+          </div>
+
+        </div>
+
+
+        <div class="search-field">
+
+          <label for="searchTime">
+            <i data-lucide="clock-3"></i>
+            Time
+          </label>
+
+          <div class="input-wrap">
+            <input type="time" id="searchTime" name="time">
+          </div>
+
+        </div>
+
+
+        <div class="search-field">
+
+          <label for="guestCount">
+            <i data-lucide="users"></i>
+            Guests
+          </label>
+
+          <div class="input-wrap">
+
+            <select id="guestCount" name="guests">
+
+              <option value="">
+                Select guests
+              </option>
+
+              <option value="2">2 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="6">6 Guests</option>
+              <option value="8">8 Guests</option>
+              <option value="10">10 Guests</option>
+              <option value="12">12 Guests</option>
+              <option value="15">15+ Guests</option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <div class="search-field">
+
+          <label for="roomCapacity">
+            <i data-lucide="door-open"></i>
+            Room Capacity
+          </label>
+
+          <div class="input-wrap">
+
+            <select id="roomCapacity" name="capacity">
+
+              <option value="">
+                Any capacity
+              </option>
+
+              <option value="2-4">2 – 4 People</option>
+              <option value="5-8">5 – 8 People</option>
+              <option value="9-12">9 – 12 People</option>
+              <option value="13-20">13 – 20 People</option>
+              <option value="20+">20+ People</option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="search-rooms-btn"
+          id="searchRoomsBtn">
+
+          <i data-lucide="search"></i>
+          <span>Search Rooms</span>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     TRENDING PARTY ROOMS - 4 CARDS
+========================================================= -->
+<section class="trending-rooms" id="trendingRooms">
+
+  <div class="container">
+
+    <div class="trending-rooms-header">
+
+      <div class="section-kicker">
+        <span class="kicker-line"></span>
+        <span>MOST LOVED</span>
+        <span class="kicker-line blue"></span>
+      </div>
+
+      <h2>
+        <span class="trending-title-primary">Trending</span>
+        <span class="trending-title-secondary">Party Rooms</span>
+      </h2>
+
+      <p>
+        Discover the most popular spaces for unforgettable celebrations.
+      </p>
+
+    </div>
+
+
+    <div class="trending-rooms-grid">
+
+      <!-- CARD 1 -->
+      <article class="trending-room-card">
+
+        <div class="trending-room-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop"
+            alt="Neon Nights Party Room">
+
+          <span class="trending-room-badge">
+            <i data-lucide="flame"></i>
+            Trending
+          </span>
+
+        </div>
+
+
+        <div class="trending-room-content">
+
+          <div class="trending-room-top">
+
+            <h3>Neon Nights</h3>
+
+            <span class="trending-capacity">
+              <i data-lucide="users"></i>
+              2–8
+            </span>
+
+          </div>
+
+          <p class="trending-room-desc">
+            A vibrant neon-lit room perfect for energetic parties and karaoke nights.
+          </p>
+
+          <div class="trending-features">
+
+            <span>
+              <i data-lucide="mic-2"></i>
+              Karaoke
+            </span>
+
+            <span>
+              <i data-lucide="sparkles"></i>
+              Neon Lights
+            </span>
+
+            <span>
+              <i data-lucide="volume-2"></i>
+              Premium Sound
+            </span>
+
+          </div>
+
+          <div class="trending-room-bottom">
+
+            <div class="trending-price">
+              <small>Starting from</small>
+              <strong>₹1,499</strong>
+              <span>/ hour</span>
+            </div>
+
+            <a href="event_details.html" class="trending-room-btn">
+              <span>View Room</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- CARD 2 -->
+      <article class="trending-room-card">
+
+        <div class="trending-room-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=1200&auto=format&fit=crop"
+            alt="VIP Lounge Party Room">
+
+          <span class="trending-room-badge">
+            <i data-lucide="flame"></i>
+            Popular
+          </span>
+
+        </div>
+
+
+        <div class="trending-room-content">
+
+          <div class="trending-room-top">
+
+            <h3>VIP Lounge</h3>
+
+            <span class="trending-capacity">
+              <i data-lucide="users"></i>
+              4–12
+            </span>
+
+          </div>
+
+          <p class="trending-room-desc">
+            A luxurious private lounge with immersive lighting and powerful sound.
+          </p>
+
+          <div class="trending-features">
+
+            <span>
+              <i data-lucide="mic-2"></i>
+              Karaoke
+            </span>
+
+            <span>
+              <i data-lucide="sofa"></i>
+              Lounge Seating
+            </span>
+
+            <span>
+              <i data-lucide="music-2"></i>
+              DJ Setup
+            </span>
+
+          </div>
+
+          <div class="trending-room-bottom">
+
+            <div class="trending-price">
+              <small>Starting from</small>
+              <strong>₹2,499</strong>
+              <span>/ hour</span>
+            </div>
+
+            <a href="event_details.html" class="trending-room-btn">
+              <span>View Room</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- CARD 3 -->
+      <article class="trending-room-card">
+
+        <div class="trending-room-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format&fit=crop"
+            alt="Party Central Room">
+
+          <span class="trending-room-badge">
+            <i data-lucide="flame"></i>
+            Best Seller
+          </span>
+
+        </div>
+
+
+        <div class="trending-room-content">
+
+          <div class="trending-room-top">
+
+            <h3>Party Central</h3>
+
+            <span class="trending-capacity">
+              <i data-lucide="users"></i>
+              8–20
+            </span>
+
+          </div>
+
+          <p class="trending-room-desc">
+            The ultimate group party space made for big celebrations and events.
+          </p>
+
+          <div class="trending-features">
+
+            <span>
+              <i data-lucide="mic-2"></i>
+              Karaoke
+            </span>
+
+            <span>
+              <i data-lucide="lightbulb"></i>
+              Stage Lights
+            </span>
+
+            <span>
+              <i data-lucide="volume-2"></i>
+              Pro Sound
+            </span>
+
+          </div>
+
+          <div class="trending-room-bottom">
+
+            <div class="trending-price">
+              <small>Starting from</small>
+              <strong>₹3,499</strong>
+              <span>/ hour</span>
+            </div>
+
+            <a href="event_details.html" class="trending-room-btn">
+              <span>View Room</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- CARD 4 -->
+      <article class="trending-room-card">
+
+        <div class="trending-room-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1519671282429-b44660ead0a7?q=80&w=1200&auto=format&fit=crop"
+            alt="Retro Beats Party Room">
+
+          <span class="trending-room-badge">
+            <i data-lucide="flame"></i>
+            New
+          </span>
+
+        </div>
+
+
+        <div class="trending-room-content">
+
+          <div class="trending-room-top">
+
+            <h3>Retro Beats</h3>
+
+            <span class="trending-capacity">
+              <i data-lucide="users"></i>
+              6–15
+            </span>
+
+          </div>
+
+          <p class="trending-room-desc">
+            A stylish retro-inspired room for throwback music, games and private celebrations.
+          </p>
+
+          <div class="trending-features">
+
+            <span>
+              <i data-lucide="mic-2"></i>
+              Karaoke
+            </span>
+
+            <span>
+              <i data-lucide="disc-3"></i>
+              Retro Music
+            </span>
+
+            <span>
+              <i data-lucide="lightbulb"></i>
+              Mood Lights
+            </span>
+
+          </div>
+
+          <div class="trending-room-bottom">
+
+            <div class="trending-price">
+              <small>Starting from</small>
+              <strong>₹2,999</strong>
+              <span>/ hour</span>
+            </div>
+
+            <a href="event_details.html" class="trending-room-btn">
+              <span>View Room</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     UPCOMING EVENTS
+========================================================= -->
+<section class="events-modern" id="upcomingEvents">
+
+  <div class="container">
+
+    <div class="events-modern-header">
+
+      <div class="section-kicker">
+        <span class="kicker-line"></span>
+        <span>WHAT'S HAPPENING</span>
+        <span class="kicker-line blue"></span>
+      </div>
+
+      <h2>
+        <span class="events-modern-primary">Upcoming Events</span>
+        <span class="events-modern-secondary">&amp; Theme Nights</span>
+      </h2>
+
+      <p>
+        Discover exciting nights, special parties and unforgettable experiences.
+      </p>
+
+    </div>
+
+
+    <div class="events-modern-grid">
+
+      <article class="events-modern-card">
+
+        <div class="events-modern-date">
+          <span>SEP</span>
+          <strong>18</strong>
+        </div>
+
+        <div class="events-modern-content">
+
+          <div class="events-modern-top">
+
+            <span class="events-modern-tag">
+              DJ NIGHT
+            </span>
+
+            <span class="events-modern-time">
+              <i data-lucide="clock-3"></i>
+              8:00 PM
+            </span>
+
+          </div>
+
+          <h3>Neon DJ Night</h3>
+
+          <p>
+            Feel the beat with live DJ mixes, neon vibes and an energetic party atmosphere.
+          </p>
+
+          <div class="events-modern-bottom">
+
+            <span>
+              <i data-lucide="music-2"></i>
+              Live DJ
+            </span>
+
+            <a href="events.html">
+              View Event
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="events-modern-card">
+
+        <div class="events-modern-date">
+          <span>SEP</span>
+          <strong>21</strong>
+        </div>
+
+        <div class="events-modern-content">
+
+          <div class="events-modern-top">
+
+            <span class="events-modern-tag">
+              KARAOKE NIGHT
+            </span>
+
+            <span class="events-modern-time">
+              <i data-lucide="clock-3"></i>
+              7:00 PM
+            </span>
+
+          </div>
+
+          <h3>Karaoke Showdown</h3>
+
+          <p>
+            Grab the mic, choose your favorite song and compete with friends for the ultimate karaoke experience.
+          </p>
+
+          <div class="events-modern-bottom">
+
+            <span>
+              <i data-lucide="mic-2"></i>
+              Open Mic
+            </span>
+
+            <a href="events.html">
+              View Event
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="events-modern-card">
+
+        <div class="events-modern-date">
+          <span>SEP</span>
+          <strong>27</strong>
+        </div>
+
+        <div class="events-modern-content">
+
+          <div class="events-modern-top">
+
+            <span class="events-modern-tag">
+              THEME PARTY
+            </span>
+
+            <span class="events-modern-time">
+              <i data-lucide="clock-3"></i>
+              9:00 PM
+            </span>
+
+          </div>
+
+          <h3>Retro 90s Party</h3>
+
+          <p>
+            Step back into the 90s with throwback music, retro games and classic party vibes.
+          </p>
+
+          <div class="events-modern-bottom">
+
+            <span>
+              <i data-lucide="sparkles"></i>
+              Retro Vibes
+            </span>
+
+            <a href="events.html">
+              View Event
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <div class="events-modern-cta">
+
+      <a href="events.html">
+        Explore All Events
+        <i data-lucide="arrow-right"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERIENCE HIGHLIGHTS
+========================================================= -->
+<section class="experience-section" id="experienceHighlights">
+
+  <div class="container">
+
+    <div class="experience-heading">
+
+      <div class="section-kicker">
+        <span class="kicker-line"></span>
+        <span>THE VIBEROOMZ EXPERIENCE</span>
+        <span class="kicker-line blue"></span>
+      </div>
+
+      <h2>
+        <span class="experience-title-primary">Party Experience</span>
+        <span class="experience-title-secondary">Highlights</span>
+      </h2>
+
+      <p>
+        Music, lights, comfort and privacy — everything comes together for an unforgettable celebration.
+      </p>
+
+    </div>
+
+
+    <div class="experience-grid">
+
+      <article class="experience-card">
+
+        <div class="experience-card-image">
+          <img
+            src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=900&q=85"
+            alt="Immersive sound">
+        </div>
+
+        <div class="experience-card-overlay"></div>
+
+        <div class="experience-card-icon">
+          <i data-lucide="volume-2"></i>
+        </div>
+
+        <div class="experience-card-content">
+
+          <span>POWERFUL AUDIO</span>
+
+          <h3>Immersive Sound</h3>
+
+          <p>
+            Feel every beat with premium sound built for karaoke and parties.
+          </p>
+
+          <div class="experience-card-info">
+            <span>
+              <i data-lucide="audio-lines"></i>
+              Premium Audio
+            </span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="experience-card">
+
+        <div class="experience-card-image">
+          <img
+            src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=85"
+            alt="Dynamic lighting">
+        </div>
+
+        <div class="experience-card-overlay"></div>
+
+        <div class="experience-card-icon">
+          <i data-lucide="lightbulb"></i>
+        </div>
+
+        <div class="experience-card-content">
+
+          <span>LIVE ENERGY</span>
+
+          <h3>Dynamic Lighting</h3>
+
+          <p>
+            Neon colours and vibrant lighting set the perfect party mood.
+          </p>
+
+          <div class="experience-card-info">
+            <span>
+              <i data-lucide="sparkles"></i>
+              Neon Atmosphere
+            </span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="experience-card">
+
+        <div class="experience-card-image">
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
+            alt="Premium interiors">
+        </div>
+
+        <div class="experience-card-overlay"></div>
+
+        <div class="experience-card-icon">
+          <i data-lucide="armchair"></i>
+        </div>
+
+        <div class="experience-card-content">
+
+          <span>PREMIUM COMFORT</span>
+
+          <h3>Premium Interiors</h3>
+
+          <p>
+            Stylish spaces and comfortable seating made for long celebrations.
+          </p>
+
+          <div class="experience-card-info">
+            <span>
+              <i data-lucide="sofa"></i>
+              Stylish Comfort
+            </span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="experience-card">
+
+        <div class="experience-card-image">
+          <img
+            src="https://images.unsplash.com/photo-1519671282429-b44660ead0a7?auto=format&fit=crop&w=900&q=85"
+            alt="Private party atmosphere">
+        </div>
+
+        <div class="experience-card-overlay"></div>
+
+        <div class="experience-card-icon">
+          <i data-lucide="lock-keyhole"></i>
+        </div>
+
+        <div class="experience-card-content">
+
+          <span>100% PRIVATE</span>
+
+          <h3>Private Atmosphere</h3>
+
+          <p>
+            Your people, your music and your own private celebration space.
+          </p>
+
+          <div class="experience-card-info">
+            <span>
+              <i data-lucide="shield-check"></i>
+              Your Private Space
+            </span>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     REVIEWS - FULL WIDTH SLIDER
+========================================================= -->
+<section class="reviews-section" id="customerReviews">
+
+  <div class="container">
+
+    <div class="reviews-heading">
+
+      <div class="section-kicker">
+        <span class="kicker-line"></span>
+        <span>CUSTOMER REVIEWS</span>
+        <span class="kicker-line blue"></span>
+      </div>
+
+      <h2>
+        <span class="reviews-title-primary">Loved by</span>
+        <span class="reviews-title-secondary">Party People</span>
+      </h2>
+
+      <p>
+        Real experiences from guests who turned their celebrations into unforgettable VibeRoomz moments.
+      </p>
+
+    </div>
+
+
+    <div class="reviews-layout">
+
+      <div class="reviews-slider">
+
+        <div class="reviews-track">
+
+          <!-- REVIEW 1 -->
+          <article class="review-slide active">
+
+            <div class="review-top">
+
+              <div class="review-quote">
+                <i data-lucide="quote"></i>
+              </div>
+
+              <div class="review-rating">
+
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+
+              </div>
+
+            </div>
+
+            <p class="review-text">
+              “The room was amazing! The sound quality, lighting and overall vibe made our birthday celebration absolutely perfect.”
+            </p>
+
+            <div class="review-user">
+
+              <div class="review-avatar">
+                AS
+              </div>
+
+              <div>
+                <strong>Ananya Sharma</strong>
+                <span>Birthday Celebration</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 2 -->
+          <article class="review-slide">
+
+            <div class="review-top">
+
+              <div class="review-quote">
+                <i data-lucide="quote"></i>
+              </div>
+
+              <div class="review-rating">
+
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+
+              </div>
+
+            </div>
+
+            <p class="review-text">
+              “Perfect place for a friends night out. We loved the private setup and the music system was seriously impressive.”
+            </p>
+
+            <div class="review-user">
+
+              <div class="review-avatar">
+                RK
+              </div>
+
+              <div>
+                <strong>Rahul Kumar</strong>
+                <span>Friends Night</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 3 -->
+          <article class="review-slide">
+
+            <div class="review-top">
+
+              <div class="review-quote">
+                <i data-lucide="quote"></i>
+              </div>
+
+              <div class="review-rating">
+
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+
+              </div>
+
+            </div>
+
+            <p class="review-text">
+              “Loved the neon atmosphere and interiors. Everything felt premium, clean and well organised from start to finish.”
+            </p>
+
+            <div class="review-user">
+
+              <div class="review-avatar">
+                PN
+              </div>
+
+              <div>
+                <strong>Priya Nair</strong>
+                <span>Weekend Party</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 4 -->
+          <article class="review-slide">
+
+            <div class="review-top">
+
+              <div class="review-quote">
+                <i data-lucide="quote"></i>
+              </div>
+
+              <div class="review-rating">
+
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+
+              </div>
+
+            </div>
+
+            <p class="review-text">
+              “One of the best private party experiences we've had. Great music, great ambience and plenty of space for everyone.”
+            </p>
+
+            <div class="review-user">
+
+              <div class="review-avatar">
+                VS
+              </div>
+
+              <div>
+                <strong>Vikram Singh</strong>
+                <span>Group Celebration</span>
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="reviews-controls">
+
+          <div class="reviews-dots">
+
+            <button
+              class="review-dot active"
+              data-slide="0"
+              aria-label="Show review 1">
+            </button>
+
+            <button
+              class="review-dot"
+              data-slide="1"
+              aria-label="Show review 2">
+            </button>
+
+            <button
+              class="review-dot"
+              data-slide="2"
+              aria-label="Show review 3">
+            </button>
+
+            <button
+              class="review-dot"
+              data-slide="3"
+              aria-label="Show review 4">
+            </button>
+
+          </div>
+
+
+          <div class="reviews-arrows">
+
+            <button
+              id="reviewPrev"
+              aria-label="Previous review"
+              type="button">
+
+              <i data-lucide="arrow-left"></i>
+
+            </button>
+
+            <button
+              id="reviewNext"
+              aria-label="Next review"
+              type="button">
+
+              <i data-lucide="arrow-right"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+<section class="vibe-cta" id="bookingCta">
+
+  <div class="container">
+
+    <div class="vibe-cta-inner">
+
+      <div class="vibe-cta-icon">
+        <i data-lucide="party-popper"></i>
+      </div>
+
+
+      <div class="vibe-cta-content">
+
+        <div class="vibe-section-kicker">
+
+          <span class="vibe-kicker-line"></span>
+
+          <span>YOUR PARTY STARTS HERE</span>
+
+          <span class="vibe-kicker-line vibe-kicker-line-blue"></span>
+
+        </div>
+
+        <h2>
+          Ready to Create Your
+          <span>Perfect Vibe?</span>
+        </h2>
+
+        <p>
+          Choose your room, pick your slot, and let the party begin.
+        </p>
+
+
+        <div class="vibe-cta-points">
+
+          <span>
+            <i data-lucide="music-2"></i>
+            Premium Sound
+          </span>
+
+          <span>
+            <i data-lucide="sparkles"></i>
+            Neon Atmosphere
+          </span>
+
+          <span>
+            <i data-lucide="lock-keyhole"></i>
+            Private Rooms
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="vibe-cta-action">
+
+        <span class="vibe-cta-action-label">
+          <i data-lucide="calendar-check-2"></i>
+          Ready when you are
+        </span>
+
+        <a href="booking.html" class="vibe-cta-btn">
+
+          <span>Book Your Room</span>
+
+          <i data-lucide="arrow-up-right"></i>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+ <footer class="footer">
+  <div class="container footer-grid">
+    <section class="footer-about">
+      <div class="footer-logo">
+        <img
+          id="footerLogo"
+          src="VibeRooms_light.png"
+          alt="VibeRoomz logo"
+          data-light-logo="VibeRooms_light.png"
+          data-dark-logo="VibeRooms_dark.png"
+        />
+        <h2>Vibe<span>Roomz</span></h2>
+      </div>
+
+
+      <p>VibeRoomz is your premium room booking space for parties, music, and unforgettable indoor experiences.</p>
+
+
+      <div class="socials">
+        <a href="#" aria-label="Visit VibeRoomz on YouTube"><i data-lucide="youtube"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on Instagram"><i data-lucide="instagram"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on X"><i data-lucide="twitter"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on LinkedIn"><i data-lucide="linkedin"></i></a>
+      </div>
+    </section>
+
+
+    <nav aria-label="Quick links">
+      <h3>Quick Links</h3>
+      <div class="line"></div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+
+    <nav aria-label="Services links">
+      <h3>Our Services</h3>
+      <div class="line"></div>
+      <ul>
+        <li><a href="rooms.html">Private Rooms</a></li>
+        <li><a href="packages.html">Party Packages</a></li>
+        <li><a href="events.html">Event Hosting</a></li>
+        <li><a href="pricing.html">Transparent Pricing</a></li>
+        <li><a href="dashboard.html">Booking Dashboard</a></li>
+      </ul>
+    </nav>
+
+<section class="footer-extra">
+      <h3>Additional Pages</h3>
+      <div class="line"></div>
+
+
+      <ul class="footer-extra-list">
+        <li><a href="rooms.html">Error 404</a></li>
+        <li><a href="packages.html">Coming soon</a></li>
+        <li><a href="contact.html">Support</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+
+
+      
+    </section>
+    <section class="footer-contact-wrap" aria-labelledby="footer-contact-title">
+      <h3 id="footer-contact-title">Contact Us</h3>
+      <div class="line"></div>
+
+
+      <ul class="contact">
+        <li><i data-lucide="map-pin"></i><span>Hyderabad, India</span></li>
+        <li><i data-lucide="phone"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+        <li><i data-lucide="mail"></i><a href="mailto:info@viberoomz.com">info@viberoomz.com</a></li>
+        <li><i data-lucide="clock-3"></i><span>9:30 am - 4:30 pm</span></li>
+      </ul>
+    </section>
+
+
+    
+  </div>
+
+
+  <div class="footer-bottom">
+    <p>© <span id="footerYear"></span> <span class="next">Vibe</span><span class="gear">Roomz</span>. All Rights Reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="pp.html">Privacy Policy</a>
+      <a href="tc.html">Terms &amp; Conditions</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+  </div>
+
+
+  <script src="main.js"></script>
+  <script src="home2.js"></script>
+  <script>lucide.createIcons();</script>
+  <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+</body>
+</html>

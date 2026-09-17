@@ -1,0 +1,643 @@
+/* =================================
+   VIBEROOMZ COOKIES POLICY
+   ================================= */
+
+html:has(.vr-cookies-page),
+body.vr-cookies-body{
+  margin:0;
+  padding:0 !important;
+  width:100%;
+  min-height:100%;
+}
+
+.vr-cookies-page{
+  min-height:100vh;
+
+  padding:35px 20px 50px;
+
+  background:var(--soft-bg);
+  color:var(--text);
+
+  position:relative;
+}
+
+
+/* ================================
+   TOP CONTROLS
+   ================================ */
+
+.vr-cookies-controls{
+  position:fixed;
+
+  top:16px;
+  right:18px;
+
+  display:flex;
+  gap:8px;
+
+  z-index:100;
+}
+
+.vr-cookies-control{
+  width:44px;
+  height:44px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:0;
+
+  border:1px solid var(--primary);
+  border-radius:14px;
+
+  background:var(--card-bg);
+  color:var(--text);
+
+  cursor:pointer;
+
+  transition:.25s ease;
+}
+
+.vr-cookies-control svg{
+  width:19px;
+  height:19px;
+}
+
+.vr-cookies-control:hover{
+  background:var(--primary);
+  color:#fff;
+
+  transform:translateY(-2px);
+}
+
+
+/* ================================
+   MAIN CARD
+   ================================ */
+
+.vr-cookies-card{
+  width:92%;
+  max-width:1050px;
+
+  margin:25px auto 0;
+
+  padding:35px 50px 25px;
+
+  background:var(--card-bg);
+
+  border:1px solid var(--border);
+  border-radius:22px;
+
+  box-shadow:0 18px 50px rgba(0,0,0,.10);
+}
+
+
+/* ================================
+   LOGO
+   ================================ */
+
+.vr-cookies-logo{
+  width:max-content;
+
+  margin:0 auto 28px;
+
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+
+  color:var(--secondary);
+}
+
+.vr-cookies-logo img{
+  width:80px;
+  height:80px;
+
+  object-fit:contain;
+
+  flex:0 0 80px;
+}
+
+.vr-cookies-logo h1{
+  margin:0;
+
+  font-size:32px;
+  line-height:1;
+
+  font-weight:600;
+
+  color:var(--secondary);
+}
+
+.vr-cookies-logo span{
+  color:var(--primary);
+}
+
+
+/* ================================
+   HEADER
+   ================================ */
+
+.vr-cookies-header{
+  text-align:center;
+
+  padding-bottom:30px;
+
+  border-bottom:1px solid var(--border);
+}
+
+.vr-cookies-title-icon{
+  width:58px;
+  height:58px;
+
+  margin:0 auto 12px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid var(--primary);
+  border-radius:16px;
+
+  color:var(--primary);
+
+  background:var(--soft-bg);
+}
+
+.vr-cookies-title-icon svg{
+  width:27px;
+  height:27px;
+}
+
+.vr-cookies-header > span{
+  display:block;
+
+  margin-bottom:6px;
+
+  font-size:15px;
+  font-weight:700;
+
+  letter-spacing:1.5px;
+
+  color:var(--secondary);
+}
+
+.vr-cookies-header h2{
+  margin:0 0 10px;
+
+  font-size:38px;
+  line-height:1.1;
+
+  color:var(--text);
+}
+
+.vr-cookies-header h2 strong{
+  color:var(--primary);
+}
+
+.vr-cookies-header p{
+  max-width:680px;
+
+  margin:0 auto 10px;
+
+  font-size:17px;
+  line-height:1.5;
+
+  color:var(--muted);
+}
+
+.vr-cookies-header small{
+  font-size:15px;
+  color:var(--muted);
+}
+
+
+/* ================================
+   CONTENT
+   ================================ */
+
+.vr-cookies-content{
+  padding-top:28px;
+}
+
+.vr-cookies-content section{
+  padding:0 0 28px;
+
+  margin-bottom:28px;
+
+  border-bottom:1px solid var(--border);
+}
+
+.vr-cookies-content section:last-child{
+  margin-bottom:0;
+}
+
+.vr-cookies-section-title{
+  display:flex;
+  align-items:center;
+
+  gap:10px;
+
+  margin-bottom:10px;
+}
+
+.vr-cookies-section-title svg{
+  width:21px;
+  height:21px;
+
+  flex:0 0 21px;
+
+  color:var(--primary);
+}
+
+.vr-cookies-section-title h3{
+  margin:0;
+
+  font-size:22px;
+  line-height:1.2;
+
+  color:var(--secondary);
+}
+
+.vr-cookies-content p{
+  margin:0 0 11px;
+
+  font-size:16px;
+  line-height:1.7;
+
+  color:var(--text);
+}
+
+.vr-cookies-content p:last-child{
+  margin-bottom:0;
+}
+
+
+/* ================================
+   LIST
+   ================================ */
+
+.vr-cookies-content ul{
+  margin:10px 0 0;
+  padding:0;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  gap:8px 30px;
+
+  list-style:none;
+}
+
+.vr-cookies-content li{
+  position:relative;
+
+  padding-left:22px;
+
+  font-size:16px;
+  line-height:1.5;
+
+  color:var(--text);
+}
+
+.vr-cookies-content li::before{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:9px;
+
+  width:7px;
+  height:7px;
+
+  border-radius:50%;
+
+  background:var(--primary);
+}
+
+
+/* ================================
+   COOKIE TYPES
+   ================================ */
+
+.vr-cookies-types{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:12px;
+
+  margin-top:18px;
+}
+
+.vr-cookie-type{
+  display:flex;
+  align-items:flex-start;
+
+  gap:13px;
+
+  padding:17px;
+
+  border:1px solid var(--border);
+  border-radius:14px;
+
+  background:var(--soft-bg);
+}
+
+.vr-cookie-type-icon{
+  width:42px;
+  height:42px;
+
+  flex:0 0 42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid var(--primary);
+  border-radius:12px;
+
+  color:var(--primary);
+
+  background:var(--card-bg);
+}
+
+.vr-cookie-type-icon svg{
+  width:19px;
+  height:19px;
+}
+
+.vr-cookie-type h4{
+  margin:0 0 5px;
+
+  font-size:18px;
+  line-height:1.2;
+
+  color:var(--secondary);
+}
+
+.vr-cookie-type p{
+  margin:0;
+
+  font-size:15px;
+
+  line-height:1.5;
+
+  color:var(--muted);
+}
+
+
+/* ================================
+   CONTACT
+   ================================ */
+
+.vr-cookies-contact{
+  border-bottom:0 !important;
+
+  padding-bottom:10px !important;
+}
+
+.vr-cookies-contact-box{
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:12px;
+
+  margin-top:18px;
+}
+
+.vr-cookies-contact-box div{
+  display:flex;
+  align-items:center;
+
+  gap:9px;
+
+  padding:12px 16px;
+
+  border:1px solid var(--border);
+  border-radius:12px;
+
+  background:var(--soft-bg);
+
+  font-size:15px;
+
+  color:var(--text);
+}
+
+.vr-cookies-contact-box svg{
+  width:18px;
+  height:18px;
+
+  color:var(--primary);
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+.vr-cookies-footer{
+  padding-top:22px;
+
+  border-top:1px solid var(--border);
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:15px;
+
+  font-size:15px;
+
+  color:var(--muted);
+}
+
+.vr-cookies-footer a{
+  display:flex;
+  align-items:center;
+
+  gap:6px;
+
+  color:var(--primary);
+
+  font-weight:700;
+}
+
+.vr-cookies-footer a:hover{
+  color:var(--secondary);
+}
+
+.vr-cookies-footer svg{
+  width:15px;
+  height:15px;
+}
+
+
+/* ================================
+   DARK MODE
+   ================================ */
+
+body.dark .vr-cookies-page{
+  background:var(--soft-bg);
+}
+
+body.dark .vr-cookies-title-icon{
+  background:var(--card-bg);
+}
+
+body.dark .vr-cookie-type{
+  background:var(--card-bg);
+}
+
+body.dark .vr-cookie-type-icon{
+  background:var(--soft-bg);
+}
+
+body.dark .vr-cookies-contact-box{
+  background:var(--card-bg);
+}
+
+
+/* ================================
+   RTL
+   ================================ */
+
+html[dir="rtl"] .vr-cookies-controls{
+  left:18px;
+  right:auto;
+}
+
+html[dir="rtl"] .vr-cookies-card{
+  direction:rtl;
+}
+
+html[dir="rtl"] .vr-cookies-content li{
+  padding-left:0;
+  padding-right:22px;
+}
+
+html[dir="rtl"] .vr-cookies-content li::before{
+  left:auto;
+  right:0;
+}
+
+html[dir="rtl"] .vr-cookies-footer a svg{
+  transform:rotate(180deg);
+}
+
+
+/* ================================
+   TABLET
+   ================================ */
+
+@media(max-width:800px){
+
+  .vr-cookies-page{
+    padding:70px 15px 30px;
+  }
+
+  .vr-cookies-card{
+    width:94%;
+    padding:30px 25px 22px;
+  }
+
+  .vr-cookies-content ul{
+    grid-template-columns:1fr;
+  }
+
+  .vr-cookies-types{
+    grid-template-columns:1fr;
+  }
+
+  .vr-cookies-header h2{
+    font-size:34px;
+  }
+
+}
+
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media(max-width:520px){
+
+  .vr-cookies-controls{
+    top:10px;
+    right:10px;
+  }
+
+  .vr-cookies-control{
+    width:40px;
+    height:40px;
+  }
+
+  .vr-cookies-page{
+    padding:65px 8px 25px;
+  }
+
+  .vr-cookies-card{
+    width:96%;
+    padding:24px 18px 20px;
+
+    border-radius:18px;
+  }
+
+  .vr-cookies-logo{
+    gap:11px;
+    margin-bottom:22px;
+  }
+
+  .vr-cookies-logo img{
+    width:80px;
+    height:80px;
+    flex-basis:80px;
+  }
+
+  .vr-cookies-logo h1{
+    font-size:28px;
+  }
+
+  .vr-cookies-title-icon{
+    width:52px;
+    height:52px;
+  }
+
+  .vr-cookies-header h2{
+    font-size:30px;
+  }
+
+  .vr-cookies-header p{
+    font-size:15px;
+  }
+
+  .vr-cookies-section-title h3{
+    font-size:19px;
+  }
+
+  .vr-cookies-content p,
+  .vr-cookies-content li{
+    font-size:15px;
+  }
+
+  .vr-cookie-type h4{
+    font-size:17px;
+  }
+
+  .vr-cookies-contact-box{
+    flex-direction:column;
+  }
+
+  .vr-cookies-contact-box div{
+    width:100%;
+    box-sizing:border-box;
+  }
+
+  .vr-cookies-footer{
+    flex-direction:column;
+    text-align:center;
+  }
+
+}

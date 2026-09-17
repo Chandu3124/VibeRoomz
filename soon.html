@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VibeRoomz - Coming Soon</title>
+<link rel="stylesheet" href="soon.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="vr-coming-body">
+
+  <main class="vr-coming-page">
+
+    <!-- TOP CONTROLS -->
+    <div class="vr-coming-controls">
+
+      <button
+        class="vr-coming-control"
+        id="comingRtlToggle"
+        type="button"
+        aria-label="Switch to RTL">
+        <i data-lucide="arrow-right-left"></i>
+      </button>
+
+      <button
+        class="vr-coming-control"
+        id="comingThemeToggle"
+        type="button"
+        aria-label="Switch to dark mode">
+        <i data-lucide="moon-star"></i>
+      </button>
+
+    </div>
+
+
+    <!-- CARD -->
+    <section class="vr-coming-card">
+
+      <!-- LOGO -->
+      <a
+        href="index.html"
+        class="vr-coming-logo"
+        aria-label="VibeRoomz Home">
+
+        <img
+          id="comingLogo"
+          src="VibeRooms_light.png"
+          data-light-logo="VibeRooms_light.png"
+          data-dark-logo="VibeRooms_dark.png"
+          alt="VibeRoomz">
+
+        <h1>
+          Vibe<span>Roomz</span>
+        </h1>
+
+      </a>
+
+
+      <!-- ANIMATED ICON -->
+      <div class="vr-coming-icon">
+        <span class="vr-coming-ring"></span>
+        <i data-lucide="rocket"></i>
+      </div>
+
+
+      <div class="vr-coming-content">
+
+        <span class="vr-coming-label">
+          Something Exciting
+        </span>
+
+        <h2>
+          Coming <span>Soon</span>
+        </h2>
+
+        <p>
+          We're working on something special for your next
+          unforgettable VibeRoomz experience.
+        </p>
+
+      </div>
+
+
+      <!-- ANIMATED DOTS -->
+      <div class="vr-coming-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+
+      <div class="vr-coming-message">
+        Stay tuned. The vibe is almost ready!
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const themeToggle =
+        document.getElementById("comingThemeToggle");
+
+      const rtlToggle =
+        document.getElementById("comingRtlToggle");
+
+      const logo =
+        document.getElementById("comingLogo");
+
+
+      function refreshIcons(){
+        if(window.lucide){
+          lucide.createIcons();
+        }
+      }
+
+
+      let darkMode =
+        localStorage.getItem("vibeAuthTheme") === "dark";
+
+      let rtlEnabled =
+        localStorage.getItem("vibeAuthRTL") === "true";
+
+
+      function updateTheme(){
+
+        document.body.classList.toggle(
+          "dark",
+          darkMode
+        );
+
+        if(themeToggle){
+
+          themeToggle.innerHTML = darkMode
+            ? `<i data-lucide="sun"></i>`
+            : `<i data-lucide="moon-star"></i>`;
+
+          themeToggle.setAttribute(
+            "aria-label",
+            darkMode
+              ? "Switch to light mode"
+              : "Switch to dark mode"
+          );
+        }
+
+
+        if(logo){
+
+          logo.src =
+            darkMode
+              ? logo.dataset.darkLogo
+              : logo.dataset.lightLogo;
+
+        }
+
+
+        refreshIcons();
+      }
+
+
+      function updateRTL(){
+
+        document.documentElement.dir =
+          rtlEnabled ? "rtl" : "ltr";
+
+        rtlToggle?.setAttribute(
+          "aria-pressed",
+          rtlEnabled ? "true" : "false"
+        );
+      }
+
+
+      themeToggle?.addEventListener(
+        "click",
+        () => {
+
+          darkMode = !darkMode;
+
+          localStorage.setItem(
+            "vibeAuthTheme",
+            darkMode ? "dark" : "light"
+          );
+
+          updateTheme();
+
+        }
+      );
+
+
+      rtlToggle?.addEventListener(
+        "click",
+        () => {
+
+          rtlEnabled = !rtlEnabled;
+
+          localStorage.setItem(
+            "vibeAuthRTL",
+            rtlEnabled ? "true" : "false"
+          );
+
+          updateRTL();
+
+        }
+      );
+
+
+      updateTheme();
+      updateRTL();
+      refreshIcons();
+
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VibeRoomz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="Package_details.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html" class="logo" aria-label="VibeRoomz home">
+        <img
+          id="siteLogo"
+          src="VibeRooms_light.png"
+          alt="VibeRoomz logo"
+          data-light-logo="VibeRooms_light.png"
+          data-dark-logo="VibeRooms_dark.png"
+        />
+        <h1>Vibe<span>Roomz</span></h1>
+      </a>
+
+
+      <ul class="menu" id="primaryMenu">
+        <li class="dropdown">
+          <a href="index.html" data-page="index.html">
+            <span>Home</span>
+            <i data-lucide="chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html" data-page="index.html">Home 1</a></li>
+            <li><a href="home2.html" data-page="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+
+
+        <li><a href="rooms.html" data-page="rooms.html">Rooms</a></li>
+        <li><a href="packages.html" data-page="packages.html">Packages</a></li>
+        <li><a href="events.html" data-page="events.html">Events</a></li>
+        <li><a href="pricing.html" data-page="pricing.html">Pricing</a></li>
+        <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+        <li><a href="dashboard.html" data-page="dashboard.html">Dashboard</a></li>
+
+
+        <li class="mobile-login-item">
+          <a href="login.html" data-page="login.html">Login</a>
+        </li>
+      </ul>
+
+
+      <div class="nav-right">
+        <button
+          class="circle rtl-btn"
+          id="rtlToggle"
+          type="button"
+          aria-label="Switch to right to left layout"
+          aria-pressed="false"
+        >
+          <i data-lucide="arrow-right-left"></i>
+        </button>
+
+
+        <button
+          class="circle theme-btn"
+          id="themeToggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+        >
+          <i data-lucide="moon-star"></i>
+        </button>
+
+
+        <a href="login.html" class="login login-btn desktop-login" data-page="login.html">Login</a>
+
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primaryMenu"
+          type="button"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="packages-detail-page">
+
+  <!-- =========================================================
+       01. PACKAGES HERO
+  ========================================================== -->
+  <section class="pkg-hero" id="packagesHero">
+    <div class="pkg-page-container">
+      <div class="pkg-hero-layout">
+
+        <div class="pkg-hero-image-wrap">
+          <div class="pkg-hero-image">
+            <img
+              src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1400&q=90"
+              alt="Friends enjoying a private party room">
+          </div>
+
+          <div class="pkg-hero-image-label">
+            <i data-lucide="sparkles"></i>
+            <span>CURATED PARTY EXPERIENCES</span>
+          </div>
+        </div>
+
+        <div class="pkg-hero-content">
+          <span class="pkg-kicker">
+            <i data-lucide="party-popper"></i>
+            VIBEROOMZ PACKAGES
+          </span>
+
+          <h1>
+            Everything You Need
+            <span>For The Perfect Party.</span>
+          </h1>
+
+          <p>
+            Our packages bring together private rooms, karaoke, premium
+            sound, lighting, food, beverages, decorations and party
+            essentials into one convenient celebration experience.
+          </p>
+
+          <div class="pkg-hero-price">
+            <span>PACKAGES STARTING FROM</span>
+            <strong>₹4,999</strong>
+            <em>per celebration</em>
+          </div>
+
+          <div class="pkg-hero-meta">
+            <div>
+              <i data-lucide="users"></i>
+              <span>Flexible Guest Groups</span>
+            </div>
+
+            <div>
+              <i data-lucide="clock-3"></i>
+              <span>Flexible Durations</span>
+            </div>
+
+            <div>
+              <i data-lucide="settings-2"></i>
+              <span>Customizable Options</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       02. PACKAGE CATEGORIES
+  ========================================================== -->
+  <section class="pkg-categories" id="packageCategories">
+    <div class="pkg-page-container">
+
+      <div class="pkg-section-heading">
+        <span>CHOOSE YOUR EXPERIENCE</span>
+        <h2>
+          Packages Designed For
+          <strong>Every Celebration</strong>
+        </h2>
+        <p>
+          VibeRoomz packages are created to simplify party planning while
+          giving every group the flexibility to choose the experience that
+          matches their occasion, guest count, budget and preferred vibe.
+        </p>
+      </div>
+
+      <div class="pkg-category-layout">
+
+        <article class="pkg-category-featured">
+          <div class="pkg-category-image">
+            <img
+              src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1300&q=90"
+              alt="Karaoke party experience">
+          </div>
+
+          <div class="pkg-category-overlay"></div>
+
+          <div class="pkg-category-featured-content">
+            <span>KARAOKE EXPERIENCE</span>
+            <h3>The Complete Party Experience</h3>
+
+            <p>
+              A balanced package for groups who want private entertainment,
+              great music, comfortable seating and everything required for
+              a smooth party without arranging each service separately.
+            </p>
+
+            <div class="pkg-category-points">
+              <span><i data-lucide="mic-2"></i>Private Karaoke</span>
+              <span><i data-lucide="volume-2"></i>Premium Audio</span>
+              <span><i data-lucide="sparkles"></i>Party Lighting</span>
+            </div>
+          </div>
+        </article>
+
+
+        <div class="pkg-category-list">
+
+          <article class="pkg-category-card">
+            <div class="pkg-category-card-icon">
+              <i data-lucide="cake"></i>
+            </div>
+
+            <div>
+              <span>CELEBRATIONS</span>
+              <h3>Birthday Packages</h3>
+              <p>
+                Designed around birthdays with decorations, food options,
+                entertainment and room arrangements that make the celebration
+                feel personal and festive.
+              </p>
+            </div>
+
+            <div class="pkg-category-card-arrow">
+              <i data-lucide="sparkles"></i>
+            </div>
+          </article>
+
+
+          <article class="pkg-category-card">
+            <div class="pkg-category-card-icon">
+              <i data-lucide="briefcase-business"></i>
+            </div>
+
+            <div>
+              <span>BUSINESS EVENTS</span>
+              <h3>Corporate Packages</h3>
+              <p>
+                A professional yet relaxed setup for team outings, office
+                celebrations, employee engagement events and private corporate
+                gatherings with flexible food and entertainment options.
+              </p>
+            </div>
+
+            <div class="pkg-category-card-arrow">
+              <i data-lucide="building-2"></i>
+            </div>
+          </article>
+
+
+          <article class="pkg-category-card">
+            <div class="pkg-category-card-icon">
+              <i data-lucide="users-round"></i>
+            </div>
+
+            <div>
+              <span>GROUP EVENTS</span>
+              <h3>Group Celebration Packages</h3>
+              <p>
+                Ideal for friends, family groups and special gatherings where
+                everyone wants entertainment, privacy, food and a comfortable
+                shared party environment.
+              </p>
+            </div>
+
+            <div class="pkg-category-card-arrow">
+              <i data-lucide="users-round"></i>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       03. PACKAGE TYPES
+  ========================================================== -->
+  <section class="pkg-types" id="packageTypes">
+    <div class="pkg-page-container">
+
+      <div class="pkg-section-heading">
+        <span>FIND YOUR PERFECT MATCH</span>
+        <h2>
+          One Platform,
+          <strong>Multiple Party Experiences</strong>
+        </h2>
+        <p>
+          Every package is structured around a different celebration style,
+          allowing you to select a ready-made experience instead of planning
+          every individual service from scratch.
+        </p>
+      </div>
+
+
+      <div class="pkg-types-grid">
+
+        <article class="pkg-type-card">
+          <div class="pkg-type-number">01</div>
+
+          <div class="pkg-type-icon">
+            <i data-lucide="mic-vocal"></i>
+          </div>
+
+          <span>FOR MUSIC LOVERS</span>
+          <h3>Karaoke Package</h3>
+
+          <p>
+            A complete entertainment-focused experience with private karaoke,
+            quality audio, dynamic lighting and comfortable party seating.
+          </p>
+
+          <div class="pkg-type-bottom">
+            <i data-lucide="music-2"></i>
+            <span>Sing • Play • Celebrate</span>
+          </div>
+        </article>
+
+
+        <article class="pkg-type-card">
+          <div class="pkg-type-number">02</div>
+
+          <div class="pkg-type-icon">
+            <i data-lucide="cake-slice"></i>
+          </div>
+
+          <span>FOR SPECIAL DAYS</span>
+          <h3>Birthday Package</h3>
+
+          <p>
+            A celebration-ready combination of room setup, decorations,
+            entertainment, food choices and birthday-focused party essentials.
+          </p>
+
+          <div class="pkg-type-bottom">
+            <i data-lucide="gift"></i>
+            <span>Celebrate • Smile • Remember</span>
+          </div>
+        </article>
+
+
+        <article class="pkg-type-card">
+          <div class="pkg-type-number">03</div>
+
+          <div class="pkg-type-icon">
+            <i data-lucide="briefcase"></i>
+          </div>
+
+          <span>FOR TEAMS</span>
+          <h3>Corporate Package</h3>
+
+          <p>
+            A flexible private-event setup for team outings, employee
+            celebrations, business gatherings and informal corporate events.
+          </p>
+
+          <div class="pkg-type-bottom">
+            <i data-lucide="users"></i>
+            <span>Connect • Relax • Enjoy</span>
+          </div>
+        </article>
+
+
+        <article class="pkg-type-card">
+          <div class="pkg-type-number">04</div>
+
+          <div class="pkg-type-icon">
+            <i data-lucide="party-popper"></i>
+          </div>
+
+          <span>FOR GROUPS</span>
+          <h3>Group Celebration</h3>
+
+          <p>
+            Built for larger groups looking for privacy, entertainment,
+            shared food options and a complete party atmosphere under one roof.
+          </p>
+
+          <div class="pkg-type-bottom">
+            <i data-lucide="sparkles"></i>
+            <span>Gather • Party • Repeat</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       04. PACKAGE COMPARISON
+  ========================================================== -->
+  <section class="pkg-comparison" id="packageComparison">
+    <div class="pkg-page-container">
+
+      <div class="pkg-section-heading">
+        <span>COMPARE BEFORE YOU BOOK</span>
+        <h2>
+          Understand What Each
+          <strong>Package Offers</strong>
+        </h2>
+        <p>
+          Compare the core package elements at a glance and understand how
+          guest capacity, duration, entertainment, food and additional
+          services change across different celebration experiences.
+        </p>
+      </div>
+
+
+      <div class="pkg-comparison-board">
+
+        <div class="pkg-comparison-table">
+
+          <div class="pkg-comparison-row pkg-comparison-head">
+            <div>Package Feature</div>
+            <div>Karaoke</div>
+            <div>Birthday</div>
+            <div>Corporate</div>
+            <div>Group</div>
+          </div>
+
+          <div class="pkg-comparison-row">
+            <div><i data-lucide="clock-3"></i>Duration</div>
+            <div>2–4 Hours</div>
+            <div>3–4 Hours</div>
+            <div>2–5 Hours</div>
+            <div>3–5 Hours</div>
+          </div>
+
+          <div class="pkg-comparison-row">
+            <div><i data-lucide="users"></i>Guests</div>
+            <div>4–10</div>
+            <div>6–15</div>
+            <div>8–30</div>
+            <div>10–40</div>
+          </div>
+
+          <div class="pkg-comparison-row">
+            <div><i data-lucide="mic-2"></i>Entertainment</div>
+            <div>Premium</div>
+            <div>Premium</div>
+            <div>Standard</div>
+            <div>Premium</div>
+          </div>
+
+          <div class="pkg-comparison-row">
+            <div><i data-lucide="utensils"></i>Food & Beverages</div>
+            <div>Optional</div>
+            <div>Included</div>
+            <div>Custom</div>
+            <div>Included</div>
+          </div>
+
+          <div class="pkg-comparison-row">
+            <div><i data-lucide="sparkles"></i>Decorations</div>
+            <div>Optional</div>
+            <div>Included</div>
+            <div>Custom</div>
+            <div>Included</div>
+          </div>
+
+          <div class="pkg-comparison-row">
+            <div><i data-lucide="settings-2"></i>Customization</div>
+            <div>High</div>
+            <div>High</div>
+            <div>Very High</div>
+            <div>High</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="pkg-comparison-note">
+        <i data-lucide="info"></i>
+        <p>
+          Package inclusions are flexible. Depending on your event type,
+          guest count and requirements, selected food, decoration,
+          photography and entertainment options can be added or adjusted.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       05. WHAT IS INCLUDED
+  ========================================================== -->
+  <section class="pkg-included" id="packageIncluded">
+    <div class="pkg-page-container">
+
+      <div class="pkg-section-heading">
+        <span>THE COMPLETE EXPERIENCE</span>
+        <h2>
+          What's Included In
+          <strong>Your Package</strong>
+        </h2>
+        <p>
+          VibeRoomz packages are designed to combine the important elements
+          of a successful party so customers can spend less time coordinating
+          and more time enjoying their celebration.
+        </p>
+      </div>
+
+
+      <div class="pkg-included-grid">
+
+        <article class="pkg-included-card">
+          <div class="pkg-included-image">
+            <img
+              src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=85"
+              alt="Karaoke equipment">
+          </div>
+          <div class="pkg-included-content">
+            <div class="pkg-icon"><i data-lucide="mic-2"></i></div>
+            <span>01</span>
+            <h3>Karaoke Setup</h3>
+            <p>
+              Ready-to-use karaoke equipment with microphones and a
+              party-friendly music setup for continuous entertainment.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="pkg-included-card">
+          <div class="pkg-included-image">
+            <img
+              src="https://images.unsplash.com/photo-1496337589254-7e19d01cec44?auto=format&fit=crop&w=900&q=85"
+              alt="Premium sound system">
+          </div>
+          <div class="pkg-included-content">
+            <div class="pkg-icon"><i data-lucide="volume-2"></i></div>
+            <span>02</span>
+            <h3>Sound System</h3>
+            <p>
+              Balanced audio designed for vocals, music and party playlists
+              without requiring customers to arrange their own equipment.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="pkg-included-card">
+          <div class="pkg-included-image">
+            <img
+              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=85"
+              alt="Party lighting">
+          </div>
+          <div class="pkg-included-content">
+            <div class="pkg-icon"><i data-lucide="lightbulb"></i></div>
+            <span>03</span>
+            <h3>Lighting Experience</h3>
+            <p>
+              Dynamic lighting and colourful ambience that instantly
+              transforms the private room into a lively celebration space.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="pkg-included-card">
+          <div class="pkg-included-image">
+            <img
+              src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=85"
+              alt="Party decorations">
+          </div>
+          <div class="pkg-included-content">
+            <div class="pkg-icon"><i data-lucide="sparkles"></i></div>
+            <span>04</span>
+            <h3>Decorations</h3>
+            <p>
+              Celebration-focused decorations that can be selected according
+              to birthdays, themes, corporate events or group preferences.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="pkg-included-card">
+          <div class="pkg-included-image">
+            <img
+              src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=85"
+              alt="Party essentials">
+          </div>
+          <div class="pkg-included-content">
+            <div class="pkg-icon"><i data-lucide="gift"></i></div>
+            <span>05</span>
+            <h3>Party Essentials</h3>
+            <p>
+              Practical celebration essentials that help the event feel
+              complete, organized and comfortable from start to finish.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="pkg-included-card">
+          <div class="pkg-included-image">
+            <img
+              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85"
+              alt="Event support staff">
+          </div>
+          <div class="pkg-included-content">
+            <div class="pkg-icon"><i data-lucide="headset"></i></div>
+            <span>06</span>
+            <h3>Event Support</h3>
+            <p>
+              Helpful staff assistance for setup, package coordination and
+              general support so your group can focus on enjoying the event.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       06. FOOD & BEVERAGE EXPERIENCE
+  ========================================================== -->
+  <section class="pkg-food" id="foodExperience">
+    <div class="pkg-page-container">
+
+      <div class="pkg-section-heading">
+        <span>FOOD & BEVERAGE EXPERIENCE</span>
+        <h2>
+          Great Parties Need
+          <strong>Great Food Too</strong>
+        </h2>
+        <p>
+          Food and beverages can be an important part of the package
+          experience. VibeRoomz keeps the options flexible so customers can
+          choose a menu that fits the occasion, group size and celebration style.
+        </p>
+      </div>
+
+
+      <div class="pkg-food-layout">
+
+        <div class="pkg-food-visual">
+          <img
+            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=90"
+            alt="Food and beverages for party">
+          <div class="pkg-food-visual-overlay"></div>
+
+          <div class="pkg-food-visual-content">
+            <span>CURATED MENU OPTIONS</span>
+            <h3>From Quick Bites To Complete Party Meals</h3>
+            <p>
+              Select simple snacks, beverage combinations or larger food
+              arrangements depending on the size and style of your celebration.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="pkg-food-details">
+
+          <article class="pkg-food-card">
+            <i data-lucide="utensils"></i>
+            <div>
+              <span>FOOD MENU</span>
+              <h3>Party-Friendly Choices</h3>
+              <p>
+                Finger foods, starters, sharing platters, vegetarian options
+                and celebration-friendly meals can be arranged based on the
+                selected package.
+              </p>
+            </div>
+          </article>
+
+          <article class="pkg-food-card">
+            <i data-lucide="cup-soda"></i>
+            <div>
+              <span>BEVERAGES</span>
+              <h3>Refreshing Drinks</h3>
+              <p>
+                Soft drinks, mocktails, juices and other non-alcoholic
+                beverage options can be included according to the package.
+              </p>
+            </div>
+          </article>
+
+          <article class="pkg-food-card">
+            <i data-lucide="concierge-bell"></i>
+            <div>
+              <span>SERVING STYLE</span>
+              <h3>Comfortable & Convenient</h3>
+              <p>
+                Food can be planned around your event flow, allowing guests
+                to enjoy their meal without interrupting the entertainment.
+              </p>
+            </div>
+          </article>
+
+          <article class="pkg-food-card">
+            <i data-lucide="leaf"></i>
+            <div>
+              <span>CUSTOMIZATION</span>
+              <h3>Dietary Preferences</h3>
+              <p>
+                Vegetarian requirements, selected dietary preferences and
+                special menu requests can be discussed while customizing
+                your package.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       07. PACKAGE JOURNEY / PROCESS
+  ========================================================== -->
+  <section class="pkg-journey" id="packageJourney">
+    <div class="pkg-page-container">
+
+      <div class="pkg-section-heading">
+        <span>HOW PACKAGE BOOKING WORKS</span>
+        <h2>
+          From Planning To Party,
+          <strong>We Keep It Simple</strong>
+        </h2>
+        <p>
+          The package experience is structured to reduce planning effort.
+          Choose the type of celebration, select the room and package,
+          customize the details and arrive ready to enjoy your event.
+        </p>
+      </div>
+
+
+      <div class="pkg-journey-layout">
+
+        <div class="pkg-journey-steps">
+
+          <article class="pkg-journey-step">
+            <div class="pkg-journey-number">01</div>
+            <div>
+              <span>STEP ONE</span>
+              <h3>Choose Your Celebration</h3>
+              <p>
+                Start by identifying the type of event you are planning.
+                Birthday, karaoke night, corporate gathering and group
+                celebrations each have different package requirements.
+              </p>
+            </div>
+          </article>
+
+          <article class="pkg-journey-step">
+            <div class="pkg-journey-number">02</div>
+            <div>
+              <span>STEP TWO</span>
+              <h3>Select Your Package</h3>
+              <p>
+                Compare package inclusions, guest capacity, duration,
+                entertainment and food options before choosing the experience
+                that best matches your group.
+              </p>
+            </div>
+          </article>
+
+          <article class="pkg-journey-step">
+            <div class="pkg-journey-number">03</div>
+            <div>
+              <span>STEP THREE</span>
+              <h3>Customize The Experience</h3>
+              <p>
+                Add optional decorations, photography, food upgrades,
+                additional room time or other services to make the event
+                more personal.
+              </p>
+            </div>
+          </article>
+
+          <article class="pkg-journey-step">
+            <div class="pkg-journey-number">04</div>
+            <div>
+              <span>STEP FOUR</span>
+              <h3>Arrive & Enjoy</h3>
+              <p>
+                Once everything is planned, your room is prepared according
+                to the selected package so your group can focus on music,
+                food and memorable moments.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+
+        <aside class="pkg-journey-card">
+          <div class="pkg-journey-card-top">
+            <i data-lucide="party-popper"></i>
+            <span>THE VIBEROOMZ PROMISE</span>
+          </div>
+
+          <h3>
+            Less Planning.
+            <strong>More Party.</strong>
+          </h3>
+
+          <p>
+            Packages bring multiple party requirements together under one
+            experience. Instead of coordinating a room, entertainment,
+            food and decorations separately, you can build your celebration
+            around one clear package structure.
+          </p>
+
+          <div class="pkg-journey-checks">
+            <span><i data-lucide="check-circle-2"></i>Clear package inclusions</span>
+            <span><i data-lucide="check-circle-2"></i>Flexible customization</span>
+            <span><i data-lucide="check-circle-2"></i>Private celebration space</span>
+            <span><i data-lucide="check-circle-2"></i>Event-ready setup</span>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       08. CUSTOMIZATION
+  ========================================================== -->
+  <section class="pkg-customization" id="packageCustomization">
+    <div class="pkg-page-container">
+
+      <div class="pkg-section-heading">
+        <span>MAKE IT YOUR OWN</span>
+        <h2>
+          Every Celebration Can Be
+          <strong>Customized</strong>
+        </h2>
+        <p>
+          Ready-made packages give you a strong starting point, while
+          optional upgrades allow you to personalize the experience around
+          your celebration, preferences and budget.
+        </p>
+      </div>
+
+
+      <div class="pkg-custom-grid">
+
+        <article class="pkg-custom-card">
+          <div class="pkg-custom-icon">
+            <i data-lucide="sparkles"></i>
+          </div>
+          <span>OPTIONAL UPGRADE</span>
+          <h3>Extra Decorations</h3>
+          <p>
+            Add balloons, themed elements, celebration signage and additional
+            decorative details to create a more personalized party environment.
+          </p>
+          <strong>From ₹999</strong>
+        </article>
+
+
+        <article class="pkg-custom-card">
+          <div class="pkg-custom-icon">
+            <i data-lucide="utensils"></i>
+          </div>
+          <span>OPTIONAL UPGRADE</span>
+          <h3>Food Upgrades</h3>
+          <p>
+            Expand the food selection with additional starters, beverages,
+            sharing platters or customized menu choices for larger groups.
+          </p>
+          <strong>From ₹499 / person</strong>
+        </article>
+
+
+        <article class="pkg-custom-card">
+          <div class="pkg-custom-icon">
+            <i data-lucide="camera"></i>
+          </div>
+          <span>OPTIONAL UPGRADE</span>
+          <h3>Photography</h3>
+          <p>
+            Capture group photos, celebration moments and party highlights
+            without relying on guests to document the entire event themselves.
+          </p>
+          <strong>From ₹2,499</strong>
+        </article>
+
+
+        <article class="pkg-custom-card">
+          <div class="pkg-custom-icon">
+            <i data-lucide="clock-plus"></i>
+          </div>
+          <span>OPTIONAL UPGRADE</span>
+          <h3>Extended Room Time</h3>
+          <p>
+            Need more time? Extend your celebration beyond the selected
+            package duration when additional slots are available.
+          </p>
+          <strong>From ₹1,000 / hour</strong>
+        </article>
+
+
+        <article class="pkg-custom-card">
+          <div class="pkg-custom-icon">
+            <i data-lucide="lightbulb"></i>
+          </div>
+          <span>OPTIONAL UPGRADE</span>
+          <h3>Special Lighting</h3>
+          <p>
+            Enhance the room with additional lighting effects and atmosphere
+            options designed around the mood of your celebration.
+          </p>
+          <strong>From ₹799</strong>
+        </article>
+
+
+        <article class="pkg-custom-card">
+          <div class="pkg-custom-icon">
+            <i data-lucide="gem"></i>
+          </div>
+          <span>OPTIONAL UPGRADE</span>
+          <h3>Premium Party Upgrades</h3>
+          <p>
+            Combine additional services and premium experience elements when
+            you want your event to feel bigger, richer and more memorable.
+          </p>
+          <strong>From ₹1,999</strong>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       09. PACKAGE EXPERIENCE VISUAL
+  ========================================================== -->
+  <section class="pkg-experience" id="packageExperience">
+
+    <div class="pkg-page-container">
+
+      <div class="pkg-section-heading">
+        <span>WHY PACKAGES MAKE SENSE</span>
+        <h2>
+          One Celebration,
+          <strong>Everything In One Place</strong>
+        </h2>
+        <p>
+          A package is more than a collection of services. It is a complete
+          way to plan your celebration around one private venue, one
+          coordinated experience and one simple booking journey.
+        </p>
+      </div>
+
+
+      <div class="pkg-experience-layout">
+
+        <div class="pkg-experience-image">
+          <img
+            src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1300&q=90"
+            alt="Friends celebrating together">
+        </div>
+
+
+        <div class="pkg-experience-content">
+
+          <article>
+            <div class="pkg-experience-icon">
+              <i data-lucide="layers-3"></i>
+            </div>
+            <div>
+              <span>01 · CONVENIENCE</span>
+              <h3>Multiple Services, One Experience</h3>
+              <p>
+                Instead of arranging every element independently, packages
+                bring entertainment, food, ambience and support together.
+              </p>
+            </div>
+          </article>
+
+
+          <article>
+            <div class="pkg-experience-icon">
+              <i data-lucide="wallet-cards"></i>
+            </div>
+            <div>
+              <span>02 · VALUE</span>
+              <h3>Clearer Planning & Budgeting</h3>
+              <p>
+                A defined package makes it easier to understand the core
+                experience and identify optional upgrades before booking.
+              </p>
+            </div>
+          </article>
+
+
+          <article>
+            <div class="pkg-experience-icon">
+              <i data-lucide="sliders-horizontal"></i>
+            </div>
+            <div>
+              <span>03 · FLEXIBILITY</span>
+              <h3>Built Around Your Celebration</h3>
+              <p>
+                Different groups have different needs, so package elements
+                can be adjusted with selected add-ons and custom requirements.
+              </p>
+            </div>
+          </article>
+
+
+          <article>
+            <div class="pkg-experience-icon">
+              <i data-lucide="heart-handshake"></i>
+            </div>
+            <div>
+              <span>04 · EXPERIENCE</span>
+              <h3>More Time To Enjoy</h3>
+              <p>
+                With the planning structure handled in advance, your group
+                can spend more time singing, eating, talking and celebrating.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       10. PACKAGE FAQ / KEY FACTS
+  ========================================================== -->
+  <section class="pkg-facts" id="packageFacts">
+    <div class="pkg-page-container">
+
+      <div class="pkg-section-heading">
+        <span>PACKAGE INFORMATION</span>
+        <h2>
+          Important Details
+          <strong>Before You Book</strong>
+        </h2>
+        <p>
+          Understanding the basic package rules helps you select the right
+          experience and prepare your celebration without last-minute surprises.
+        </p>
+      </div>
+
+
+      <div class="pkg-facts-layout">
+
+        <div class="pkg-facts-list">
+
+          <article class="pkg-fact-row">
+            <div class="pkg-fact-number">01</div>
+            <div class="pkg-fact-icon">
+              <i data-lucide="users"></i>
+            </div>
+            <div>
+              <span>GUEST CAPACITY</span>
+              <h3>Choose According To Your Group</h3>
+              <p>
+                Each package has a recommended guest range. Selecting a room
+                that comfortably fits your group helps maintain a better
+                experience throughout the event.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="pkg-fact-row">
+            <div class="pkg-fact-number">02</div>
+            <div class="pkg-fact-icon">
+              <i data-lucide="clock-3"></i>
+            </div>
+            <div>
+              <span>BOOKING DURATION</span>
+              <h3>Plan Enough Time For Your Celebration</h3>
+              <p>
+                Packages are available for different durations, and additional
+                time can be requested depending on room availability.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="pkg-fact-row">
+            <div class="pkg-fact-number">03</div>
+            <div class="pkg-fact-icon">
+              <i data-lucide="utensils"></i>
+            </div>
+            <div>
+              <span>FOOD & BEVERAGES</span>
+              <h3>Menus Can Vary By Package</h3>
+              <p>
+                Some packages include food and beverage options while others
+                keep them optional, allowing you to choose based on your event.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="pkg-fact-row">
+            <div class="pkg-fact-number">04</div>
+            <div class="pkg-fact-icon">
+              <i data-lucide="settings-2"></i>
+            </div>
+            <div>
+              <span>CUSTOMIZATION</span>
+              <h3>Upgrade The Experience When Needed</h3>
+              <p>
+                Decorations, photography, food upgrades, special lighting and
+                extra time can be considered as optional additions.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="pkg-fact-row">
+            <div class="pkg-fact-number">05</div>
+            <div class="pkg-fact-icon">
+              <i data-lucide="calendar-check-2"></i>
+            </div>
+            <div>
+              <span>AVAILABILITY</span>
+              <h3>Advance Planning Is Recommended</h3>
+              <p>
+                Popular dates and larger rooms can fill quickly, especially
+                during weekends, festive periods and special occasions.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+
+        <aside class="pkg-facts-side">
+
+          <div class="pkg-facts-side-top">
+            <i data-lucide="badge-check"></i>
+            <span>PACKAGE CHECKLIST</span>
+          </div>
+
+          <h3>
+            Everything Important,
+            <strong>Clearly Explained.</strong>
+          </h3>
+
+          <p>
+            Before confirming your package, make sure the guest count,
+            duration, food requirements, room preference and any special
+            requests are clearly understood.
+          </p>
+
+          <div class="pkg-facts-checklist">
+
+            <div>
+              <i data-lucide="check-circle-2"></i>
+              <span>Private party room</span>
+            </div>
+
+            <div>
+              <i data-lucide="check-circle-2"></i>
+              <span>Karaoke & entertainment</span>
+            </div>
+
+            <div>
+              <i data-lucide="check-circle-2"></i>
+              <span>Sound & lighting options</span>
+            </div>
+
+            <div>
+              <i data-lucide="check-circle-2"></i>
+              <span>Food & beverage choices</span>
+            </div>
+
+            <div>
+              <i data-lucide="check-circle-2"></i>
+              <span>Optional upgrades</span>
+            </div>
+
+            <div>
+              <i data-lucide="check-circle-2"></i>
+              <span>Event support</span>
+            </div>
+
+          </div>
+
+          <div class="pkg-facts-bottom">
+            <i data-lucide="info"></i>
+            <span>
+              Final pricing depends on package, guest count, duration and
+              selected customizations.
+            </span>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       11. FINAL CTA
+  ========================================================== -->
+  <section class="pkg-final-cta" id="packageFinalCta">
+  <div class="pkg-page-container">
+
+    <div class="pkg-final-cta-card">
+
+      <div class="pkg-final-cta-icon">
+        <i data-lucide="party-popper"></i>
+      </div>
+
+      <div class="pkg-final-cta-content">
+
+        <div class="pkg-final-kicker">
+          <span class="pkg-final-kicker-line"></span>
+          <span>READY TO CREATE YOUR EXPERIENCE?</span>
+          <span class="pkg-final-kicker-line"></span>
+        </div>
+
+        <h2>
+          Everything You Need.
+          <strong>One Perfect Package.</strong>
+        </h2>
+
+        <p>
+          Choose your celebration, customize the experience and let
+          VibeRoomz take care of the details while you enjoy the party.
+        </p>
+
+        <div class="pkg-final-points">
+
+          <span>
+            <i data-lucide="check-circle-2"></i>
+            Flexible Packages
+          </span>
+
+          <span>
+            <i data-lucide="sparkles"></i>
+            Premium Experiences
+          </span>
+
+          <span>
+            <i data-lucide="shield-check"></i>
+            Private Celebrations
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="pkg-final-cta-action">
+        <a href="booking.html" class="pkg-final-button">
+          <span>Book Your Package</span>
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+ <footer class="footer">
+  <div class="container footer-grid">
+    <section class="footer-about">
+      <div class="footer-logo">
+        <img
+          id="footerLogo"
+          src="VibeRooms_light.png"
+          alt="VibeRoomz logo"
+          data-light-logo="VibeRooms_light.png"
+          data-dark-logo="VibeRooms_dark.png"
+        />
+        <h2>Vibe<span>Roomz</span></h2>
+      </div>
+
+
+      <p>VibeRoomz is your premium room booking space for parties, music, and unforgettable indoor experiences.</p>
+
+
+      <div class="socials">
+        <a href="#" aria-label="Visit VibeRoomz on YouTube"><i data-lucide="youtube"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on Instagram"><i data-lucide="instagram"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on X"><i data-lucide="twitter"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on LinkedIn"><i data-lucide="linkedin"></i></a>
+      </div>
+    </section>
+
+
+    <nav aria-label="Quick links">
+      <h3>Quick Links</h3>
+      <div class="line"></div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+
+    <nav aria-label="Services links">
+      <h3>Our Services</h3>
+      <div class="line"></div>
+      <ul>
+        <li><a href="rooms.html">Private Rooms</a></li>
+        <li><a href="packages.html">Party Packages</a></li>
+        <li><a href="events.html">Event Hosting</a></li>
+        <li><a href="pricing.html">Transparent Pricing</a></li>
+        <li><a href="dashboard.html">Booking Dashboard</a></li>
+      </ul>
+    </nav>
+
+<section class="footer-extra">
+      <h3>Additional Pages</h3>
+      <div class="line"></div>
+
+
+      <ul class="footer-extra-list">
+        <li><a href="rooms.html">Error 404</a></li>
+        <li><a href="packages.html">Coming soon</a></li>
+        <li><a href="contact.html">Support</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+
+
+      
+    </section>
+    <section class="footer-contact-wrap" aria-labelledby="footer-contact-title">
+      <h3 id="footer-contact-title">Contact Us</h3>
+      <div class="line"></div>
+
+
+      <ul class="contact">
+        <li><i data-lucide="map-pin"></i><span>Hyderabad, India</span></li>
+        <li><i data-lucide="phone"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+        <li><i data-lucide="mail"></i><a href="mailto:info@viberoomz.com">info@viberoomz.com</a></li>
+        <li><i data-lucide="clock-3"></i><span>9:30 am - 4:30 pm</span></li>
+      </ul>
+    </section>
+
+
+    
+  </div>
+
+
+  <div class="footer-bottom">
+    <p>© <span id="footerYear"></span> <span class="next">Vibe</span><span class="gear">Roomz</span>. All Rights Reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="pp.html">Privacy Policy</a>
+      <a href="tc.html">Terms &amp; Conditions</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+  </div>
+
+
+  <script src="main.js"></script>
+  
+  <script>lucide.createIcons();</script>
+  <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+</body>
+</html>

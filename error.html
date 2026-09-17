@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VibeRoomz - Page Not Found</title>
+<link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="error.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="vr-404-body">
+
+  <main class="vr-404-page">
+
+    <!-- TOP RIGHT CONTROLS -->
+    <div class="vr-404-controls">
+
+      <button
+        class="vr-404-control"
+        id="errorRtlToggle"
+        type="button"
+        aria-label="Switch to RTL"
+        aria-pressed="false">
+        <i data-lucide="arrow-right-left"></i>
+      </button>
+
+      <button
+        class="vr-404-control"
+        id="errorThemeToggle"
+        type="button"
+        aria-label="Switch to dark mode"
+        aria-pressed="false">
+        <i data-lucide="moon-star"></i>
+      </button>
+
+    </div>
+
+
+    <!-- 404 CARD -->
+    <section class="vr-404-card">
+
+      <div class="vr-404-icon">
+        <i data-lucide="search-x"></i>
+      </div>
+
+      <div class="vr-404-number">
+        4<span>0</span>4
+      </div>
+
+      <h1>
+        Page <span>Not Found</span>
+      </h1>
+
+      <p>
+        Sorry, the page you're looking for doesn't exist
+        or may have been moved.
+      </p>
+
+      <a href="index.html" class="vr-404-home">
+        <i data-lucide="house"></i>
+        <span>Back to Home</span>
+      </a>
+
+    </section>
+
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const themeToggle =
+        document.getElementById("errorThemeToggle");
+
+      const rtlToggle =
+        document.getElementById("errorRtlToggle");
+
+      let darkMode =
+        localStorage.getItem("vibeAuthTheme") === "dark";
+
+      let rtlEnabled =
+        localStorage.getItem("vibeAuthRTL") === "true";
+
+
+      function refreshIcons(){
+        if(window.lucide){
+          lucide.createIcons();
+        }
+      }
+
+
+      function updateTheme(){
+
+        document.body.classList.toggle(
+          "dark",
+          darkMode
+        );
+
+        themeToggle?.setAttribute(
+          "aria-pressed",
+          darkMode ? "true" : "false"
+        );
+
+        themeToggle?.setAttribute(
+          "aria-label",
+          darkMode
+            ? "Switch to light mode"
+            : "Switch to dark mode"
+        );
+
+        if(themeToggle){
+          themeToggle.innerHTML = darkMode
+            ? `<i data-lucide="sun"></i>`
+            : `<i data-lucide="moon-star"></i>`;
+        }
+
+        refreshIcons();
+      }
+
+
+      function updateRTL(){
+
+        document.documentElement.dir =
+          rtlEnabled ? "rtl" : "ltr";
+
+        rtlToggle?.setAttribute(
+          "aria-pressed",
+          rtlEnabled ? "true" : "false"
+        );
+      }
+
+
+      themeToggle?.addEventListener("click", () => {
+
+        darkMode = !darkMode;
+
+        localStorage.setItem(
+          "vibeAuthTheme",
+          darkMode ? "dark" : "light"
+        );
+
+        updateTheme();
+
+      });
+
+
+      rtlToggle?.addEventListener("click", () => {
+
+        rtlEnabled = !rtlEnabled;
+
+        localStorage.setItem(
+          "vibeAuthRTL",
+          rtlEnabled ? "true" : "false"
+        );
+
+        updateRTL();
+
+      });
+
+
+      updateTheme();
+      updateRTL();
+      refreshIcons();
+
+    });
+  </script>
+
+</body>
+</html>

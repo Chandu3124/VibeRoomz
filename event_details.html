@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VibeRoomz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="event_details.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html" class="logo" aria-label="VibeRoomz home">
+        <img
+          id="siteLogo"
+          src="VibeRooms_light.png"
+          alt="VibeRoomz logo"
+          data-light-logo="VibeRooms_light.png"
+          data-dark-logo="VibeRooms_dark.png"
+        />
+        <h1>Vibe<span>Roomz</span></h1>
+      </a>
+
+
+      <ul class="menu" id="primaryMenu">
+        <li class="dropdown">
+          <a href="index.html" data-page="index.html">
+            <span>Home</span>
+            <i data-lucide="chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html" data-page="index.html">Home 1</a></li>
+            <li><a href="home2.html" data-page="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+
+
+        <li><a href="rooms.html" data-page="rooms.html">Rooms</a></li>
+        <li><a href="packages.html" data-page="packages.html">Packages</a></li>
+        <li><a href="events.html" data-page="events.html">Events</a></li>
+        <li><a href="pricing.html" data-page="pricing.html">Pricing</a></li>
+        <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+        <li><a href="dashboard.html" data-page="dashboard.html">Dashboard</a></li>
+
+
+        <li class="mobile-login-item">
+          <a href="login.html" data-page="login.html">Login</a>
+        </li>
+      </ul>
+
+
+      <div class="nav-right">
+        <button
+          class="circle rtl-btn"
+          id="rtlToggle"
+          type="button"
+          aria-label="Switch to right to left layout"
+          aria-pressed="false"
+        >
+          <i data-lucide="arrow-right-left"></i>
+        </button>
+
+
+        <button
+          class="circle theme-btn"
+          id="themeToggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+        >
+          <i data-lucide="moon-star"></i>
+        </button>
+
+
+        <a href="login.html" class="login login-btn desktop-login" data-page="login.html">Login</a>
+
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primaryMenu"
+          type="button"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="event-detail-page">
+
+  <!-- =========================
+       1. EVENT HERO
+  ========================== -->
+  <section class="ed-hero" id="eventHero">
+    <div class="ed-hero-overlay"></div>
+
+    <div class="ed-container">
+      <div class="ed-hero-content">
+
+        <span class="ed-hero-kicker">
+          <i data-lucide="sparkles"></i>
+          UPCOMING EVENT
+        </span>
+
+        <h1>
+          Neon DJ <strong>Night</strong>
+        </h1>
+
+        <p class="ed-hero-description">
+          Turn up the energy with live DJ mixes, neon lights, powerful sound
+          and an unforgettable party atmosphere designed for an incredible night.
+        </p>
+
+        <div class="ed-hero-meta">
+          <div>
+            <i data-lucide="calendar-days"></i>
+            <span>September 18, 2026</span>
+          </div>
+
+          <div>
+            <i data-lucide="clock-3"></i>
+            <span>8:00 PM – 11:30 PM</span>
+          </div>
+
+          <div>
+            <i data-lucide="music-2"></i>
+            <span>DJ Night</span>
+          </div>
+
+          <div>
+            <i data-lucide="palette"></i>
+            <span>Neon Theme</span>
+          </div>
+        </div>
+
+        <div class="ed-hero-info-grid">
+
+          <div class="ed-hero-info">
+            <i data-lucide="users"></i>
+            <div>
+              <span>CAPACITY</span>
+              <strong>Up to 40 Guests</strong>
+            </div>
+          </div>
+
+          <div class="ed-hero-info">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <span>VENUE</span>
+              <strong>VibeRoomz Event Space</strong>
+            </div>
+          </div>
+
+          <div class="ed-hero-info">
+            <i data-lucide="timer"></i>
+            <div>
+              <span>DURATION</span>
+              <strong>Approximately 3.5 Hours</strong>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================
+       2. EVENT OVERVIEW
+  ========================== -->
+  <section class="ed-overview" id="eventOverview">
+    <div class="ed-container">
+
+      <div class="ed-section-heading">
+        <span>EVENT OVERVIEW</span>
+        <h2>
+          Everything You Need To Know About
+          <strong>Neon DJ Night</strong>
+        </h2>
+        <p>
+          Get familiar with the event format, atmosphere, timing and overall
+          experience before planning your night with us.
+        </p>
+      </div>
+
+      <div class="ed-overview-layout">
+
+        <!-- LEFT CONTENT -->
+        <div class="ed-overview-content">
+
+          <article class="ed-overview-block">
+            <span class="ed-overview-number">01</span>
+
+            <div>
+              <h3>What Is Neon DJ Night?</h3>
+              <p>
+                Neon DJ Night is a high-energy VibeRoomz experience created
+                around music, lights, karaoke and social entertainment.
+                The evening combines the excitement of a live DJ atmosphere
+                with the comfort and privacy of a dedicated party space.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="ed-overview-block">
+            <span class="ed-overview-number">02</span>
+
+            <div>
+              <h3>When Does The Event Take Place?</h3>
+              <p>
+                The event takes place on September 18, 2026, from 8:00 PM
+                to 11:30 PM. Guests can arrive before the main program begins
+                so they have enough time to settle in, meet their group and
+                get comfortable with the venue.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="ed-overview-block">
+            <span class="ed-overview-number">03</span>
+
+            <div>
+              <h3>What Makes The Venue Different?</h3>
+              <p>
+                VibeRoomz brings together premium audio, colourful lighting,
+                comfortable interiors and private entertainment areas.
+                Instead of moving between multiple venues, guests can enjoy
+                music, karaoke and group activities within one dedicated space.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="ed-overview-block">
+            <span class="ed-overview-number">04</span>
+
+            <div>
+              <h3>Who Is This Event Designed For?</h3>
+              <p>
+                Neon DJ Night is ideal for friends, young groups, birthday
+                celebrations, social gatherings and anyone who enjoys energetic
+                music and a lively nightlife atmosphere.
+              </p>
+
+              <div class="ed-audience-grid">
+                <span><i data-lucide="users"></i>Friend Groups</span>
+                <span><i data-lucide="cake"></i>Celebrations</span>
+                <span><i data-lucide="music"></i>Music Lovers</span>
+                <span><i data-lucide="party-popper"></i>Party Groups</span>
+              </div>
+            </div>
+          </article>
+
+
+
+
+        </div>
+
+
+        <!-- RIGHT SINGLE STICKY SIDEBAR -->
+        <aside class="ed-sticky-sidebar">
+
+          <div class="ed-sidebar-header">
+            <span>EVENT DETAILS</span>
+            <i data-lucide="calendar-check-2"></i>
+          </div>
+
+          <div class="ed-sidebar-row">
+            <i data-lucide="calendar-days"></i>
+            <div>
+              <span>DATE</span>
+              <strong>18 September 2026</strong>
+            </div>
+          </div>
+
+          <div class="ed-sidebar-row">
+            <i data-lucide="clock-3"></i>
+            <div>
+              <span>TIME</span>
+              <strong>8:00 PM – 11:30 PM</strong>
+            </div>
+          </div>
+
+          <div class="ed-sidebar-row">
+            <i data-lucide="users"></i>
+            <div>
+              <span>CAPACITY</span>
+              <strong>Up to 40 Guests</strong>
+            </div>
+          </div>
+
+          <div class="ed-sidebar-row">
+            <i data-lucide="music-2"></i>
+            <div>
+              <span>EVENT TYPE</span>
+              <strong>DJ Night</strong>
+            </div>
+          </div>
+
+          <div class="ed-sidebar-row">
+            <i data-lucide="palette"></i>
+            <div>
+              <span>THEME</span>
+              <strong>Neon Party</strong>
+            </div>
+          </div>
+
+          <div class="ed-sidebar-row">
+            <i data-lucide="timer"></i>
+            <div>
+              <span>DURATION</span>
+              <strong>Approximately 3.5 Hours</strong>
+            </div>
+          </div>
+
+          <div class="ed-sidebar-row">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <span>VENUE</span>
+              <strong>VibeRoomz Event Space</strong>
+            </div>
+          </div>
+
+          <div class="ed-sidebar-note">
+            <i data-lucide="sparkles"></i>
+            <p>
+              Best suited for groups who enjoy high-energy music,
+              karaoke, social entertainment and colourful nightlife vibes.
+            </p>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================
+       3. EVENT ITINERARY
+  ========================== -->
+  <section class="ed-itinerary" id="eventItinerary">
+    <div class="ed-container">
+
+      <div class="ed-section-heading">
+        <span>EVENT ITINERARY</span>
+        <h2>
+          A Night Planned For
+          <strong>Non-Stop Energy</strong>
+        </h2>
+        <p>
+          From arrival to the final moments, every part of the evening
+          is designed to keep the celebration moving.
+        </p>
+      </div>
+
+      <div class="ed-itinerary-grid">
+
+        <article class="ed-itinerary-card">
+          <div class="ed-itinerary-image">
+            <img
+              src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=900&q=90"
+              alt="Guests arriving for the event"
+            >
+          </div>
+
+          <div class="ed-itinerary-content">
+            <span class="ed-itinerary-number">01</span>
+            <h3>Start The Evening Together</h3>
+            <p>
+              Guests arrive, settle into the space and get comfortable
+              before the main entertainment begins. It is the perfect
+              time to connect with your group and prepare for the night.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="ed-itinerary-card">
+          <div class="ed-itinerary-image">
+            <img
+              src="https://images.unsplash.com/photo-1496337589254-7e19d01cec44?auto=format&fit=crop&w=900&q=90"
+              alt="DJ performing live"
+            >
+          </div>
+
+          <div class="ed-itinerary-content">
+            <span class="ed-itinerary-number">02</span>
+            <h3>Music Takes Over</h3>
+            <p>
+              Once the evening gets moving, live DJ music and dynamic
+              lighting transform the venue into a vibrant party environment
+              filled with rhythm and energy.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="ed-itinerary-card">
+          <div class="ed-itinerary-image">
+            <img
+              src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=90"
+              alt="Karaoke performance"
+            >
+          </div>
+
+          <div class="ed-itinerary-content">
+            <span class="ed-itinerary-number">03</span>
+            <h3>Become Part Of The Show</h3>
+            <p>
+              Guests can take the mic, sing along with friends and become
+              part of the entertainment. Karaoke adds an interactive layer
+              that makes every group part of the celebration.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="ed-itinerary-card">
+          <div class="ed-itinerary-image">
+            <img
+              src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=90"
+              alt="People enjoying a party"
+            >
+          </div>
+
+          <div class="ed-itinerary-content">
+            <span class="ed-itinerary-number">04</span>
+            <h3>More Ways To Connect</h3>
+            <p>
+              Between music and performances, groups can enjoy games,
+              conversations and relaxed social moments that keep the
+              celebration personal and memorable.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================
+       4. EVENT EXPERIENCE GALLERY
+  ========================== -->
+  <section class="ed-gallery" id="eventGallery">
+    <div class="ed-container">
+
+      <div class="ed-section-heading">
+        <span>EVENT EXPERIENCE</span>
+        <h2>
+          See The Energy Behind
+          <strong>The Experience</strong>
+        </h2>
+        <p>
+          A visual look at the atmosphere, entertainment and details
+          that shape the VibeRoomz event experience.
+        </p>
+      </div>
+
+      <div class="ed-gallery-grid">
+
+        <article class="ed-gallery-card">
+          <img
+            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=90"
+            alt="Neon party atmosphere"
+          >
+          <div>
+            <span>01</span>
+            <h3>Neon Party Energy</h3>
+          </div>
+        </article>
+
+        <article class="ed-gallery-card">
+          <img
+            src="https://images.unsplash.com/photo-1496337589254-7e19d01cec44?auto=format&fit=crop&w=1000&q=90"
+            alt="DJ live performance"
+          >
+          <div>
+            <span>02</span>
+            <h3>Live Music Energy</h3>
+          </div>
+        </article>
+
+        <article class="ed-gallery-card">
+          <img
+            src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1000&q=90"
+            alt="Interactive karaoke moment"
+          >
+          <div>
+            <span>03</span>
+            <h3>Interactive Moments</h3>
+          </div>
+        </article>
+
+        <article class="ed-gallery-card">
+          <img
+            src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1000&q=90"
+            alt="Party celebration details"
+          >
+          <div>
+            <span>04</span>
+            <h3>Celebration Details</h3>
+          </div>
+        </article>
+
+      </div>
+
+
+      <div class="ed-gallery-theory">
+
+        <article>
+          <i data-lucide="volume-2"></i>
+          <h3>Sound Designed For The Room</h3>
+          <p>
+            Powerful audio creates an immersive experience without taking
+            away from conversations, singing or group activities.
+          </p>
+        </article>
+
+        <article>
+          <i data-lucide="lightbulb"></i>
+          <h3>Lighting That Defines The Mood</h3>
+          <p>
+            Neon lighting adds visual energy to the room and creates a
+            stronger atmosphere as the evening moves forward.
+          </p>
+        </article>
+
+        <article>
+          <i data-lucide="heart"></i>
+          <h3>Built For Memorable Moments</h3>
+          <p>
+            From spontaneous karaoke performances to group celebrations,
+            every detail is designed around memorable shared experiences.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       5. TICKET / RSVP
+  ========================== -->
+  <section class="ed-ticket-section" id="eventTickets">
+    <div class="ed-container">
+
+      <div class="ed-section-heading">
+        <span>EVENT ENTRY</span>
+        <h2>
+          Plan Your Night Before
+          <strong>You Arrive</strong>
+        </h2>
+        <p>
+          Understand the entry details, guest planning and everything
+          that helps make your event experience smooth.
+        </p>
+      </div>
+
+      <div class="ed-ticket-main">
+
+        <div class="ed-ticket-pricing">
+
+          <div class="ed-ticket-top">
+            <span>NEON DJ NIGHT</span>
+            <i data-lucide="ticket"></i>
+          </div>
+
+          <h3>Event Entry</h3>
+
+          <div class="ed-ticket-price">
+            <small>Starting from</small>
+            <strong>₹799</strong>
+            <span>per guest</span>
+          </div>
+
+          <p>
+            Event entry gives guests access to the Neon DJ Night experience,
+            including music, entertainment, karaoke opportunities and the
+            complete party atmosphere.
+          </p>
+
+          <div class="ed-ticket-features">
+
+            <div>
+              <i data-lucide="check"></i>
+              <span>DJ Entertainment</span>
+            </div>
+
+            <div>
+              <i data-lucide="check"></i>
+              <span>Karaoke Access</span>
+            </div>
+
+            <div>
+              <i data-lucide="check"></i>
+              <span>Group Activities</span>
+            </div>
+
+            <div>
+              <i data-lucide="check"></i>
+              <span>Neon Atmosphere</span>
+            </div>
+
+          </div>
+
+          <div class="ed-ticket-note">
+            <i data-lucide="info"></i>
+            <span>
+              Final entry pricing may vary depending on selected
+              package options and event arrangements.
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="ed-ticket-guide">
+
+          <div class="ed-ticket-guide-image">
+            <img
+              src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1100&q=90"
+              alt="Event celebration"
+            >
+          </div>
+
+          <div class="ed-ticket-guide-content">
+
+            <span>BEFORE YOU JOIN</span>
+
+            <h3>
+              A Little Planning Makes
+              The Night Better.
+            </h3>
+
+            <p>
+              A few simple preparations can help your group enjoy the event
+              without unnecessary delays or confusion.
+            </p>
+
+            <div class="ed-ticket-guide-list">
+
+              <div>
+                <i data-lucide="users"></i>
+                <div>
+                  <strong>Plan Your Guest Count</strong>
+                  <span>Confirm your group size before the event.</span>
+                </div>
+              </div>
+
+              <div>
+                <i data-lucide="calendar-days"></i>
+                <div>
+                  <strong>Check The Event Date</strong>
+                  <span>Keep the event timing in mind while planning.</span>
+                </div>
+              </div>
+
+              <div>
+                <i data-lucide="message-square"></i>
+                <div>
+                  <strong>Share Special Requirements</strong>
+                  <span>Inform the team about important arrangements.</span>
+                </div>
+              </div>
+
+              <div>
+                <i data-lucide="clock-3"></i>
+                <div>
+                  <strong>Arrive Before The Main Program</strong>
+                  <span>Give yourself time to settle in comfortably.</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="ed-ticket-theory">
+
+        <article>
+          <i data-lucide="ticket-check"></i>
+          <h3>Entry Information</h3>
+          <p>
+            Entry is planned around the event schedule so guests can enjoy
+            the complete experience without missing the main entertainment.
+          </p>
+        </article>
+
+        <article>
+          <i data-lucide="users"></i>
+          <h3>Guest Planning</h3>
+          <p>
+            Groups should plan their guest count in advance so seating,
+            room capacity and overall comfort can be managed effectively.
+          </p>
+        </article>
+
+        <article>
+          <i data-lucide="shield-check"></i>
+          <h3>Venue Guidelines</h3>
+          <p>
+            Guests are expected to follow venue guidelines and respect the
+            space so everyone can enjoy a safe and comfortable celebration.
+          </p>
+        </article>
+
+        <article>
+          <i data-lucide="utensils"></i>
+          <h3>Food & Personal Preferences</h3>
+          <p>
+            Food and additional preferences can be planned according to
+            the available event and package arrangements.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+<!-- =========================
+     6. FINAL CTA
+========================== -->
+<section class="ed-final-cta" id="eventFinalCta">
+  <div class="ed-container">
+
+    <div class="ed-final-card">
+
+      <div class="ed-final-icon">
+        <i data-lucide="party-popper"></i>
+      </div>
+
+      <div class="ed-final-content">
+
+        <div class="ed-final-kicker">
+          <span class="ed-final-kicker-line"></span>
+          <span>YOUR NIGHT STARTS HERE</span>
+          <span class="ed-final-kicker-line"></span>
+        </div>
+
+        <h2>
+          Don’t Just Hear About The Party.
+          <strong>Be There.</strong>
+        </h2>
+
+        <p>
+          Reserve your spot and experience the VibeRoomz event with
+          music, lights, entertainment and unforgettable moments.
+        </p>
+
+      </div>
+
+      <a href="booking.html" class="ed-final-button">
+        <span>Get Your Spot</span>
+        <i data-lucide="arrow-up-right"></i>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+</section>
+ <footer class="footer">
+  <div class="container footer-grid">
+    <section class="footer-about">
+      <div class="footer-logo">
+        <img
+          id="footerLogo"
+          src="VibeRooms_light.png"
+          alt="VibeRoomz logo"
+          data-light-logo="VibeRooms_light.png"
+          data-dark-logo="VibeRooms_dark.png"
+        />
+        <h2>Vibe<span>Roomz</span></h2>
+      </div>
+
+
+      <p>VibeRoomz is your premium room booking space for parties, music, and unforgettable indoor experiences.</p>
+
+
+      <div class="socials">
+        <a href="#" aria-label="Visit VibeRoomz on YouTube"><i data-lucide="youtube"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on Instagram"><i data-lucide="instagram"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on X"><i data-lucide="twitter"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on LinkedIn"><i data-lucide="linkedin"></i></a>
+      </div>
+    </section>
+
+
+    <nav aria-label="Quick links">
+      <h3>Quick Links</h3>
+      <div class="line"></div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+
+    <nav aria-label="Services links">
+      <h3>Our Services</h3>
+      <div class="line"></div>
+      <ul>
+        <li><a href="rooms.html">Private Rooms</a></li>
+        <li><a href="packages.html">Party Packages</a></li>
+        <li><a href="events.html">Event Hosting</a></li>
+        <li><a href="pricing.html">Transparent Pricing</a></li>
+        <li><a href="dashboard.html">Booking Dashboard</a></li>
+      </ul>
+    </nav>
+
+<section class="footer-extra">
+      <h3>Additional Pages</h3>
+      <div class="line"></div>
+
+
+      <ul class="footer-extra-list">
+        <li><a href="rooms.html">Error 404</a></li>
+        <li><a href="packages.html">Coming soon</a></li>
+        <li><a href="contact.html">Support</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+
+
+      
+    </section>
+    <section class="footer-contact-wrap" aria-labelledby="footer-contact-title">
+      <h3 id="footer-contact-title">Contact Us</h3>
+      <div class="line"></div>
+
+
+      <ul class="contact">
+        <li><i data-lucide="map-pin"></i><span>Hyderabad, India</span></li>
+        <li><i data-lucide="phone"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+        <li><i data-lucide="mail"></i><a href="mailto:info@viberoomz.com">info@viberoomz.com</a></li>
+        <li><i data-lucide="clock-3"></i><span>9:30 am - 4:30 pm</span></li>
+      </ul>
+    </section>
+
+
+    
+  </div>
+
+
+  <div class="footer-bottom">
+    <p>© <span id="footerYear"></span> <span class="next">Vibe</span><span class="gear">Roomz</span>. All Rights Reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="pp.html">Privacy Policy</a>
+      <a href="tc.html">Terms &amp; Conditions</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+  </div>
+
+
+  <script src="main.js"></script>
+  
+  <script>lucide.createIcons();</script>
+  <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+</body>
+</html>

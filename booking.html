@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VibeRoomz - Book a Room</title>
+
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="booking.css">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="vr-booking-body">
+
+  <div class="vr-booking-page">
+
+    <!-- TOP CONTROLS -->
+    <div class="vr-booking-controls">
+
+      <button
+        class="vr-booking-control"
+        id="bookingRtlToggle"
+        type="button"
+        aria-label="Switch to RTL"
+        aria-pressed="false">
+        <i data-lucide="arrow-right-left"></i>
+      </button>
+
+      <button
+        class="vr-booking-control"
+        id="bookingThemeToggle"
+        type="button"
+        aria-label="Switch to dark mode"
+        aria-pressed="false">
+        <i data-lucide="moon-star"></i>
+      </button>
+
+    </div>
+
+
+    <!-- BOOKING CONTAINER -->
+    <main class="vr-booking-container">
+
+      <section class="vr-booking-card">
+
+        <!-- FORM SIDE -->
+
+        <div class="vr-booking-form-side">
+
+          <!-- CLICKABLE LOGO -->
+          <a
+            href="index.html"
+            class="vr-booking-logo"
+            aria-label="VibeRoomz Home">
+
+            <img
+              id="bookingLogo"
+              src="VibeRooms_light.png"
+              data-light-logo="VibeRooms_light.png"
+              data-dark-logo="VibeRooms_dark.png"
+              alt="VibeRoomz">
+
+            <h1>
+              Vibe<span>Roomz</span>
+            </h1>
+
+          </a>
+
+
+          <!-- HEADING -->
+          <div class="vr-booking-heading">
+
+            <h2>
+              Book Your <span>Room</span>
+            </h2>
+
+            <p>
+              Reserve your private party room.
+            </p>
+
+          </div>
+
+
+          <!-- FORM -->
+          <form
+            class="vr-booking-form"
+            id="bookingForm">
+
+            <!-- NAME -->
+            <div class="vr-booking-field">
+
+              <label for="bookingName">
+                Full Name
+              </label>
+
+              <div class="vr-booking-input">
+
+                <i data-lucide="user-round"></i>
+
+                <input
+                  type="text"
+                  id="bookingName"
+                  placeholder="Enter your full name"
+                  autocomplete="name"
+                  required>
+
+              </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+            <div class="vr-booking-field">
+
+              <label for="bookingEmail">
+                Email Address
+              </label>
+
+              <div class="vr-booking-input">
+
+                <i data-lucide="mail"></i>
+
+                <input
+                  type="email"
+                  id="bookingEmail"
+                  placeholder="Enter your email address"
+                  autocomplete="email"
+                  required>
+
+              </div>
+
+            </div>
+
+
+            <!-- PHONE -->
+            <div class="vr-booking-field">
+
+              <label for="bookingPhone">
+                Phone Number
+              </label>
+
+              <div class="vr-booking-input">
+
+                <i data-lucide="phone"></i>
+
+                <input
+                  type="tel"
+                  id="bookingPhone"
+                  placeholder="Enter your phone number"
+                  autocomplete="tel"
+                  required>
+
+              </div>
+
+            </div>
+
+
+            <!-- ROOM -->
+            <div class="vr-booking-field">
+
+              <label for="bookingRoom">
+                Choose Room
+              </label>
+
+              <div class="vr-booking-input">
+
+                <i data-lucide="door-open"></i>
+
+                <select
+                  id="bookingRoom"
+                  required>
+
+                  <option
+                    value=""
+                    selected
+                    disabled>
+                    Select a room
+                  </option>
+
+                  <option>
+                    Vibe Mini — Up to 4 Guests
+                  </option>
+
+                  <option>
+                    Vibe Plus — Up to 8 Guests
+                  </option>
+
+                  <option>
+                    Vibe Party — Up to 15 Guests
+                  </option>
+
+                  <option>
+                    Vibe Premium — Up to 25 Guests
+                  </option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <!-- DATE + TIME -->
+            <div class="vr-booking-row">
+
+              <div class="vr-booking-field">
+
+                <label for="bookingDate">
+                  Date
+                </label>
+
+                <div class="vr-booking-input">
+
+                  <i data-lucide="calendar-days"></i>
+
+                  <input
+                    type="date"
+                    id="bookingDate"
+                    required>
+
+                </div>
+
+              </div>
+
+
+              <div class="vr-booking-field">
+
+                <label for="bookingTime">
+                  Time
+                </label>
+
+                <div class="vr-booking-input">
+
+                  <i data-lucide="clock-3"></i>
+
+                  <select
+                    id="bookingTime"
+                    required>
+
+                    <option
+                      value=""
+                      selected
+                      disabled>
+                      Select time
+                    </option>
+
+                    <option>10:00 AM</option>
+                    <option>12:00 PM</option>
+                    <option>02:00 PM</option>
+                    <option>04:00 PM</option>
+                    <option>06:00 PM</option>
+                    <option>08:00 PM</option>
+                    <option>10:00 PM</option>
+
+                  </select>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- GUESTS -->
+            <div class="vr-booking-field">
+
+              <label for="bookingGuests">
+                Number of Guests
+              </label>
+
+              <div class="vr-booking-input">
+
+                <i data-lucide="users-round"></i>
+
+                <select
+                  id="bookingGuests"
+                  required>
+
+                  <option
+                    value=""
+                    selected
+                    disabled>
+                    Select guests
+                  </option>
+
+                  <option>2 Guests</option>
+                  <option>4 Guests</option>
+                  <option>6 Guests</option>
+                  <option>8 Guests</option>
+                  <option>10 Guests</option>
+                  <option>15 Guests</option>
+                  <option>20 Guests</option>
+                  <option>25 Guests</option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <!-- CTA -->
+            <button
+              type="submit"
+              class="vr-booking-submit">
+
+              <span>Continue Booking</span>
+
+              <i data-lucide="arrow-right"></i>
+
+            </button>
+
+          </form>
+
+
+          <!-- SECURITY -->
+          <div class="vr-booking-note">
+
+            <i data-lucide="shield-check"></i>
+
+            <span>
+              Your booking details are secure.
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <script src="booking.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>

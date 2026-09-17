@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VibeRoomz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="events.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html" class="logo" aria-label="VibeRoomz home">
+        <img
+          id="siteLogo"
+          src="VibeRooms_light.png"
+          alt="VibeRoomz logo"
+          data-light-logo="VibeRooms_light.png"
+          data-dark-logo="VibeRooms_dark.png"
+        />
+        <h1>Vibe<span>Roomz</span></h1>
+      </a>
+
+
+      <ul class="menu" id="primaryMenu">
+        <li class="dropdown">
+          <a href="index.html" data-page="index.html">
+            <span>Home</span>
+            <i data-lucide="chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html" data-page="index.html">Home 1</a></li>
+            <li><a href="home2.html" data-page="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+
+
+        <li><a href="rooms.html" data-page="rooms.html">Rooms</a></li>
+        <li><a href="packages.html" data-page="packages.html">Packages</a></li>
+        <li><a href="events.html" data-page="events.html">Events</a></li>
+        <li><a href="pricing.html" data-page="pricing.html">Pricing</a></li>
+        <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+        <li><a href="dashboard.html" data-page="dashboard.html">Dashboard</a></li>
+
+
+        <li class="mobile-login-item">
+          <a href="login.html" data-page="login.html">Login</a>
+        </li>
+      </ul>
+
+
+      <div class="nav-right">
+        <button
+          class="circle rtl-btn"
+          id="rtlToggle"
+          type="button"
+          aria-label="Switch to right to left layout"
+          aria-pressed="false"
+        >
+          <i data-lucide="arrow-right-left"></i>
+        </button>
+
+
+        <button
+          class="circle theme-btn"
+          id="themeToggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+        >
+          <i data-lucide="moon-star"></i>
+        </button>
+
+
+        <a href="login.html" class="login login-btn desktop-login" data-page="login.html">Login</a>
+
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primaryMenu"
+          type="button"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+<section class="events-hero" id="eventsHero">
+  <div class="events-hero-bg"></div>
+  <div class="events-hero-overlay"></div>
+
+  <div class="container">
+    <div class="events-hero-content">
+      <div class="events-hero-kicker">
+        <span class="events-kicker-line"></span>
+        <span>UNFORGETTABLE MOMENTS</span>
+        <span class="events-kicker-line events-kicker-line-right"></span>
+      </div>
+
+      <h1>
+        Celebrate, Connect,
+        <span>Create Memories</span>
+      </h1>
+
+      <p>
+        From private parties to epic celebrations, discover upcoming events
+        designed to bring people together and make every moment special.
+      </p>
+
+      <a href="events.html" class="events-hero-btn">
+        <span>Explore Events</span>
+        <i data-lucide="arrow-right"></i>
+      </a>
+
+      <div class="events-hero-features">
+        <div class="events-hero-feature">
+          <div class="events-feature-icon">
+            <i data-lucide="music-2"></i>
+          </div>
+
+          <div>
+            <strong>Live Events</strong>
+            <span>Feel the energy</span>
+          </div>
+        </div>
+
+        <div class="events-feature-divider"></div>
+
+        <div class="events-hero-feature">
+          <div class="events-feature-icon">
+            <i data-lucide="mic-2"></i>
+          </div>
+
+          <div>
+            <strong>Karaoke Nights</strong>
+            <span>Grab the mic</span>
+          </div>
+        </div>
+
+        <div class="events-feature-divider"></div>
+
+        <div class="events-hero-feature">
+          <div class="events-feature-icon">
+            <i data-lucide="party-popper"></i>
+          </div>
+
+          <div>
+            <strong>Theme Parties</strong>
+            <span>Make it special</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="upcoming-events-section" id="upcomingEvents">
+  <div class="container">
+    <div class="upcoming-events-heading">
+      <div class="events-section-kicker">
+        <span class="events-section-kicker-line"></span>
+        <span>WHAT'S HAPPENING</span>
+        <span class="events-section-kicker-line events-section-kicker-line-right"></span>
+      </div>
+
+      <h2>Upcoming <strong>Events</strong></h2>
+
+      <p>
+        Discover exciting nights, special parties and unforgettable experiences
+        at VibeRoomz.
+      </p>
+    </div>
+
+    <div class="upcoming-events-list">
+      <article class="upcoming-event-card">
+        <div class="event-date">
+          <span>SEP</span>
+          <strong>18</strong>
+          <small>2026</small>
+        </div>
+
+        <div class="event-main">
+          <div class="event-top">
+            <span class="event-type dj">
+              <i data-lucide="music-2"></i>
+              DJ NIGHT
+            </span>
+
+            <span class="event-time">
+              <i data-lucide="clock-3"></i>
+              8:00 PM
+            </span>
+          </div>
+
+          <h3>Neon DJ Night</h3>
+
+          <p>
+            Feel the beat with live DJ mixes, vibrant neon lights and an
+            energetic atmosphere made for an unforgettable night.
+          </p>
+
+          <div class="event-meta">
+            <span>
+              <i data-lucide="sparkles"></i>
+              Neon Atmosphere
+            </span>
+
+            <span>
+              <i data-lucide="users"></i>
+              Open Event
+            </span>
+          </div>
+        </div>
+
+        <a href="event-details.html" class="event-view-btn">
+          <span>View Event</span>
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+      </article>
+
+      <article class="upcoming-event-card">
+        <div class="event-date">
+          <span>SEP</span>
+          <strong>21</strong>
+          <small>2026</small>
+        </div>
+
+        <div class="event-main">
+          <div class="event-top">
+            <span class="event-type karaoke">
+              <i data-lucide="mic-2"></i>
+              KARAOKE NIGHT
+            </span>
+
+            <span class="event-time">
+              <i data-lucide="clock-3"></i>
+              7:00 PM
+            </span>
+          </div>
+
+          <h3>Karaoke Showdown</h3>
+
+          <p>
+            Grab the mic, choose your favourite song and compete with friends
+            for the ultimate karaoke experience.
+          </p>
+
+          <div class="event-meta">
+            <span>
+              <i data-lucide="mic"></i>
+              Open Mic
+            </span>
+
+            <span>
+              <i data-lucide="trophy"></i>
+              Live Competition
+            </span>
+          </div>
+        </div>
+
+        <a href="event-details.html" class="event-view-btn">
+          <span>View Event</span>
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+      </article>
+
+      <article class="upcoming-event-card">
+        <div class="event-date">
+          <span>SEP</span>
+          <strong>27</strong>
+          <small>2026</small>
+        </div>
+
+        <div class="event-main">
+          <div class="event-top">
+            <span class="event-type theme">
+              <i data-lucide="sparkles"></i>
+              THEME PARTY
+            </span>
+
+            <span class="event-time">
+              <i data-lucide="clock-3"></i>
+              9:00 PM
+            </span>
+          </div>
+
+          <h3>Retro 90s Party</h3>
+
+          <p>
+            Step back into the 90s with throwback music, retro games and
+            classic party vibes all night long.
+          </p>
+
+          <div class="event-meta">
+            <span>
+              <i data-lucide="disc-3"></i>
+              Retro Vibes
+            </span>
+
+            <span>
+              <i data-lucide="gamepad-2"></i>
+              Retro Games
+            </span>
+          </div>
+        </div>
+
+        <a href="event-details.html" class="event-view-btn">
+          <span>View Event</span>
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+      </article>
+    </div>
+
+    <div class="upcoming-events-footer">
+      <span>
+        <i data-lucide="calendar-days"></i>
+        More exciting events coming soon
+      </span>
+
+      <a href="events.html">
+        Explore All Events
+        <i data-lucide="arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="theme-nights-section" id="themeNights">
+  <div class="container">
+    <div class="theme-nights-heading">
+      <div class="events-section-kicker">
+        <span class="events-section-kicker-line"></span>
+        <span>THE VIBEROOMZ NIGHTS</span>
+        <span class="events-section-kicker-line events-section-kicker-line-right"></span>
+      </div>
+
+      <h2>Theme <strong>Nights</strong></h2>
+
+      <p>
+        Step into a different vibe every time with our recurring theme nights,
+        special music experiences and unforgettable party moments.
+      </p>
+    </div>
+
+    <div class="theme-nights-layout">
+      <article class="theme-nights-featured">
+        <div class="theme-nights-featured-image">
+          <img
+            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=90"
+            alt="Retro Night"
+          />
+        </div>
+
+        <div class="theme-nights-featured-overlay"></div>
+
+        <span class="theme-nights-number">01</span>
+
+        <div class="theme-nights-featured-content">
+          <span class="theme-nights-tag">
+            <i data-lucide="disc-3"></i>
+            THROWBACK EXPERIENCE
+          </span>
+
+          <h3>Retro Night</h3>
+
+          <p>
+            Bring back the classics with retro music, colourful lights,
+            nostalgic vibes and a night full of throwback memories.
+          </p>
+
+          <a href="event-details.html" class="theme-nights-btn">
+            <span>Explore Night</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <div class="theme-nights-grid">
+        <article class="theme-nights-card">
+          <img
+            src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=900&q=90"
+            alt="Bollywood Night"
+          />
+
+          <div class="theme-nights-card-overlay"></div>
+          <span class="theme-nights-card-number">02</span>
+
+          <div class="theme-nights-card-content">
+            <span>BOLLYWOOD</span>
+            <h3>Bollywood Night</h3>
+
+            <div>
+              <i data-lucide="music-2"></i>
+              <span>Dance • Music • Celebration</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="theme-nights-card">
+          <img
+            src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=90"
+            alt="2000s Throwback"
+          />
+
+          <div class="theme-nights-card-overlay"></div>
+          <span class="theme-nights-card-number">03</span>
+
+          <div class="theme-nights-card-content">
+            <span>Y2K EXPERIENCE</span>
+            <h3>2000s Throwback</h3>
+
+            <div>
+              <i data-lucide="headphones"></i>
+              <span>Hits • Pop • Nostalgia</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="theme-nights-card">
+          <img
+            src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=90"
+            alt="Ladies Night"
+          />
+
+          <div class="theme-nights-card-overlay"></div>
+          <span class="theme-nights-card-number">04</span>
+
+          <div class="theme-nights-card-content">
+            <span>SPECIAL NIGHT</span>
+            <h3>Ladies Night</h3>
+
+            <div>
+              <i data-lucide="sparkles"></i>
+              <span>Fun • Friends • Vibes</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="theme-nights-card">
+          <img
+            src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=90"
+            alt="Karaoke Battle"
+          />
+
+          <div class="theme-nights-card-overlay"></div>
+          <span class="theme-nights-card-number">05</span>
+
+          <div class="theme-nights-card-content">
+            <span>MUSIC BATTLE</span>
+            <h3>Karaoke Battle</h3>
+
+            <div>
+              <i data-lucide="mic-2"></i>
+              <span>Sing • Compete • Win</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dj-live-section" id="djLiveEntertainment">
+  <div class="container">
+    <div class="dj-live-heading">
+      <div class="events-section-kicker">
+        <span class="events-section-kicker-line"></span>
+        <span>LIVE ENTERTAINMENT</span>
+        <span class="events-section-kicker-line events-section-kicker-line-right"></span>
+      </div>
+
+      <h2>
+        Feel The Music.
+        <strong>Live The Moment.</strong>
+      </h2>
+
+      <p>
+        From electrifying DJ nights to unforgettable live performances,
+        experience music that turns every celebration into a story.
+      </p>
+    </div>
+
+    <div class="dj-live-main">
+      <div class="dj-live-content">
+        <div class="dj-live-intro">
+          <span>HIGH ENERGY EXPERIENCES</span>
+
+          <h3>
+            Your Night.
+            <strong>Your Sound.</strong>
+          </h3>
+
+          <p>
+            Step into an atmosphere powered by music, lights and incredible
+            performances. Every event is designed to keep the energy high and
+            the memories unforgettable.
+          </p>
+        </div>
+
+        <div class="dj-live-highlights">
+          <div class="dj-live-highlight">
+            <div class="dj-live-highlight-icon">
+              <i data-lucide="disc-3"></i>
+            </div>
+
+            <div>
+              <strong>DJ Nights</strong>
+              <span>Live mixes &amp; high-energy beats</span>
+            </div>
+          </div>
+
+          <div class="dj-live-highlight">
+            <div class="dj-live-highlight-icon">
+              <i data-lucide="mic-2"></i>
+            </div>
+
+            <div>
+              <strong>Live Performers</strong>
+              <span>Artists who own the stage</span>
+            </div>
+          </div>
+
+          <div class="dj-live-highlight">
+            <div class="dj-live-highlight-icon">
+              <i data-lucide="star"></i>
+            </div>
+
+            <div>
+              <strong>Guest Artists</strong>
+              <span>Special appearances &amp; sessions</span>
+            </div>
+          </div>
+
+          <div class="dj-live-highlight">
+            <div class="dj-live-highlight-icon">
+              <i data-lucide="music-2"></i>
+            </div>
+
+            <div>
+              <strong>Music Sessions</strong>
+              <span>Unique sounds &amp; special vibes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dj-live-visual">
+        <img
+          src="https://images.unsplash.com/photo-1496337589254-7e19d01cec44?auto=format&fit=crop&w=1400&q=90"
+          alt="DJ performing live at an event"
+        />
+
+        <div class="dj-live-visual-overlay"></div>
+
+        <div class="dj-live-visual-top">
+          <span>
+            <i data-lucide="circle"></i>
+            LIVE NOW
+          </span>
+
+          <strong>VIBEROOMZ</strong>
+        </div>
+
+        <div class="dj-live-visual-bottom">
+          <div class="dj-live-visual-title">
+            <span>EVENT HIGHLIGHT</span>
+            <h3>Turn Up The Night</h3>
+          </div>
+
+          <div class="dj-live-equalizer">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dj-live-event-strip">
+      <div class="dj-live-strip-label">
+        <i data-lucide="sparkles"></i>
+
+        <div>
+          <span>WHAT'S ON</span>
+          <strong>Experience The Energy</strong>
+        </div>
+      </div>
+
+      <div class="dj-live-strip-items">
+        <div class="dj-live-strip-item">
+          <span>01</span>
+          <strong>DJ Nights</strong>
+        </div>
+
+        <div class="dj-live-strip-line"></div>
+
+        <div class="dj-live-strip-item">
+          <span>02</span>
+          <strong>Guest Artists</strong>
+        </div>
+
+        <div class="dj-live-strip-line"></div>
+
+        <div class="dj-live-strip-item">
+          <span>03</span>
+          <strong>Live Sessions</strong>
+        </div>
+
+        <div class="dj-live-strip-line"></div>
+
+        <div class="dj-live-strip-item">
+          <span>04</span>
+          <strong>Special Events</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="party-guides-section" id="partyGuides">
+  <div class="container">
+    <div class="party-guides-heading">
+      <div class="events-section-kicker">
+        <span class="events-section-kicker-line"></span>
+        <span>PLAN IT YOUR WAY</span>
+        <span class="events-section-kicker-line events-section-kicker-line-right"></span>
+      </div>
+
+      <h2>Party Planning <strong>Guides</strong></h2>
+
+      <p>
+        Not sure where to start? Pick your celebration type and get simple,
+        practical ideas to plan the perfect VibeRoomz experience.
+      </p>
+    </div>
+
+    <div class="party-guides-layout">
+      <div class="party-guides-nav">
+        <div class="party-guides-nav-top">
+          <div class="party-guides-nav-icon">
+            <i data-lucide="compass"></i>
+          </div>
+
+          <div>
+            <span>CHOOSE YOUR PLAN</span>
+            <strong>What are you planning?</strong>
+          </div>
+        </div>
+
+        <button class="party-guide-tab active" data-guide="birthday">
+          <span class="party-guide-number">01</span>
+
+          <span class="party-guide-tab-content">
+            <strong>Birthday Party</strong>
+            <small>Make their day unforgettable</small>
+          </span>
+
+          <i data-lucide="arrow-up-right"></i>
+        </button>
+
+        <button class="party-guide-tab" data-guide="corporate">
+          <span class="party-guide-number">02</span>
+
+          <span class="party-guide-tab-content">
+            <strong>Corporate Party</strong>
+            <small>Plan a better team experience</small>
+          </span>
+
+          <i data-lucide="arrow-up-right"></i>
+        </button>
+
+        <button class="party-guide-tab" data-guide="group">
+          <span class="party-guide-number">03</span>
+
+          <span class="party-guide-tab-content">
+            <strong>Group Celebration</strong>
+            <small>More people, more memories</small>
+          </span>
+
+          <i data-lucide="arrow-up-right"></i>
+        </button>
+
+        <button class="party-guide-tab" data-guide="karaoke">
+          <span class="party-guide-number">04</span>
+
+          <span class="party-guide-tab-content">
+            <strong>Karaoke Party</strong>
+            <small>Get everyone singing</small>
+          </span>
+
+          <i data-lucide="arrow-up-right"></i>
+        </button>
+
+        <button class="party-guide-tab" data-guide="theme">
+          <span class="party-guide-number">05</span>
+
+          <span class="party-guide-tab-content">
+            <strong>Theme &amp; Decor</strong>
+            <small>Build your perfect party vibe</small>
+          </span>
+
+          <i data-lucide="arrow-up-right"></i>
+        </button>
+      </div>
+
+      <div class="party-guides-result">
+        <div class="party-guides-result-head">
+          <div>
+            <span class="party-guide-label">
+              BEST FOR BIRTHDAY CELEBRATIONS
+            </span>
+
+            <h3>
+              Make Their Birthday
+              <strong>Extra Special</strong>
+            </h3>
+          </div>
+
+          <div class="party-guide-index">01 / 05</div>
+        </div>
+
+        <p class="party-guide-description">
+          Create a celebration that feels personal, exciting and effortless.
+          From choosing the right room to adding the perfect finishing touches,
+          this guide helps you plan it all.
+        </p>
+
+        <div class="party-guide-meta">
+          <div>
+            <i data-lucide="users"></i>
+            <span>Ideal Group</span>
+            <strong>6–12 Guests</strong>
+          </div>
+
+          <div>
+            <i data-lucide="clock-3"></i>
+            <span>Planning Time</span>
+            <strong>1–2 Hours</strong>
+          </div>
+
+          <div>
+            <i data-lucide="sparkles"></i>
+            <span>Vibe Level</span>
+            <strong>Fun &amp; Festive</strong>
+          </div>
+        </div>
+
+        <div class="party-guide-checklist">
+          <div class="party-guide-checklist-head">
+            <span>QUICK PLANNING CHECKLIST</span>
+            <i data-lucide="list-checks"></i>
+          </div>
+
+          <div class="party-guide-points">
+            <div>
+              <i data-lucide="check"></i>
+              <span>Choose a room matching your guest count</span>
+            </div>
+
+            <div>
+              <i data-lucide="check"></i>
+              <span>Add birthday decorations and cake setup</span>
+            </div>
+
+            <div>
+              <i data-lucide="check"></i>
+              <span>
+                Prepare a playlist with the birthday person's favourites
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="party-guide-footer">
+          <div class="party-guide-tip">
+            <i data-lucide="lightbulb"></i>
+            <span id="guideTip">
+              Pro tip: Add a personalized decoration package to make the room
+              feel special.
+            </span>
+          </div>
+
+          <a href="guides.html" class="party-guide-btn">
+            <span>Read Full Guide</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="event-wall-section" id="eventWall">
+  <div class="container">
+    <div class="event-wall-heading">
+      <div class="events-section-kicker">
+        <span class="events-section-kicker-line"></span>
+        <span>WHAT'S HAPPENING</span>
+        <span class="events-section-kicker-line events-section-kicker-line-right"></span>
+      </div>
+
+      <h2>Find Your Next <strong>Party Night</strong></h2>
+
+      <p>
+        Explore our upcoming events, discover new themes and choose the night
+        that matches your vibe.
+      </p>
+    </div>
+
+    <div class="event-wall-filters">
+      <button class="event-wall-filter active" data-filter="all">
+        All Events
+      </button>
+
+      <button class="event-wall-filter" data-filter="dj">
+        <i data-lucide="disc-3"></i>
+        DJ Nights
+      </button>
+
+      <button class="event-wall-filter" data-filter="karaoke">
+        <i data-lucide="mic-2"></i>
+        Karaoke
+      </button>
+
+      <button class="event-wall-filter" data-filter="theme">
+        <i data-lucide="sparkles"></i>
+        Theme Parties
+      </button>
+
+      <span class="event-wall-filter-divider"></span>
+
+      <button class="event-wall-filter availability-filter" data-filter="available">
+        <i data-lucide="circle-check"></i>
+        Available
+      </button>
+    </div>
+
+    <div class="event-wall-main">
+      <div class="event-wall-featured">
+        <div class="event-wall-image-wrap">
+          <img
+            id="wallEventImage"
+            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1400&q=90"
+            alt="VibeRoomz upcoming event"
+          />
+
+          <div class="event-wall-image-overlay"></div>
+
+          <div class="event-wall-date">
+            <span id="wallDateMonth">SEP</span>
+            <strong id="wallDateNumber">18</strong>
+          </div>
+
+          <div class="event-wall-live">
+            <i data-lucide="radio"></i>
+            UPCOMING EVENT
+          </div>
+
+          <div class="event-wall-image-content">
+            <span id="wallEventType">DJ NIGHT</span>
+            <h3 id="wallEventTitle">Neon DJ Night</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-wall-details">
+        <div class="event-wall-details-top">
+          <div>
+            <span class="event-wall-small-title">
+              SELECTED EXPERIENCE
+            </span>
+
+            <h3 id="wallDetailTitle">Neon DJ Night</h3>
+          </div>
+
+          <div class="event-wall-month-nav">
+            <button id="wallPrev" type="button">
+              <i data-lucide="chevron-left"></i>
+            </button>
+
+            <span id="wallMonth">September 2026</span>
+
+            <button id="wallNext" type="button">
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <p class="event-wall-description" id="wallDescription">
+          Turn up the energy with live DJ mixes, neon lights, powerful sound
+          and an unforgettable party atmosphere.
+        </p>
+
+        <div class="event-wall-info">
+          <div>
+            <i data-lucide="clock-3"></i>
+            <span>TIME</span>
+            <strong id="wallTime">8:00 PM</strong>
+          </div>
+
+          <div>
+            <i data-lucide="users"></i>
+            <span>CAPACITY</span>
+            <strong id="wallCapacity">Up to 40</strong>
+          </div>
+
+          <div>
+            <i data-lucide="palette"></i>
+            <span>THEME</span>
+            <strong id="wallTheme">Neon</strong>
+          </div>
+        </div>
+
+        <div class="event-wall-availability">
+          <div class="event-wall-availability-icon">
+            <i data-lucide="ticket-check"></i>
+          </div>
+
+          <div>
+            <span>AVAILABILITY</span>
+            <strong id="wallAvailability">
+              Good availability
+            </strong>
+          </div>
+
+          <div class="event-wall-progress">
+            <span></span>
+          </div>
+        </div>
+
+        <div class="event-wall-action">
+          <div class="event-wall-tip">
+            <i data-lucide="sparkles"></i>
+            <span id="wallTip">
+              Perfect for groups looking for a high-energy night.
+            </span>
+          </div>
+
+          <a href="event-details.html" class="event-wall-btn">
+            <span>View Event Details</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event-wall-upcoming">
+      <div class="event-wall-upcoming-heading">
+        <span>MARK YOUR CALENDAR</span>
+        <strong>Upcoming Nights</strong>
+      </div>
+
+      <div class="event-wall-upcoming-list">
+        <button class="event-wall-mini-card" data-event="2026-09-21" type="button">
+          <span class="mini-date">
+            <strong>21</strong>
+            SEP
+          </span>
+
+          <span class="mini-content">
+            <strong>Karaoke Showdown</strong>
+            <small>7:00 PM · Karaoke Night</small>
+          </span>
+
+          <i data-lucide="arrow-up-right"></i>
+        </button>
+
+        <button class="event-wall-mini-card" data-event="2026-09-27" type="button">
+          <span class="mini-date">
+            <strong>27</strong>
+            SEP
+          </span>
+
+          <span class="mini-content">
+            <strong>Retro 90s Party</strong>
+            <small>9:00 PM · Theme Party</small>
+          </span>
+
+          <i data-lucide="arrow-up-right"></i>
+        </button>
+
+        <button class="event-wall-mini-card" data-event="2026-10-03" type="button">
+          <span class="mini-date">
+            <strong>03</strong>
+            OCT
+          </span>
+
+          <span class="mini-content">
+            <strong>Bollywood Beats</strong>
+            <small>8:30 PM · Theme Party</small>
+          </span>
+
+          <i data-lucide="arrow-up-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="event-cta-section" id="eventCta">
+  <div class="container">
+    <div class="event-cta-card">
+      <div class="event-cta-content">
+        <span class="event-cta-kicker">
+          <span class="event-cta-line"></span>
+          <span>UPCOMING EXPERIENCES</span>
+          <span class="event-cta-line event-cta-line-right"></span>
+        </span>
+
+        <h2>
+          There’s Always a Reason to
+          <span>Celebrate.</span>
+        </h2>
+
+        <p>
+          Discover the next VibeRoomz experience and join the party.
+        </p>
+      </div>
+
+      <a href="events.html" class="event-cta-btn">
+        <span>Explore Upcoming Events</span>
+        <i data-lucide="arrow-up-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+ <footer class="footer">
+  <div class="container footer-grid">
+    <section class="footer-about">
+      <div class="footer-logo">
+        <img
+          id="footerLogo"
+          src="VibeRooms_light.png"
+          alt="VibeRoomz logo"
+          data-light-logo="VibeRooms_light.png"
+          data-dark-logo="VibeRooms_dark.png"
+        />
+        <h2>Vibe<span>Roomz</span></h2>
+      </div>
+
+
+      <p>VibeRoomz is your premium room booking space for parties, music, and unforgettable indoor experiences.</p>
+
+
+      <div class="socials">
+        <a href="#" aria-label="Visit VibeRoomz on YouTube"><i data-lucide="youtube"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on Instagram"><i data-lucide="instagram"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on X"><i data-lucide="twitter"></i></a>
+        <a href="#" aria-label="Visit VibeRoomz on LinkedIn"><i data-lucide="linkedin"></i></a>
+      </div>
+    </section>
+
+
+    <nav aria-label="Quick links">
+      <h3>Quick Links</h3>
+      <div class="line"></div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+
+    <nav aria-label="Services links">
+      <h3>Our Services</h3>
+      <div class="line"></div>
+      <ul>
+        <li><a href="rooms.html">Private Rooms</a></li>
+        <li><a href="packages.html">Party Packages</a></li>
+        <li><a href="events.html">Event Hosting</a></li>
+        <li><a href="pricing.html">Transparent Pricing</a></li>
+        <li><a href="dashboard.html">Booking Dashboard</a></li>
+      </ul>
+    </nav>
+
+<section class="footer-extra">
+      <h3>Additional Pages</h3>
+      <div class="line"></div>
+
+
+      <ul class="footer-extra-list">
+        <li><a href="rooms.html">Error 404</a></li>
+        <li><a href="packages.html">Coming soon</a></li>
+        <li><a href="contact.html">Support</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+
+
+      
+    </section>
+    <section class="footer-contact-wrap" aria-labelledby="footer-contact-title">
+      <h3 id="footer-contact-title">Contact Us</h3>
+      <div class="line"></div>
+
+
+      <ul class="contact">
+        <li><i data-lucide="map-pin"></i><span>Hyderabad, India</span></li>
+        <li><i data-lucide="phone"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+        <li><i data-lucide="mail"></i><a href="mailto:info@viberoomz.com">info@viberoomz.com</a></li>
+        <li><i data-lucide="clock-3"></i><span>9:30 am - 4:30 pm</span></li>
+      </ul>
+    </section>
+
+
+    
+  </div>
+
+
+  <div class="footer-bottom">
+    <p>© <span id="footerYear"></span> <span class="next">Vibe</span><span class="gear">Roomz</span>. All Rights Reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="pp.html">Privacy Policy</a>
+      <a href="tc.html">Terms &amp; Conditions</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+  </div>
+
+
+  <script src="main.js"></script>
+  <script src="events.js"></script>
+  <script>lucide.createIcons();</script>
+  <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+</body>
+</html>
