@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>VibeRoomz - Coming Soon</title>
+   <link rel="icon" type="image/png" sizes="184x184" href="VibeRooms_light.png">
 <link rel="stylesheet" href="soon.css">
   <link rel="stylesheet" href="main.css">
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -105,117 +106,220 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
 
-      const themeToggle =
+    const themeToggle =
         document.getElementById("comingThemeToggle");
 
-      const rtlToggle =
+    const rtlToggle =
         document.getElementById("comingRtlToggle");
 
-      const logo =
+    const logo =
         document.getElementById("comingLogo");
 
+    const html = document.documentElement;
+    const body = document.body;
 
-      function refreshIcons(){
-        if(window.lucide){
-          lucide.createIcons();
+    const THEME_KEY = "theme";
+    const DIRECTION_KEY = "direction";
+
+    function refreshIcons() {
+        if (
+            window.lucide &&
+            typeof window.lucide.createIcons === "function"
+        ) {
+            window.lucide.createIcons();
         }
-      }
+    }
 
+    function getStorage(key, fallback = null) {
+        try {
+            return localStorage.getItem(key) || fallback;
+        } catch (error) {
+            return fallback;
+        }
+    }
 
-      let darkMode =
-        localStorage.getItem("vibeAuthTheme") === "dark";
+    function setStorage(key, value) {
+        try {
+            localStorage.setItem(key, value);
 
-      let rtlEnabled =
-        localStorage.getItem("vibeAuthRTL") === "true";
+            /*
+             * localStorage storage event does not fire
+             * in the same document, so dispatch a custom event.
+             */
+            window.dispatchEvent(
+                new CustomEvent("viberoomz-storage-change", {
+                    detail: {
+                        key,
+                        value
+                    }
+                })
+            );
+        } catch (error) {
+            console.log("Storage error:", error);
+        }
+    }
 
+    /* =====================================================
+       THEME
+    ====================================================== */
 
-      function updateTheme(){
+    function updateTheme(theme) {
+        const isDark = theme === "dark";
 
-        document.body.classList.toggle(
-          "dark",
-          darkMode
-        );
+        body.classList.toggle("dark", isDark);
 
-        if(themeToggle){
+        if (themeToggle) {
+            themeToggle.innerHTML = isDark
+                ? '<i data-lucide="sun-medium"></i>'
+                : '<i data-lucide="moon-star"></i>';
 
-          themeToggle.innerHTML = darkMode
-            ? `<i data-lucide="sun"></i>`
-            : `<i data-lucide="moon-star"></i>`;
+            themeToggle.setAttribute(
+                "aria-label",
+                isDark
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
+            );
 
-          themeToggle.setAttribute(
-            "aria-label",
-            darkMode
-              ? "Switch to light mode"
-              : "Switch to dark mode"
-          );
+            themeToggle.setAttribute(
+                "aria-pressed",
+                String(isDark)
+            );
         }
 
+        if (logo) {
+            const lightLogo =
+                logo.dataset.lightLogo;
 
-        if(logo){
+            const darkLogo =
+                logo.dataset.darkLogo;
 
-          logo.src =
-            darkMode
-              ? logo.dataset.darkLogo
-              : logo.dataset.lightLogo;
-
+            if (isDark && darkLogo) {
+                logo.src = darkLogo;
+            } else if (!isDark && lightLogo) {
+                logo.src = lightLogo;
+            }
         }
-
 
         refreshIcons();
-      }
+    }
 
+    if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+            const currentTheme =
+                body.classList.contains("dark")
+                    ? "dark"
+                    : "light";
 
-      function updateRTL(){
+            const newTheme =
+                currentTheme === "dark"
+                    ? "light"
+                    : "dark";
 
-        document.documentElement.dir =
-          rtlEnabled ? "rtl" : "ltr";
+            setStorage(THEME_KEY, newTheme);
+            updateTheme(newTheme);
+        });
+    }
 
-        rtlToggle?.setAttribute(
-          "aria-pressed",
-          rtlEnabled ? "true" : "false"
+    /* =====================================================
+       RTL
+    ====================================================== */
+
+    function updateRTL(direction) {
+        const isRTL = direction === "rtl";
+
+        html.setAttribute(
+            "dir",
+            isRTL ? "rtl" : "ltr"
         );
-      }
 
+        if (rtlToggle) {
+            rtlToggle.innerHTML =
+                '<i data-lucide="arrow-right-left"></i>';
 
-      themeToggle?.addEventListener(
-        "click",
-        () => {
+            rtlToggle.setAttribute(
+                "aria-label",
+                isRTL
+                    ? "Switch to left-to-right layout"
+                    : "Switch to right-to-left layout"
+            );
 
-          darkMode = !darkMode;
-
-          localStorage.setItem(
-            "vibeAuthTheme",
-            darkMode ? "dark" : "light"
-          );
-
-          updateTheme();
-
+            rtlToggle.setAttribute(
+                "aria-pressed",
+                String(isRTL)
+            );
         }
-      );
 
+        refreshIcons();
+    }
 
-      rtlToggle?.addEventListener(
-        "click",
-        () => {
+    if (rtlToggle) {
+        rtlToggle.addEventListener("click", () => {
+            const currentDirection =
+                html.getAttribute("dir") || "ltr";
 
-          rtlEnabled = !rtlEnabled;
+            const newDirection =
+                currentDirection === "rtl"
+                    ? "ltr"
+                    : "rtl";
 
-          localStorage.setItem(
-            "vibeAuthRTL",
-            rtlEnabled ? "true" : "false"
-          );
+            setStorage(DIRECTION_KEY, newDirection);
+            updateRTL(newDirection);
+        });
+    }
 
-          updateRTL();
+    /* =====================================================
+       SAME-PAGE SYNC
+    ====================================================== */
 
+    window.addEventListener(
+        "viberoomz-storage-change",
+        event => {
+            const key = event.detail?.key;
+            const value = event.detail?.value;
+
+            if (key === THEME_KEY) {
+                updateTheme(value || "light");
+            }
+
+            if (key === DIRECTION_KEY) {
+                updateRTL(value || "ltr");
+            }
         }
-      );
+    );
 
+    /* =====================================================
+       OTHER TAB / PAGE SYNC
+    ====================================================== */
 
-      updateTheme();
-      updateRTL();
-      refreshIcons();
+    window.addEventListener("storage", event => {
+        if (event.key === THEME_KEY) {
+            updateTheme(event.newValue || "light");
+        }
 
+        if (event.key === DIRECTION_KEY) {
+            updateRTL(event.newValue || "ltr");
+        }
     });
+
+    /* =====================================================
+       INITIAL STATE
+    ====================================================== */
+
+    const savedTheme =
+        getStorage(THEME_KEY) ||
+        (window.matchMedia(
+            "(prefers-color-scheme: dark)"
+        ).matches
+            ? "dark"
+            : "light");
+
+    const savedDirection =
+        getStorage(DIRECTION_KEY) || "ltr";
+
+    updateTheme(savedTheme);
+    updateRTL(savedDirection);
+    refreshIcons();
+});
   </script>
 
 </body>

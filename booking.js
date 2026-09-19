@@ -1,261 +1,316 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const bookingPage =
+        document.querySelector(".vr-booking-page");
 
-  const bookingPage =
-    document.querySelector(".vr-booking-page");
+    const themeToggle =
+        document.getElementById("bookingThemeToggle");
 
-  const themeToggle =
-    document.getElementById("bookingThemeToggle");
+    const rtlToggle =
+        document.getElementById("bookingRtlToggle");
 
-  const rtlToggle =
-    document.getElementById("bookingRtlToggle");
+    const bookingLogo =
+        document.getElementById("bookingLogo");
 
-  const bookingLogo =
-    document.getElementById("bookingLogo");
+    const bookingForm =
+        document.getElementById("bookingForm");
 
-  const bookingForm =
-    document.getElementById("bookingForm");
+    const bookingDate =
+        document.getElementById("bookingDate");
 
-  const bookingDate =
-    document.getElementById("bookingDate");
+    const html = document.documentElement;
+    const body = document.body;
 
+    const THEME_KEY = "theme";
+    const DIRECTION_KEY = "direction";
 
-  /* =========================================
-     LUCIDE
-  ========================================= */
+    /* =========================================
+       STORAGE
+    ========================================= */
 
-  function refreshIcons(){
-
-    if(window.lucide){
-      lucide.createIcons();
+    function getStorage(key, fallback = null) {
+        try {
+            return localStorage.getItem(key) || fallback;
+        } catch (error) {
+            return fallback;
+        }
     }
 
-  }
+    function setStorage(key, value) {
+        try {
+            localStorage.setItem(key, value);
 
-  refreshIcons();
-
-
-  /* =========================================
-     THEME
-  ========================================= */
-
-  let darkMode =
-    localStorage.getItem("vibeAuthTheme") === "dark";
-
-
-  function updateTheme(){
-
-    document.body.classList.toggle(
-      "dark",
-      darkMode
-    );
-
-    themeToggle?.setAttribute(
-      "aria-pressed",
-      darkMode ? "true" : "false"
-    );
-
-    themeToggle?.setAttribute(
-      "aria-label",
-      darkMode
-        ? "Switch to light mode"
-        : "Switch to dark mode"
-    );
-
-
-    if(themeToggle){
-
-      themeToggle.innerHTML = darkMode
-        ? `<i data-lucide="sun"></i>`
-        : `<i data-lucide="moon-star"></i>`;
-
+            /*
+             * Updates other scripts on the same page.
+             */
+            window.dispatchEvent(
+                new CustomEvent("viberoomz-storage-change", {
+                    detail: {
+                        key,
+                        value
+                    }
+                })
+            );
+        } catch (error) {
+            console.log("Storage error:", error);
+        }
     }
 
+    /* =========================================
+       LUCIDE
+    ========================================= */
 
-    updateLogo();
-    refreshIcons();
-
-  }
-
-
-  function updateLogo(){
-
-    if(!bookingLogo) return;
-
-    const lightLogo =
-      bookingLogo.dataset.lightLogo;
-
-    const darkLogo =
-      bookingLogo.dataset.darkLogo;
-
-
-    bookingLogo.src =
-      darkMode && darkLogo
-        ? darkLogo
-        : lightLogo;
-
-  }
-
-
-  themeToggle?.addEventListener(
-    "click",
-    () => {
-
-      darkMode = !darkMode;
-
-      localStorage.setItem(
-        "vibeAuthTheme",
-        darkMode ? "dark" : "light"
-      );
-
-      updateTheme();
-
+    function refreshIcons() {
+        if (
+            window.lucide &&
+            typeof window.lucide.createIcons === "function"
+        ) {
+            window.lucide.createIcons();
+        }
     }
-  );
 
+    /* =========================================
+       THEME
+    ========================================= */
 
-  /* =========================================
-     RTL
-  ========================================= */
+    function updateLogo(isDark) {
+        if (!bookingLogo) {
+            return;
+        }
 
-  let rtlEnabled =
-    localStorage.getItem("vibeAuthRTL") === "true";
+        const lightLogo =
+            bookingLogo.dataset.lightLogo;
 
+        const darkLogo =
+            bookingLogo.dataset.darkLogo;
 
-  function updateRTL(){
-
-    if(!bookingPage) return;
-
-    const direction =
-      rtlEnabled ? "rtl" : "ltr";
-
-    document.documentElement.dir =
-      direction;
-
-    document.body.dir =
-      direction;
-
-    bookingPage.dir =
-      direction;
-
-    rtlToggle?.setAttribute(
-      "aria-pressed",
-      rtlEnabled ? "true" : "false"
-    );
-
-  }
-
-
-  rtlToggle?.addEventListener(
-    "click",
-    () => {
-
-      rtlEnabled = !rtlEnabled;
-
-      localStorage.setItem(
-        "vibeAuthRTL",
-        rtlEnabled ? "true" : "false"
-      );
-
-      updateRTL();
-
+        if (isDark && darkLogo) {
+            bookingLogo.src = darkLogo;
+        } else if (!isDark && lightLogo) {
+            bookingLogo.src = lightLogo;
+        }
     }
-  );
 
+    function updateTheme(theme) {
+        const isDark = theme === "dark";
 
-  /* =========================================
-     MINIMUM DATE
-  ========================================= */
+        body.classList.toggle("dark", isDark);
 
-  if(bookingDate){
+        if (themeToggle) {
+            themeToggle.innerHTML = isDark
+                ? '<i data-lucide="sun-medium"></i>'
+                : '<i data-lucide="moon-star"></i>';
 
-    const today =
-      new Date().toISOString().split("T")[0];
+            themeToggle.setAttribute(
+                "aria-label",
+                isDark
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
+            );
 
-    bookingDate.min = today;
+            themeToggle.setAttribute(
+                "aria-pressed",
+                String(isDark)
+            );
+        }
 
-  }
+        updateLogo(isDark);
+        refreshIcons();
+    }
 
+    if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+            const currentTheme =
+                body.classList.contains("dark")
+                    ? "dark"
+                    : "light";
 
-  /* =========================================
-     BOOKING SUBMIT
-  ========================================= */
+            const newTheme =
+                currentTheme === "dark"
+                    ? "light"
+                    : "dark";
 
-  bookingForm?.addEventListener(
-    "submit",
-    (event) => {
+            setStorage(THEME_KEY, newTheme);
+            updateTheme(newTheme);
+        });
+    }
 
-      event.preventDefault();
+    /* =========================================
+       RTL
+    ========================================= */
 
+    function updateRTL(direction) {
+        const isRTL = direction === "rtl";
 
-      const name =
-        document.getElementById(
-          "bookingName"
-        )?.value.trim();
-
-      const email =
-        document.getElementById(
-          "bookingEmail"
-        )?.value.trim();
-
-      const phone =
-        document.getElementById(
-          "bookingPhone"
-        )?.value.trim();
-
-      const room =
-        document.getElementById(
-          "bookingRoom"
-        )?.value;
-
-      const date =
-        document.getElementById(
-          "bookingDate"
-        )?.value;
-
-      const time =
-        document.getElementById(
-          "bookingTime"
-        )?.value;
-
-      const guests =
-        document.getElementById(
-          "bookingGuests"
-        )?.value;
-
-
-      if(
-        !name ||
-        !email ||
-        !phone ||
-        !room ||
-        !date ||
-        !time ||
-        !guests
-      ){
-
-        alert(
-          "Please complete all booking details."
+        html.setAttribute(
+            "dir",
+            isRTL ? "rtl" : "ltr"
         );
 
-        return;
+        body.setAttribute(
+            "dir",
+            isRTL ? "rtl" : "ltr"
+        );
 
-      }
+        if (bookingPage) {
+            bookingPage.setAttribute(
+                "dir",
+                isRTL ? "rtl" : "ltr"
+            );
+        }
 
+        if (rtlToggle) {
+            rtlToggle.innerHTML =
+                '<i data-lucide="arrow-right-left"></i>';
 
-      alert(
-        "Booking details saved successfully!"
-      );
+            rtlToggle.setAttribute(
+                "aria-label",
+                isRTL
+                    ? "Switch to left-to-right layout"
+                    : "Switch to right-to-left layout"
+            );
 
+            rtlToggle.setAttribute(
+                "aria-pressed",
+                String(isRTL)
+            );
+        }
+
+        refreshIcons();
     }
-  );
 
+    if (rtlToggle) {
+        rtlToggle.addEventListener("click", () => {
+            const currentDirection =
+                html.getAttribute("dir") || "ltr";
 
-  /* =========================================
-     INITIALIZE
-  ========================================= */
+            const newDirection =
+                currentDirection === "rtl"
+                    ? "ltr"
+                    : "rtl";
 
-  updateTheme();
-  updateRTL();
-  refreshIcons();
+            setStorage(DIRECTION_KEY, newDirection);
+            updateRTL(newDirection);
+        });
+    }
 
+    /* =========================================
+       SAME-PAGE SYNC
+    ========================================= */
+
+    window.addEventListener(
+        "viberoomz-storage-change",
+        event => {
+            const key = event.detail?.key;
+            const value = event.detail?.value;
+
+            if (key === THEME_KEY) {
+                updateTheme(value || "light");
+            }
+
+            if (key === DIRECTION_KEY) {
+                updateRTL(value || "ltr");
+            }
+        }
+    );
+
+    /* =========================================
+       OTHER TAB / PAGE SYNC
+    ========================================= */
+
+    window.addEventListener("storage", event => {
+        if (event.key === THEME_KEY) {
+            updateTheme(event.newValue || "light");
+        }
+
+        if (event.key === DIRECTION_KEY) {
+            updateRTL(event.newValue || "ltr");
+        }
+    });
+
+    /* =========================================
+       MINIMUM DATE
+    ========================================= */
+
+    if (bookingDate) {
+        const today =
+            new Date().toISOString().split("T")[0];
+
+        bookingDate.min = today;
+    }
+
+    /* =========================================
+       BOOKING SUBMIT
+    ========================================= */
+
+    bookingForm?.addEventListener("submit", event => {
+        event.preventDefault();
+
+        const name =
+            document
+                .getElementById("bookingName")
+                ?.value
+                .trim();
+
+        const email =
+            document
+                .getElementById("bookingEmail")
+                ?.value
+                .trim();
+
+        const phone =
+            document
+                .getElementById("bookingPhone")
+                ?.value
+                .trim();
+
+        const room =
+            document.getElementById("bookingRoom")?.value;
+
+        const date =
+            document.getElementById("bookingDate")?.value;
+
+        const time =
+            document.getElementById("bookingTime")?.value;
+
+        const guests =
+            document.getElementById("bookingGuests")?.value;
+
+        if (
+            !name ||
+            !email ||
+            !phone ||
+            !room ||
+            !date ||
+            !time ||
+            !guests
+        ) {
+            alert(
+                "Please complete all booking details."
+            );
+            return;
+        }
+
+        alert(
+            "Booking details saved successfully!"
+        );
+    });
+
+    /* =========================================
+       INITIALIZE
+    ========================================= */
+
+    const savedTheme =
+        getStorage(THEME_KEY) ||
+        (window.matchMedia(
+            "(prefers-color-scheme: dark)"
+        ).matches
+            ? "dark"
+            : "light");
+
+    const savedDirection =
+        getStorage(DIRECTION_KEY) || "ltr";
+
+    updateTheme(savedTheme);
+    updateRTL(savedDirection);
+    refreshIcons();
 });

@@ -1696,127 +1696,140 @@ body.dark
   }
 }
 
-
 /* =========================================================
    iPad Mini
    Width: 768px–820px
    ========================================================= */
+
 @media screen and (min-width: 768px) and (max-width: 820px) {
-  .home1-hero-split {
-    min-height: auto;
-    padding: 54px 0 44px;
-  }
+    .home1-hero-split {
+        min-height: auto;
+        padding: 54px 0 44px;
+    }
 
-  .home1-hero-split .container {
-    width: calc(100% - 48px);
-  }
+    .home1-hero-split .container {
+        width: calc(100% - 48px);
+    }
 
-  .home1-hero-split-grid {
-    grid-template-columns: 1fr;
-    gap: 42px;
-    min-height: auto;
-  }
+    .home1-hero-split-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+        min-height: auto;
+    }
 
-  .home1-hero-copy {
-    min-height: auto;
-    padding: 0;
-    text-align: center;
-    align-items: center;
-  }
+    .home1-hero-copy {
+        min-height: auto;
+        padding: 0;
+        text-align: center;
+        align-items: center;
+    }
 
-  .home1-hero-copy h2 {
-    font-size: clamp(46px, 7vw, 60px);
-    max-width: 700px;
-  }
+    .home1-hero-copy h2 {
+        font-size: clamp(46px, 7vw, 60px);
+        max-width: 700px;
+    }
 
-  .home1-hero-text {
-    max-width: 650px;
-    font-size: 18px;
-  }
+    .home1-hero-text {
+        max-width: 650px;
+        font-size: 18px;
+    }
 
-  .home1-hero-actions {
-    justify-content: center;
-  }
+    .home1-hero-actions {
+        justify-content: center;
+    }
 
-  .home1-hero-visual {
-    min-height: auto;
-  }
+    .home1-hero-visual {
+        min-height: auto;
+    }
 
-  .home1-music-stage {
-    max-width: 510px;
-    height: 480px;
-    transform: scale(0.9);
-    transform-origin: center top;
-    margin-bottom: -45px;
-  }
+    .home1-music-stage {
+        max-width: 510px;
+        height: 480px;
+        transform: scale(.9);
+        transform-origin: center top;
+        margin: 0 auto -45px;
+    }
 
-  .home1-rooms-grid,
-  .home1-benefits-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-  }
+    .home1-rooms-grid,
+    .home1-benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
 
-  .home1-room-image {
-    height: 210px;
-  }
+    .home1-room-image {
+        height: 210px;
+    }
 
-  .home1-package-horizontal-image {
-    flex-basis: 38%;
-  }
+    .home1-package-horizontal-image {
+        flex-basis: 38%;
+    }
 
-  .home1-flowchart {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 42px 20px;
-  }
+    .home1-flowchart {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 42px 20px;
+    }
 
-  .home1-flowchart::before {
-    top: 40px;
-    left: 15%;
-    right: 15%;
-    width: auto;
-    height: 3px;
-  }
+    .home1-flowchart::before {
+        top: 40px;
+        left: 15%;
+        right: 15%;
+        width: auto;
+        height: 3px;
+    }
 
-  .home1-slot-widget-wrap {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
+    .home1-slot-widget-wrap {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
 
-  .home1-slot-media {
-    min-height: 360px;
-    max-height: 420px;
-  }
+    .home1-slot-media {
+        min-height: 360px;
+        max-height: 420px;
+    }
 
-  .home1-testimonials {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+    .home1-testimonials {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
 
-  .home1-testimonial:last-child {
-    grid-column: 1 / -1;
-    max-width: calc(50% - 9px);
-    width: 100%;
-    justify-self: center;
-  }
+    .home1-testimonial:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 9px);
+        max-width: none;
+        justify-self: center;
+    }
 
-  .home1-features-grid-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+    /*
+     * 7th section:
+     * Six cards = two cards per row.
+     * Every card gets equal width.
+     */
+    .home1-features-grid-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        width: 100%;
+    }
 
-  .home1-feature-item:last-child {
-    grid-column: 1 / -1;
-    max-width: calc(50% - 10px);
-    width: 100%;
-    justify-self: center;
-  }
+    .home1-feature-item {
+        grid-column: auto;
+        width: 100%;
+        max-width: none;
+        justify-self: stretch;
+    }
 
-  .home1-cta-box {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 26px;
-  }
+    .home1-feature-item:last-child {
+        grid-column: auto;
+        width: 100%;
+        max-width: none;
+        justify-self: stretch;
+    }
+
+    .home1-cta-box {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 26px;
+    }
 }
-
-
 /* =========================================================
    iPad Pro 11"
    Width: 821px–1024px

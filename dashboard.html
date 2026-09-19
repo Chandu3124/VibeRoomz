@@ -4,25 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VibeRoomz Dashboard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="main.css" />
+ <link rel="icon" type="image/png" sizes="184x184" href="VibeRooms_light.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="dashboard.css">
+
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
     <div class="vr-dashboard">
 
         <!-- SIDEBAR -->
         <aside class="vr-dashboard-sidebar" id="vrSidebar">
+
             <a href="index.html" class="vr-sidebar-brand" id="vrSidebarBrand">
                 <img src="VibeRooms_light.png"
                      data-light-logo="VibeRooms_light.png"
                      data-dark-logo="VibeRooms_dark.png"
                      alt="VibeRoomz">
+
                 <h1>Vibe<span>Roomz</span></h1>
             </a>
+
+            <!-- Visible only when sidebar is open on mobile/tablet -->
+            <button
+                class="vr-sidebar-close"
+                id="vrSidebarClose"
+                type="button"
+                aria-label="Close sidebar">
+                <i data-lucide="x"></i>
+            </button>
 
             <nav class="vr-dashboard-nav">
                 <button class="vr-nav-link active" data-section="dashboard">
@@ -69,8 +84,11 @@
             <header class="vr-dashboard-header">
                 <div class="vr-header-left">
                     <div class="vr-mobile-menu">
-                        <button class="vr-circle-btn" id="vrMobileMenu" type="button"
-                                aria-label="Open menu">
+                        <button
+                            class="vr-circle-btn"
+                            id="vrMobileMenu"
+                            type="button"
+                            aria-label="Open menu">
                             <i data-lucide="menu"></i>
                         </button>
                     </div>
@@ -82,30 +100,45 @@
                 </div>
 
                 <div class="vr-header-actions">
-                    <button class="vr-circle-btn" id="rtlToggle" type="button"
-                            aria-label="Toggle RTL">
+                    <button
+                        class="vr-circle-btn"
+                        id="rtlToggle"
+                        type="button"
+                        aria-label="Toggle RTL">
                         <i data-lucide="arrow-right-left"></i>
                     </button>
 
-                    <button class="vr-circle-btn" id="themeToggle" type="button"
-                            aria-label="Toggle dark mode">
+                    <button
+                        class="vr-circle-btn"
+                        id="themeToggle"
+                        type="button"
+                        aria-label="Toggle dark mode">
                         <i data-lucide="moon-star"></i>
                     </button>
 
-                    <button class="vr-circle-btn vr-notification-btn" id="notificationBtn"
-                            type="button" aria-label="Notifications">
+                    <button
+                        class="vr-circle-btn vr-notification-btn"
+                        id="notificationBtn"
+                        type="button"
+                        aria-label="Notifications">
                         <i data-lucide="bell"></i>
                         <span class="vr-notification-dot"></span>
                     </button>
 
                     <div class="vr-profile-wrap">
-                        <button class="vr-profile-btn" id="profileBtn" type="button"
-                                aria-label="Profile menu">
+                        <button
+                            class="vr-profile-btn"
+                            id="profileBtn"
+                            type="button"
+                            aria-label="Profile menu">
+
                             <div class="vr-profile-avatar">A</div>
+
                             <div class="vr-profile-info">
                                 <strong>Arjun</strong>
                                 <span>Customer</span>
                             </div>
+
                             <i data-lucide="chevron-down"></i>
                         </button>
 
@@ -146,6 +179,7 @@
                             <div class="vr-stat-icon">
                                 <i data-lucide="calendar-days"></i>
                             </div>
+
                             <div>
                                 <span>Upcoming Reservations</span>
                                 <strong>02</strong>
@@ -157,6 +191,7 @@
                             <div class="vr-stat-icon">
                                 <i data-lucide="history"></i>
                             </div>
+
                             <div>
                                 <span>Total Bookings</span>
                                 <strong>18</strong>
@@ -168,6 +203,7 @@
                             <div class="vr-stat-icon">
                                 <i data-lucide="wallet-cards"></i>
                             </div>
+
                             <div>
                                 <span>Pending Payments</span>
                                 <strong>₹1,200</strong>
@@ -208,14 +244,26 @@
                             </div>
 
                             <div class="vr-booking-preview">
-                                <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80"
-                                     alt="Karaoke room">
+                                <img
+                                    src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80"
+                                    alt="Karaoke room">
 
                                 <div>
                                     <h4>Neon Beats Room</h4>
-                                    <p><i data-lucide="calendar"></i> 18 Sep 2026</p>
-                                    <p><i data-lucide="clock-3"></i> 7:00 PM – 10:00 PM</p>
-                                    <p><i data-lucide="users"></i> 8 Guests</p>
+                                    <p>
+                                        <i data-lucide="calendar"></i>
+                                        18 Sep 2026
+                                    </p>
+
+                                    <p>
+                                        <i data-lucide="clock-3"></i>
+                                        7:00 PM – 10:00 PM
+                                    </p>
+
+                                    <p>
+                                        <i data-lucide="users"></i>
+                                        8 Guests
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -259,6 +307,7 @@
                                     <strong>Birthday Bash</strong>
                                     <span>Get 20% off on birthday bookings.</span>
                                 </div>
+
                                 <i data-lucide="party-popper"></i>
                             </div>
 
@@ -267,6 +316,7 @@
                                     <strong>Weekday Vibes</strong>
                                     <span>Enjoy special weekday room pricing.</span>
                                 </div>
+
                                 <i data-lucide="calendar-heart"></i>
                             </div>
                         </div>
@@ -286,6 +336,7 @@
                         <article class="vr-book-step">
                             <div class="vr-step-head">
                                 <div class="vr-step-number">01</div>
+
                                 <div>
                                     <h3>Date & Time</h3>
                                     <p>Select your preferred date and booking slot.</p>
@@ -336,6 +387,7 @@
                         <article class="vr-book-step">
                             <div class="vr-step-head">
                                 <div class="vr-step-number">02</div>
+
                                 <div>
                                     <h3>Choose Room</h3>
                                     <p>Select a room based on your party size.</p>
@@ -343,8 +395,9 @@
                             </div>
 
                             <div class="vr-room-option selected">
-                                <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=700&q=80"
-                                     alt="Neon Beats room">
+                                <img
+                                    src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=700&q=80"
+                                    alt="Neon Beats room">
 
                                 <div class="vr-room-info">
                                     <h4>Neon Beats Room</h4>
@@ -356,8 +409,9 @@
                             </div>
 
                             <div class="vr-room-option">
-                                <img src="https://images.unsplash.com/photo-1598387993281-cecf8b71a8f8?auto=format&fit=crop&w=700&q=80"
-                                     alt="Party room">
+                                <img
+                                    src="https://images.unsplash.com/photo-1598387993281-cecf8b71a8f8?auto=format&fit=crop&w=700&q=80"
+                                    alt="Party room">
 
                                 <div class="vr-room-info">
                                     <h4>Party Pulse</h4>
@@ -372,6 +426,7 @@
                         <article class="vr-book-step">
                             <div class="vr-step-head">
                                 <div class="vr-step-number">03</div>
+
                                 <div>
                                     <h3>Packages & Add-ons</h3>
                                     <p>Enhance your party with optional extras.</p>
@@ -381,37 +436,45 @@
                             <div class="vr-addon-list">
                                 <label class="vr-addon">
                                     <input type="checkbox" checked>
+
                                     <span>
                                         <strong>Birthday Decor</strong>
                                         <small>Decorations and celebration setup</small>
                                     </span>
+
                                     <b>₹799</b>
                                 </label>
 
                                 <label class="vr-addon">
                                     <input type="checkbox">
+
                                     <span>
                                         <strong>Party Lights & Laser</strong>
                                         <small>Premium lighting effects</small>
                                     </span>
+
                                     <b>₹599</b>
                                 </label>
 
                                 <label class="vr-addon">
                                     <input type="checkbox" checked>
+
                                     <span>
                                         <strong>Premium Sound</strong>
                                         <small>Enhanced speaker experience</small>
                                     </span>
+
                                     <b>₹499</b>
                                 </label>
 
                                 <label class="vr-addon">
                                     <input type="checkbox">
+
                                     <span>
                                         <strong>Food & Beverage</strong>
                                         <small>Snacks and refreshments</small>
                                     </span>
+
                                     <b>₹999</b>
                                 </label>
                             </div>
@@ -420,6 +483,7 @@
                         <article class="vr-book-step vr-review-step">
                             <div class="vr-step-head">
                                 <div class="vr-step-number">04</div>
+
                                 <div>
                                     <h3>Review & Confirm</h3>
                                     <p>Check your booking before payment.</p>
@@ -489,8 +553,9 @@
                         </div>
 
                         <div class="vr-reservation-card">
-                            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=700&q=80"
-                                 alt="Neon Beats">
+                            <img
+                                src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=700&q=80"
+                                alt="Neon Beats">
 
                             <div>
                                 <h4>Neon Beats Room</h4>
@@ -543,6 +608,7 @@
                             <div class="vr-stat-icon">
                                 <i data-lucide="wallet"></i>
                             </div>
+
                             <div>
                                 <span>Outstanding Due</span>
                                 <strong>₹1,200</strong>
@@ -554,6 +620,7 @@
                             <div class="vr-stat-icon">
                                 <i data-lucide="receipt"></i>
                             </div>
+
                             <div>
                                 <span>Total Paid</span>
                                 <strong>₹34,890</strong>
@@ -571,19 +638,23 @@
 
                             <div class="vr-payment-method">
                                 <i data-lucide="credit-card"></i>
+
                                 <div>
                                     <strong>HDFC Bank Card</strong>
                                     <span>•••• •••• •••• 4288</span>
                                 </div>
+
                                 <span>Default</span>
                             </div>
 
                             <div class="vr-payment-method">
                                 <i data-lucide="smartphone"></i>
+
                                 <div>
                                     <strong>UPI</strong>
                                     <span>arjun@upi</span>
                                 </div>
+
                                 <span>Saved</span>
                             </div>
                         </div>
@@ -598,6 +669,7 @@
                                     <strong>Neon Beats Room</strong>
                                     <span>18 Sep 2026</span>
                                 </div>
+
                                 <b>₹2,597</b>
                             </div>
 
@@ -606,6 +678,7 @@
                                     <strong>Retro Beats Room</strong>
                                     <span>12 Aug 2026</span>
                                 </div>
+
                                 <b>₹2,499</b>
                             </div>
                         </div>
@@ -659,6 +732,7 @@
 
                             <div class="vr-preference-row">
                                 <span>Default Party Size</span>
+
                                 <select>
                                     <option>8 Guests</option>
                                     <option>6 Guests</option>
@@ -668,6 +742,7 @@
 
                             <div class="vr-preference-row">
                                 <span>Preferred Room</span>
+
                                 <select>
                                     <option>Premium Rooms</option>
                                     <option>Standard Rooms</option>
@@ -698,8 +773,9 @@
 
                     <div class="vr-offer-grid">
                         <article class="vr-offer-card">
-                            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80"
-                                 alt="Birthday party">
+                            <img
+                                src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80"
+                                alt="Birthday party">
 
                             <div>
                                 <span>Birthday Special</span>
@@ -710,8 +786,9 @@
                         </article>
 
                         <article class="vr-offer-card">
-                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"
-                                 alt="Party">
+                            <img
+                                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"
+                                alt="Party">
 
                             <div>
                                 <span>Weekday Offer</span>
@@ -722,8 +799,9 @@
                         </article>
 
                         <article class="vr-offer-card">
-                            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80"
-                                 alt="Music event">
+                            <img
+                                src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80"
+                                alt="Music event">
 
                             <div>
                                 <span>Festive Season</span>
@@ -782,10 +860,25 @@
                         </div>
 
                         <div class="vr-rules-grid">
-                            <span><i data-lucide="check"></i> Arrive 10 minutes before your slot.</span>
-                            <span><i data-lucide="check"></i> Outside alcohol is not permitted.</span>
-                            <span><i data-lucide="check"></i> Cancellation terms depend on booking time.</span>
-                            <span><i data-lucide="check"></i> Please respect room equipment and facilities.</span>
+                            <span>
+                                <i data-lucide="check"></i>
+                                Arrive 10 minutes before your slot.
+                            </span>
+
+                            <span>
+                                <i data-lucide="check"></i>
+                                Outside alcohol is not permitted.
+                            </span>
+
+                            <span>
+                                <i data-lucide="check"></i>
+                                Cancellation terms depend on booking time.
+                            </span>
+
+                            <span>
+                                <i data-lucide="check"></i>
+                                Please respect room equipment and facilities.
+                            </span>
                         </div>
                     </div>
                 </section>
@@ -797,9 +890,12 @@
     <script src="main.js"></script>
     <script src="dashboard.js"></script>
     <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            lucide.createIcons();
+            if (window.lucide) {
+                lucide.createIcons();
+            }
         });
     </script>
 </body>

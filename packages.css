@@ -2537,269 +2537,346 @@ body {
   }
 }
 
-
 /* =========================================================
    iPad Mini
-   768px - 820px
+   Width: 768px–820px
 ========================================================= */
 
 @media screen and (min-width: 768px) and (max-width: 820px) {
-  .packages-light-hero {
-    height: 650px;
-    min-height: 650px;
-  }
+    /* ================= HERO ================= */
 
-  .packages-light-hero .container {
-    width: calc(100% - 56px);
-  }
+    .packages-light-hero {
+        height: 650px;
+        min-height: 650px;
+    }
 
-  .packages-light-layout {
-    grid-template-columns: 1fr;
-  }
+    .packages-light-hero .container {
+        width: calc(100% - 56px);
+        margin-inline: auto;
+    }
 
-  .packages-light-visual {
-    display: none;
-  }
+    .packages-light-layout {
+        grid-template-columns: 1fr;
+    }
 
-  .packages-light-content {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 70px 0;
-    text-align: center;
-    transform: translateY(25px);
-    animation-name: packagesContentInMobile;
-  }
+    .packages-light-visual {
+        display: none;
+    }
 
-  .packages-light-kicker {
-    margin-bottom: 17px;
-  }
+    .packages-light-content,
+    .packages-light-hero.packages-rtl
+        .packages-light-content {
+        width: 100%;
+        max-width: 700px;
+        margin-inline: auto;
+        padding: 70px 0;
 
-  .packages-light-content h1 {
-    font-size: clamp(50px, 7vw, 65px);
-  }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-  .packages-light-content > p {
-    max-width: 620px;
-    margin-inline: auto;
-    font-size: 17px;
-  }
+        text-align: center;
+        transform: translateY(25px);
+        animation-name: packagesContentInMobile;
+    }
 
-  .packages-light-actions {
-    justify-content: center;
-  }
+    .packages-light-kicker {
+        width: 100%;
+        margin-bottom: 17px;
+        text-align: center;
+    }
 
-  .packages-light-features {
-    justify-content: center;
-  }
+    /*
+     * Main hero heading
+     */
+    .packages-light-hero
+        .packages-light-content
+        h1 {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 1.05;
+    }
 
-  .packages-light-hero.packages-rtl .packages-light-content {
-    margin: 0 auto;
-    padding: 70px 0;
-    text-align: center;
-    transform: translateY(25px);
-  }
+    /*
+     * Only the span inside this hero heading.
+     * This will not affect spans on the main page.
+     */
+    .packages-light-hero
+        .packages-light-content
+        h1
+        span {
+        display: inline;
+        text-align: center;
+    }
 
-  .packages-light-hero.packages-rtl .packages-light-actions {
-    justify-content: center;
-  }
+    .packages-light-hero
+        .packages-light-content
+        > p {
+        width: 100%;
+        max-width: 620px;
+        margin: 18px auto 0;
+        text-align: center;
+        font-size: 17px;
+    }
 
-  .package-category-section,
-  .package-comparison-section,
-  .included-benefits-section,
-  .custom-package-section,
-  .occasion-match-section,
-  .party-cta-section {
-    padding: 60px 0;
-  }
+    .packages-light-content h1 {
+        font-size: clamp(50px, 7vw, 65px);
+    }
 
-  .package-category-heading,
-  .package-comparison-heading,
-  .included-benefits-heading,
-  .custom-package-heading,
-  .occasion-match-heading {
-    margin-bottom: 33px;
-  }
+    .packages-light-actions,
+    .packages-light-hero.packages-rtl
+        .packages-light-actions {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .package-category-heading h2,
-  .package-comparison-heading h2,
-  .included-benefits-heading h2,
-  .custom-package-heading h2,
-  .occasion-match-heading h2 {
-    font-size: clamp(37px, 5vw, 49px);
-  }
+    .packages-light-features {
+        justify-content: center;
+        text-align: center;
+    }
 
-  .package-category-heading p,
-  .package-comparison-heading p,
-  .included-benefits-heading p,
-  .custom-package-heading p,
-  .occasion-match-heading p {
-    font-size: 16px;
-  }
+    /* ================= SECTION SPACING ================= */
 
-  .package-category-layout {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    min-height: 0;
-  }
+    .package-category-section,
+    .package-comparison-section,
+    .included-benefits-section,
+    .custom-package-section,
+    .occasion-match-section,
+    .party-cta-section {
+        padding: 60px 0;
+    }
 
-  .package-featured {
-    min-height: 480px;
-  }
+    .package-category-heading,
+    .package-comparison-heading,
+    .included-benefits-heading,
+    .custom-package-heading,
+    .occasion-match-heading {
+        margin-bottom: 33px;
+        text-align: center;
+    }
 
-  .package-category-list {
-    grid-template-rows: none;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 13px;
-  }
+    .package-category-heading h2,
+    .package-comparison-heading h2,
+    .included-benefits-heading h2,
+    .custom-package-heading h2,
+    .occasion-match-heading h2 {
+        font-size: clamp(37px, 5vw, 49px);
+        text-align: center;
+    }
 
-  .package-category-card {
-    min-height: 260px;
-    padding: 19px 15px;
-  }
+    .package-category-heading p,
+    .package-comparison-heading p,
+    .included-benefits-heading p,
+    .custom-package-heading p,
+    .occasion-match-heading p {
+        font-size: 16px;
+        text-align: center;
+    }
 
-  .package-card-top > span {
-    font-size: 14px;
-  }
+    /* ================= PACKAGE CATEGORY ================= */
 
-  .package-category-card .package-category-icon {
-    width: 42px;
-    height: 42px;
-  }
+    .package-category-layout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        min-height: 0;
+    }
 
-  .package-card-content h3 {
-    font-size: 22px;
-  }
+    .package-featured {
+        min-height: 480px;
+    }
 
-  .package-card-content p {
-    font-size: 14px;
-  }
+    .package-category-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: none;
+        gap: 13px;
+    }
 
-  .package-comparison-board {
-    display: block;
-    overflow-x: auto;
-  }
+    .package-category-card {
+        min-height: 260px;
+        padding: 19px 15px;
+    }
 
-  .package-comparison-details {
-    min-width: 760px;
-  }
+    .package-card-top > span {
+        font-size: 14px;
+    }
 
-  .package-compare-feature {
-    grid-template-columns: 175px minmax(585px, 1fr);
-  }
+    .package-category-card .package-category-icon {
+        width: 42px;
+        height: 42px;
+    }
 
-  .package-feature-values {
-    grid-template-columns: repeat(4, minmax(145px, 1fr));
-  }
+    .package-card-content h3 {
+        font-size: 22px;
+    }
 
-  .package-comparison-sidebar {
-    min-width: 760px;
-    border-top: 1px solid var(--border);
-    border-left: 0;
-  }
+    .package-card-content p {
+        font-size: 14px;
+    }
 
-  .package-comparison-packages {
-    grid-template-columns: repeat(4, minmax(160px, 1fr));
-    grid-template-rows: 1fr;
-  }
+    /* ================= COMPARISON ================= */
 
-  .package-compare-package.active::before {
-    left: 50%;
-    top: auto;
-    bottom: -14px;
-    width: 42px;
-    height: 4px;
-    transform: translateX(-50%);
-    border-radius: 4px 4px 0 0;
-  }
+    .package-comparison-board {
+        display: block;
+        overflow-x: auto;
+    }
 
-  .included-benefits-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-  }
+    .package-comparison-details {
+        min-width: 760px;
+    }
 
-  .included-benefit-card:last-child {
-    grid-column: 1 / -1;
-    width: calc(50% - 9px);
-    justify-self: center;
-  }
+    .package-compare-feature {
+        grid-template-columns: 175px minmax(585px, 1fr);
+    }
 
-  .included-benefit-image {
-    height: 205px;
-  }
+    .package-feature-values {
+        grid-template-columns: repeat(4, minmax(145px, 1fr));
+    }
 
-  .included-benefit-content {
-    padding: 20px;
-  }
+    .package-comparison-sidebar {
+        min-width: 760px;
+        border-top: 1px solid var(--border);
+        border-left: 0;
+    }
 
-  .custom-package-layout {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
+    .package-comparison-packages {
+        grid-template-columns: repeat(4, minmax(160px, 1fr));
+        grid-template-rows: 1fr;
+    }
 
-  .custom-package-summary {
-    padding: 25px;
-  }
+    .package-compare-package.active::before {
+        left: 50%;
+        top: auto;
+        bottom: -14px;
+        width: 42px;
+        height: 4px;
+        transform: translateX(-50%);
+        border-radius: 4px 4px 0 0;
+    }
 
-  .custom-package-options {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(180px, 1fr));
-  }
+    /* ================= INCLUDED BENEFITS ================= */
 
-  .custom-option {
-    min-height: 180px;
-    padding: 18px;
-  }
+    /*
+     * Six cards:
+     *
+     * Card 1 | Card 2
+     * Card 3 | Card 4
+     * Card 5 | Card 6
+     */
+    .included-benefits-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
 
-  .custom-option-content h3 {
-    font-size: 21px;
-  }
+    .included-benefit-card,
+    .included-benefit-card:last-child {
+        grid-column: auto;
+        width: 100%;
+        max-width: none;
+        justify-self: stretch;
+    }
 
-  .custom-package-footer {
-    margin-top: 18px;
-  }
+    .included-benefit-image {
+        height: 205px;
+    }
 
-  .occasion-match-board {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
+    .included-benefit-content {
+        padding: 20px;
+    }
 
-  .occasion-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: none;
-    gap: 11px;
-  }
+    /* ================= CUSTOM PACKAGE ================= */
 
-  .occasion-item {
-    min-height: 91px;
-    padding: 14px;
-  }
+    .custom-package-layout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
 
-  .occasion-recommendation {
-    min-height: 520px;
-  }
+    .custom-package-summary {
+        padding: 25px;
+    }
 
-  .recommendation-image-wrap,
-  .recommendation-image-wrap img {
-    min-height: 400px;
-  }
+    .custom-package-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(2, minmax(180px, 1fr));
+    }
 
-  .party-cta-card {
-    align-items: stretch;
-    flex-direction: column;
-    gap: 22px;
-    padding: 31px;
-  }
+    .custom-option {
+        min-height: 180px;
+        padding: 18px;
+    }
 
-  .party-cta-action {
-    align-items: center;
-  }
+    .custom-option-content h3 {
+        font-size: 21px;
+    }
 
-  .party-cta-btn {
-    min-width: 270px;
-  }
+    .custom-package-footer {
+        margin-top: 18px;
+    }
+
+    /* ================= OCCASION MATCH ================= */
+
+    .occasion-match-board {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .occasion-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: none;
+        gap: 11px;
+    }
+
+    .occasion-item {
+        min-height: 91px;
+        padding: 14px;
+    }
+
+    .occasion-recommendation {
+        min-height: 520px;
+    }
+
+    .recommendation-image-wrap,
+    .recommendation-image-wrap img {
+        min-height: 400px;
+    }
+
+    /* ================= CTA ================= */
+
+    .party-cta-card {
+        align-items: center;
+        flex-direction: column;
+        gap: 22px;
+        padding: 31px;
+        text-align: center;
+    }
+
+    .party-cta-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .party-cta-content h2,
+    .party-cta-content p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .party-cta-action {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .party-cta-btn {
+        min-width: 270px;
+    }
 }
-
-
 /* =========================================================
    iPad Pro 11"
    821px - 1024px
