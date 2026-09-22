@@ -914,7 +914,60 @@ body.dark .header {
   }
 }
 
+/* Mobile open menu - dark mode */
+@media screen and (min-width: 360px) and (max-width: 1024px) {
+  body.dark .menu {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border-top: 1px solid #222222;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7);
+  }
 
+  body.dark .menu > li > a,
+  body.dark .menu .dropdown > a,
+  body.dark .mobile-login-item a {
+    color: #ffffff !important;
+  }
+
+  body.dark .menu > li > a:hover,
+  body.dark .menu > li > a.active,
+  body.dark .menu > li > a[aria-current="page"],
+  body.dark .menu .dropdown > a:hover {
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+  }
+
+  body.dark .dropdown-menu {
+    background: #000000 !important;
+    border: 1px solid #2a2a2a !important;
+    box-shadow: none;
+  }
+
+  body.dark .dropdown-menu li a,
+  body.dark .dropdown-menu li a.active,
+  body.dark .dropdown-menu li a[aria-current="page"] {
+    color: #ffffff !important;
+  }
+
+  body.dark .dropdown-menu li a:hover,
+  body.dark .dropdown-menu li a.active,
+  body.dark .dropdown-menu li a[aria-current="page"] {
+    background: #222222 !important;
+    color: #ffffff !important;
+  }
+
+  body.dark .mobile-login-item a {
+    background: #ff5a00 !important;
+    color: #ffffff !important;
+  }
+
+  body.dark .mobile-login-item a:hover,
+  body.dark .mobile-login-item a.active,
+  body.dark .mobile-login-item a[aria-current="page"] {
+    background: #0047cc !important;
+    color: #ffffff !important;
+  }
+}
 /* =========================================
    Samsung Galaxy S8+
    360px to 740px
