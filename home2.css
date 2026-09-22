@@ -260,7 +260,11 @@
   width: 19px;
   height: 19px;
 }
-
+body.dark .search-field input[type="date"]::-webkit-calendar-picker-indicator,
+body.dark .search-field input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 1;
+}
 .promo-banners {
   padding: 70px 0;
   background: var(--white);
@@ -415,6 +419,7 @@
   height: 18px;
   color: var(--primary);
 }
+
 
 .input-wrap input,
 .input-wrap select {
